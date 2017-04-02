@@ -10,28 +10,27 @@ call pathogen#infect()
 """"""""""""""""""""""
 
 filetype plugin indent on
-set cc=80
-set tw=80
-set formatoptions+=t
-set ff=unix
-set cursorline
+set textwidth=0 " (default) no breaking up of inserted text
+set formatoptions+=t " automatic formatting
+set fileformat=unix 
+set cursorline " highlight line of cursor
 
-"more colors
-set t_Co=256
-colorscheme lucius
+set t_Co=256 "more colors
+
+colorscheme lucius " theme (in .vim/colors)
 set bg=dark
 
-set history=10000
 
-" make backspace working in vim 7.3
-set bs=2
+set history=1000 " remember a lot of 'i' commands
 
-set mouse=nv
-set shiftwidth=4
+set bs=2 " make backspace working in vim 7.3
+
+set mouse=nv " enable mouse in Normal and Visual mode
+set shiftwidth=4 " four spaces for indenting
 set encoding=utf-8
-set tabstop=4
-set expandtab
-set ruler
+set tabstop=4 " tab equals 4 spaces
+set expandtab " always use spaces
+set ruler " show line and col (bottom)
 set tm=500
 syntax on
 set number
@@ -140,7 +139,7 @@ let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
 
 "airline
 set laststatus=2
-set noshowmode
+set showmode " show current mode
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
