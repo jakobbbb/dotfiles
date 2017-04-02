@@ -16,7 +16,7 @@ set formatoptions+=t
 set ff=unix
 set cursorline
 
-"moar colors
+"more colors
 set t_Co=256
 colorscheme lucius
 set bg=dark
@@ -131,7 +131,7 @@ let g:ctrlp_reuse_window = 'help'
 let g:netrw_list_hide='\.swp$,\.o$,\.ali$,\.swo$,\.pyc$'
 
 
-" Y U NO COMMIT AFTER 20 LINES???!?!
+" Why doest thou not commit posterior to 20 verses?
 let g:YUNOcommit_after = 20
 
 
