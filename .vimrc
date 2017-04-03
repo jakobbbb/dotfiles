@@ -20,6 +20,7 @@ set t_Co=256 "more colors
 colorscheme lucius " theme (in .vim/colors)
 set bg=dark
 
+language en_US.utf8
 
 set history=1000 " remember a lot of 'i' commands
 
@@ -27,21 +28,21 @@ set bs=2 " make backspace working in vim 7.3
 
 set mouse=nv " enable mouse in Normal and Visual mode
 set shiftwidth=4 " four spaces for indenting
-set encoding=utf-8
+set encoding=utf-8 
 set tabstop=4 " tab equals 4 spaces
 set expandtab " always use spaces
 set ruler " show line and col (bottom)
 set tm=500
 syntax on
-set number
-set ai
-set si
-set scrolloff=5
+set number " line numbers
+set autoindent 
+set smartindent
+set scrolloff=5 " min no of lines above/below cursor
 
 set dictionary+=/usr/share/dict/american-english
 set dictionary+=/usr/share/dict/ngerman
 
-set list
+set list " show spaces with underscores
 set lcs=tab:▸\ ,trail:_
 
 set undofile
@@ -72,31 +73,33 @@ set hlsearch
 "" KEYBINDINGS ""
 """""""""""""""""
 
-let mapleader = ","
+"let mapleader = ","
 
-nnoremap ; :
-inoremap <F13> <Esc>
+"nnoremap ; :
 
-nmap <Leader>e :NERDTreeToggle<CR>
+inoremap <F12> <Esc>
+inoremap jk <Esc>
+
+"nmap <Leader>e :NERDTreeToggle<CR>
 
 "F3 for paste
 set pt=<F3>
 
-command W w
-command Q q
+"command W w
+"command Q q
 
-nnoremap <C-Up> :call AdjustFontSize(1)<CR>:echo &guifont<CR>
-nnoremap <C-Down> :call AdjustFontSize(-1)<CR>:echo &guifont<CR>
+"nnoremap <C-Up> :call AdjustFontSize(1)<CR>:echo &guifont<CR>
+"nnoremap <C-Down> :call AdjustFontSize(-1)<CR>:echo &guifont<CR>
 
-nnoremap <leader>w <C-w>v<C-w>l
+"nnoremap <leader>w <C-w>v<C-w>l
 
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+"nnoremap <C-h> <C-w>h
+"nnoremap <C-j> <C-w>j
+"nnoremap <C-k> <C-w>k
+"nnoremap <C-l> <C-w>l
 
 " turn of search highlight
-nnoremap <leader><space> :noh<cr>
+" nnoremap <leader><space> :noh<cr>
 
 
 """""""""""
