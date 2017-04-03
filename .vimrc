@@ -26,7 +26,6 @@ set history=1000 " remember a lot of 'i' commands
 
 set bs=2 " make backspace working in vim 7.3
 
-set mouse=nv " enable mouse in Normal and Visual mode
 set shiftwidth=4 " four spaces for indenting
 set encoding=utf-8 
 set tabstop=4 " tab equals 4 spaces
