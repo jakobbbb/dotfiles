@@ -75,7 +75,7 @@ set hlsearch
 let mapleader = ","
 
 
-nnoremap ; :
+inoremap <F13> <Esc>
 
 nmap <Leader>e :NERDTreeToggle<CR>
 
