@@ -172,3 +172,5 @@ nnoremap <Leader>t :TlistToggle<CR>
 function! AdjustFontSize(amount)
   let &guifont=substitute(&guifont,'\zs\d\+','\=eval(submatch(0)+a:amount)','')
 endfunction
+
+
