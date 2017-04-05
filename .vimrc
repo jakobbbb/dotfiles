@@ -173,3 +173,26 @@ nnoremap <Leader>t :TlistToggle<CR>
 function! AdjustFontSize(amount)
   let &guifont=substitute(&guifont,'\zs\d\+','\=eval(submatch(0)+a:amount)','')
 endfunction
+
+
+" KILL MOUSE EVEN MORE
+nmap <ScrollWheelUp> <nop>
+nmap <S-ScrollWheelUp> <nop>
+nmap <C-ScrollWheelUp> <nop>
+nmap <ScrollWheelDown> <nop>
+nmap <S-ScrollWheelDown> <nop>
+nmap <C-ScrollWheelDown> <nop>
+
+imap <ScrollWheelUp> <nop>
+imap <S-ScrollWheelUp> <nop>
+imap <C-ScrollWheelUp> <nop>
+imap <ScrollWheelDown> <nop>
+imap <S-ScrollWheelDown> <nop>
+imap <C-ScrollWheelDown> <nop>
+
+vmap <ScrollWheelUp> <nop>
+vmap <S-ScrollWheelUp> <nop>
+vmap <C-ScrollWheelUp> <nop>
+vmap <ScrollWheelDown> <nop>
+vmap <S-ScrollWheelDown> <nop>
+vmap <C-ScrollWheelDown> <nop>
