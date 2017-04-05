@@ -173,4 +173,9 @@ function! AdjustFontSize(amount)
   let &guifont=substitute(&guifont,'\zs\d\+','\=eval(submatch(0)+a:amount)','')
 endfunction
 
-
+" kill scoll wheel
+" doesnt work on windows, to be tested on osx/linux
+map <ScrollWheelUp> <C-Y>
+map <S-ScrollWheelUp> <C-U>
+map <ScrollWheelDown> <C-E>
+map <S-ScrollWheelDown> <C-D>
