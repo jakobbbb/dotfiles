@@ -20,7 +20,7 @@ set t_Co=256 "more colors
 colorscheme lucius " theme (in .vim/colors)
 set bg=dark
 
-language en_US
+"language en_US
 
 set history=1000 " remember a lot of 'i' commands
 
