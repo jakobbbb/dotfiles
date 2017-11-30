@@ -17,6 +17,8 @@ order += "wireless _first_"
 order += "ethernet _first_"
 order += "battery all"
 order += "load"
+order += "cpu_usage"
+order += "cpu_temperature 0"
 order += "tztime local"
 
 wireless _first_ {
@@ -44,4 +46,11 @@ load {
 
 disk "/" {
         format = "%avail"
+}
+cpu_usage {
+            format = " cpu %usage "
+}
+
+cpu_temperature 0 {
+            format = " %degrees°C "
 }
