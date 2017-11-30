@@ -2,7 +2,7 @@
 Name=LuciusDark
 ColorForeground=#d7d7d7
 ColorBackground=#303030
-ColorCursor=#87afd7
+ColorCursor=#7a7a7a
 ColorPalette=#303030;#ff5f5f;#afd787;#d7d7af;#87d7ff;#d7afd7;#87d7af;#d7d7d7;#303030;#ff5f5f;#afd787;#d7d7af;#87d7ff;#d7afd7;#87d7af;#d7d7d7;
 
 [Configuration]
@@ -11,8 +11,8 @@ MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
 MiscBordersDefault=TRUE
-MiscCursorBlinks=FALSE
-MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
+MiscCursorBlinks=TRUE
+MiscCursorShape=TERMINAL_CURSOR_SHAPE_IBEAM
 MiscDefaultGeometry=80x24
 MiscInheritGeometry=FALSE
 MiscMenubarDefault=TRUE
@@ -32,7 +32,9 @@ MiscRewrapOnResize=TRUE
 MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
 ColorBackground=#2c2c2c
-ColorCursor=#dcdcdc
+ColorCursor=#dcdcdcdcdcdc
 ColorPalette=#3f3f3f;#705050;#60b48a;#dfaf8f;#9ab8d7;#dc8cc3;#8cd0d3;#dcdcdc;#709080;#dca3a3;#72d5a3;#f0dfaf;#94bff3;#ec93d3;#93e0e3;#ffffff
-FontName=Menlo 9
+FontName=Noto Mono for Powerline 11
+MiscScrollAlternateScreen=TRUE
+ColorSelection=#210821082108
 
