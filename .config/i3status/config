@@ -11,14 +11,14 @@ general {
         interval = 1
 }
 
-order += "ipv6"
+#order += "ipv6"
 order += "disk /"
-order += "wireless _first_"
 order += "ethernet _first_"
-order += "battery all"
+#order += "battery all"
 order += "load"
 order += "cpu_usage"
-order += "cpu_temperature 0"
+order += "cpu_temperature 2"
+order += "volume master"
 order += "tztime local"
 
 wireless _first_ {
@@ -48,9 +48,12 @@ disk "/" {
         format = "%avail"
 }
 cpu_usage {
-            format = " cpu %usage "
+            format = "cpu %usage"
 }
 
-cpu_temperature 0 {
-            format = " %degrees°C "
+cpu_temperature 2 {
+            format = "%degrees°C"
+}
+volume master {
+            format = "♪ %volume"
 }
