@@ -96,8 +96,8 @@ set pt=<F3>
 "nnoremap <C-k> <C-w>k
 "nnoremap <C-l> <C-w>l
 
-" turn of search highlight
-" nnoremap <leader><space> :noh<cr>
+" turn off search by pressing enter
+nnoremap <CR> :nohlsearch<CR><CR>
 
 " disable arrow keys
 noremap <Up> <NOP>
