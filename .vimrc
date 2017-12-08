@@ -20,6 +20,8 @@ set t_Co=256 "more colors
 colorscheme lucius " theme (in .vim/colors)
 set bg=dark
 
+" set language to US (not needed in most cases, produces error in others)
+" only enable if vim is german by default!
 "language en_US
 
 set history=1000 " remember a lot of 'i' commands
@@ -44,6 +46,12 @@ set dictionary+=/usr/share/dict/ngerman
 set list " show spaces with underscores
 set lcs=tab:▸\ ,trail:_
 
+" create undofiles in ~/.undodir (less clutter)
+" (and create undodir first if needed)
+if !isdirectory($HOME."/.undodir")
+    call mkdir($HOME."/.undodir", "", 0700)
+endif
+set undodir=~/.undodir
 set undofile
 
 
@@ -52,7 +60,7 @@ set undofile
 """""""""""""""
 
 set wildmenu
-set wildmode=full
+set wildmode=longest:full " 'longest' will disable tab scrolling thingy
 set wildignore=*.o,*.obj,*.exe,*~,*.swp,*.log,*.out
 set wildcharm=<Tab>
 
@@ -71,10 +79,6 @@ set hlsearch
 "" KEYBINDINGS ""
 """""""""""""""""
 
-"let mapleader = ","
-
-"nnoremap ; :
-
 inoremap <F12> <Esc>
 inoremap jk <Esc>
 
@@ -91,10 +95,10 @@ set pt=<F3>
 
 "nnoremap <leader>w <C-w>v<C-w>l
 
-"nnoremap <C-h> <C-w>h
-"nnoremap <C-j> <C-w>j
-"nnoremap <C-k> <C-w>k
-"nnoremap <C-l> <C-w>l
+
+" scroll for f<char> using , and . 
+" next to eachother on german keyboard
+nnoremap . ;
 
 " turn off search by pressing enter
 nnoremap <CR> :nohlsearch<CR><CR>
@@ -118,6 +122,7 @@ noremap <C-ScrollWheelLeft> <nop>
 noremap <ScrollWheelRight> <nop>
 noremap <S-ScrollWheelRight> <nop>
 noremap <C-ScrollWheelRight> <nop>
+
 
 """""""""""
 "" RULES ""
