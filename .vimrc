@@ -99,6 +99,25 @@ set pt=<F3>
 " turn of search highlight
 " nnoremap <leader><space> :noh<cr>
 
+" disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
+" disable scroll whell
+noremap <ScrollWheelUp> <nop>
+noremap <S-ScrollWheelUp> <nop>
+noremap <C-ScrollWheelUp> <nop>
+noremap <ScrollWheelDown> <nop>
+noremap <S-ScrollWheelDown> <nop>
+noremap <C-ScrollWheelDown> <nop>
+noremap <ScrollWheelLeft> <nop>
+noremap <S-ScrollWheelLeft> <nop>
+noremap <C-ScrollWheelLeft> <nop>
+noremap <ScrollWheelRight> <nop>
+noremap <S-ScrollWheelRight> <nop>
+noremap <C-ScrollWheelRight> <nop>
 
 """""""""""
 "" RULES ""
@@ -172,10 +191,3 @@ nnoremap <Leader>t :TlistToggle<CR>
 function! AdjustFontSize(amount)
   let &guifont=substitute(&guifont,'\zs\d\+','\=eval(submatch(0)+a:amount)','')
 endfunction
-
-" kill scoll wheel
-" doesnt work on windows, to be tested on osx/linux
-map <ScrollWheelUp> <C-Y>
-map <S-ScrollWheelUp> <C-U>
-map <ScrollWheelDown> <C-E>
-map <S-ScrollWheelDown> <C-D>
