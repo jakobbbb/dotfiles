@@ -19,3 +19,8 @@ display: none !important;
 #sidebar-header {
     visibility: collapse;
 }
+
+/* decrease min sidebar width */
+#sidebar {
+    min-width: 100px !important;
+  }
