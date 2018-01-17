@@ -1,6 +1,6 @@
 import os
 
-deploy = (".vim", ".config", ".zsh") # files with this prefix are symlinked
+deploy = (".vim", ".config", ".zsh", ".mutt") # files with this prefix are symlinked
 
 HOMEDIR = "/home/jakob/"
 DOTFILEDIR = "/home/jakob/dotfiles/"
