@@ -39,49 +39,45 @@ cursor_shape = ibeam
 # "off", "left" or "right"
 #scrollbar = off
 
+
+# jakob
 [colors]
-# If both of these are unset, cursor falls back to the foreground color,
-# and cursor_foreground falls back to the background color.
-cursor = #dcdcdc
-cursor_foreground = #dcdccc
 
-foreground = #dcdcdc
+# special
+foreground      = #ffffff
 foreground_bold = #ffffff
-background = #2c2c2c
+cursor          = #ffffff
+background      = #0d171b
 
-# 20% background transparency (requires a compositor)
-#background = rgba(63, 63, 63, 0.8)
+# black
+color0  = #002b36
+color8  = #5a7b8c
 
-# If unset, will reverse foreground and background
-highlight = #2f2f2f
+# red
+color1  = #d22d72
+color9  = #d22d72
 
-# Colors from color0 to color254 can be set
-color0 = #3f3f3f
-color1 = #705050
-color2 = #60b48a
-color3 = #dfaf8f
-color4 = #9ab8d7
-color5 = #dc8cc3
-color6 = #8cd0d3
-color7 = #dcdccc
-color8 = #709080
-color9 = #dca3a3
-color10 = #72d5a3
-color11 = #f0dfaf
-color12 = #94bff3
-color13 = #ec93d3
-color14 = #93e0e3
-color15 = #ffffff
+# green
+color2  = #43977a
+color10 = #70b696
 
-[hints]
-#font = Monospace 12
-#foreground = #dcdccc
-#background = #3f3f3f
-#active_foreground = #e68080
-#active_background = #3f3f3f
-#padding = 2
-#border = #3f3f3f
-#border_width = 0.5
-#roundness = 2.0
+# yellow
+color3  = #c66f6f
+color11 = #8a8a0f
 
-# vim: ft=dosini cms=#%s
+# blue
+color4  = #38a6de
+color12 = #83b7d2
+
+# magenta
+color5  = #6f6fb1
+color13 = #9e9eda
+
+# cyan
+color6  = #2d8f6f
+color14 = #7ab29f
+
+# white
+color7  = #89b0c3
+color15 = #ebf8ff
+

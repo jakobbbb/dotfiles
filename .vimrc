@@ -17,8 +17,10 @@ set cursorline " highlight line of cursor
 
 set t_Co=256 "more colors
 
-colorscheme lucius " theme (in .vim/colors)
+"colorscheme lucius " theme (in .vim/colors)
+colorscheme jakob " theme (in .vim/colors)
 set bg=dark
+"let g:lucius_no_term_bg=1
 
 " set language to US (not needed in most cases, produces error in others)
 " only enable if vim is german by default!
