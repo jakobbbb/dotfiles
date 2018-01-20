@@ -7,7 +7,8 @@ termite: https://github.com/thestinger/termite
 
 arc-theme: https://github.com/horst3180/arc-theme/
 
-## screenshot
-this is what my vim looks like:
+## screenshots
+
+![termite screenshot](https://i.imgur.com/WqPP2h7.png)
 
 ![vim screenshot](https://i.imgur.com/z7fljVo.png)
