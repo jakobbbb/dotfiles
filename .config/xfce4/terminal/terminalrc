@@ -25,8 +25,7 @@ MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
 FontName=Meslo LG M for Powerline 10
 MiscScrollAlternateScreen=TRUE
-ColorForeground=#dcdcdc
-ColorBackground=#2c2c2c
-ColorCursor=#dcdcdc
-ColorPalette=#3f3f3f;#705050;#60b48a;#dfaf8f;#9ab8d7;#dc8cc3;#8cd0d3;#dcdcdc;#709080;#dca3a3;#72d5a3;#f0dfaf;#94bff3;#ec93d3;#93e0e3;#ffffff
-
+ColorForeground=#ffffff
+ColorBackground=#0d171b
+ColorCursor=#fffff
+ColorPalette=#002b36;#d22d72;#60b48a;#c66f6f;#38a6de;#6f6fb1;#2d8f6f;#89b0c3;#5a7b8c;#d22d72;#70b696;#8a8a0f;#83b7d2;#9e9eda;#7ab29f;#ebf8ff
