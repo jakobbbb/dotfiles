@@ -12,6 +12,7 @@ DOTFILEDIR = os.getcwd() + "/"
 no_errors = True
 
 def execute(cmd):
+    global no_errors
     if len(argv) == 2 and argv[1] == "dry":
         print " ".join(cmd)
     else:
@@ -19,11 +20,12 @@ def execute(cmd):
             subprocess.check_call(cmd)
         except Exception, e:
             no_errors = False
-            print(":( "+e)
+            print ":(", e
 
 def getFFprofile():
     # Read FF's profiles.ini to find active FF profile
     # (used for deploying userChrome.css)
+    global no_errors
     ini = {}
     try:
         with open(HOMEDIR+"/.mozilla/firefox/profiles.ini", "r") as f:
@@ -39,7 +41,9 @@ def getFFprofile():
                             default = section
         return ini[default]["Path"]
     except Exception, e:
-        print(":( (FF) "+e)
+        print ":( (FF)", e
+        no_errors = False
+        return False
 
 
 for root, dirs, files in os.walk(".", topdown=True):
@@ -64,7 +68,7 @@ for root, dirs, files in os.walk(".", topdown=True):
                     do_deploy = False
                 else:
                     execute(["mv", target, target+".bak"])
-            elif not os.path.exists(root_short): # parent folder doesn't exist?
+            elif not os.path.exists(HOMEDIR+root_short): # parent folder doesn't exist?
                execute(["mkdir", "--parents", HOMEDIR+root_short])
 
             if do_deploy:
