@@ -30,7 +30,7 @@ font pango:Ubuntu Medium 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec termite || xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -180,7 +180,7 @@ exec_always /usr/bin/gnome-settings-daemon
 # finds out, if available)
 bar {
         position bottom 
-        status_command myi3status
+        status_command myi3status || i3status
         colors {
       background #002b36
       statusline #ffffff
