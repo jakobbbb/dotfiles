@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+from __future__ import print_function
 import os
 import subprocess
 from sys import argv
@@ -14,13 +15,13 @@ no_errors = True
 def execute(cmd):
     global no_errors
     if len(argv) == 2 and argv[1] == "dry":
-        print " ".join(cmd)
+        print(" ".join(cmd))
     else:
         try:
             subprocess.check_call(cmd)
-        except Exception, e:
+        except Exception as e:
             no_errors = False
-            print ":(", e
+            print(":(", e)
 
 def getFFprofile():
     # Read FF's profiles.ini to find active FF profile
@@ -40,8 +41,8 @@ def getFFprofile():
                         if [key, value] == ["Default", "1"]:
                             default = section
         return ini[default]["Path"]
-    except Exception, e:
-        print ":( (FF)", e
+    except Exception as e:
+        print(":( (FF)", e)
         no_errors = False
         return False
 
