@@ -23,3 +23,6 @@ arc-theme: https://github.com/horst3180/arc-theme/
 ![termite screenshot](https://i.imgur.com/WqPP2h7.png)
 
 ![vim screenshot](https://i.imgur.com/z7fljVo.png)
+
+## other useful stuff
+set German keyboard layout: `sudo localectl set-x11-keymap de pc105 nodeadkeys`
