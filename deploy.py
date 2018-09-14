@@ -5,7 +5,14 @@ import os
 import subprocess
 from sys import argv
 
-deploy = (".vim", ".config", ".zsh", ".mutt", ".mozilla") # files with this prefix are symlinked
+# files with this prefix are symlinked
+deploy = (
+        ".vim",
+        ".config",
+        ".zsh",
+        ".mutt",
+        ".mozilla"
+        )
 
 HOMEDIR = os.path.expanduser("~") + "/"
 DOTFILEDIR = os.getcwd() + "/"
