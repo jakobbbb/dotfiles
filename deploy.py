@@ -61,6 +61,7 @@ for root, dirs, files in os.walk(".", topdown=True):
                 FFprofile = getFFprofile()
                 if FFprofile:
                     target = HOMEDIR+file_short.replace("profile", FFprofile)
+                    root_short = root_short.replace("profile", FFprofile)
             else: # default target
                 target = HOMEDIR+file_short
 
