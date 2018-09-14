@@ -11,7 +11,8 @@ deploy = (
         ".config",
         ".zsh",
         ".mutt",
-        ".mozilla"
+        ".mozilla",
+        ".oh-my-zsh"
         )
 
 HOMEDIR = os.path.expanduser("~") + "/"
