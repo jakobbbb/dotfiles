@@ -102,3 +102,6 @@ source $ZSH/oh-my-zsh.sh
 #setopt autolist
 #unsetopt menucomplete
 setopt noautomenu
+
+# nicer drwxrwxrwx LS_COLOR
+LS_COLORS="$LS_COLORS:ow=30;42:"
