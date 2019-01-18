@@ -6,7 +6,7 @@ export LS_COLORS="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/jakob/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
