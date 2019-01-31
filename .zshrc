@@ -139,3 +139,5 @@ zle-line-init() {
 }
 zle -N zle-keymap-select
 zle -N zle-line-init
+
+export GOPATH="$HOME/gocode"
