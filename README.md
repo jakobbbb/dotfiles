@@ -16,7 +16,7 @@ termite: https://github.com/thestinger/termite
 
 ### gtk theme
 
-arc-theme: https://github.com/horst3180/arc-theme/
+arc-theme: https://github.com/NicoHood/arc-theme/
 
 ## screenshots
 
