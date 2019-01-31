@@ -20,9 +20,9 @@ arc-theme: https://github.com/horst3180/arc-theme/
 
 ## screenshots
 
-![termite screenshot](https://i.imgur.com/WqPP2h7.png)
+![zsh screenshot](https://i.imgur.com/2xeSXYb.png)
 
-![vim screenshot](https://i.imgur.com/z7fljVo.png)
+![vim screenshot](https://i.imgur.com/VltRR1U.png)
 
 ## other useful stuff
 set German keyboard layout: `sudo localectl set-x11-keymap de pc105 nodeadkeys`
