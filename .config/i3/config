@@ -121,6 +121,10 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+dead_circumflex move scratchpad
 bindsym $mod+dead_circumflex scratchpad show
 
+# scratchpad, all windows
+bindsym $mod+Shift+less move scratchpad
+bindsym $mod+less [title=.*] scratchpad show
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
