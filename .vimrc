@@ -134,7 +134,8 @@ if has("autocmd")
     autocmd FileType make setlocal ts=8 sw=8 noet
     autocmd FileType html setlocal ts=2 sw=2 et omnifunc=htmlcomplete#CompleteTags
     autocmd FileType css setlocal ts=2 sw=2 et omnifunc=csscomplete#CompleteCSS
-    autocmd FileType javascript setlocal ts=4 sw=4 et
+    autocmd FileType scss setlocal ts=2 sw=2 et omnifunc=csscomplete#CompleteCSS
+    autocmd FileType javascript setlocal ts=2 sw=2 et
     autocmd FileType c setlocal ts=4 sw=4 noet
     autocmd FileType ada setlocal ts=3 sw=3 et
     autocmd FileType tex setlocal ts=2 sw=2 et
