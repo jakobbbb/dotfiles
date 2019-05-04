@@ -110,3 +110,7 @@ export EDITOR='vim'
 setopt noautomenu
 
 export GOPATH="$HOME/gocode"
+
+if [ "$TERM" = "linux" ]; then
+    ~/bin/motd
+fi
