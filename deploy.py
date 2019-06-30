@@ -13,7 +13,8 @@ deploy = (
         ".mutt",
         ".mozilla",
         ".oh-my-zsh",
-        ".gtkrc-2.0"
+        ".gtkrc-2.0",
+        ".xinitrc"
         )
 
 HOMEDIR = os.path.expanduser("~") + "/"
