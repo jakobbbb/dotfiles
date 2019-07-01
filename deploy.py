@@ -47,11 +47,13 @@ def getFFprofile():
                         key, value = line.split("=")
                         if key == "Default":
                             default_profile = value
+                            break
         path = HOMEDIR + ".mozilla/firefox/" + default_profile
         if os.path.exists(path + "/extensions/treestyletab@piro.sakura.ne.jp.xpi"):
             return path
         else:
             print(":| TST not found, not deploying userChrome")
+            print(path + "/extensions/treestyletab@piro.sakura.ne.jp.xpi")
             return False
     except Exception as e:
         print(":( (FF)", e)
