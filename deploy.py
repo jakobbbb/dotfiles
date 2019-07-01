@@ -37,20 +37,22 @@ def getFFprofile():
     # Read FF's profiles.ini to find active FF profile
     # (used for deploying userChrome.css)
     global no_errors
-    ini = {}
     try:
-        with open(HOMEDIR+"/.mozilla/firefox/profiles.ini", "r") as f:
+        with open(HOMEDIR + ".mozilla/firefox/profiles.ini", "r") as f:
             for line in f.read().splitlines():
                 if len(line) > 1:
                     if line[0] + line[-1] == "[]":
                         section = line[1:-1]
-                        ini[section] = {}
                     elif "=" in line:
                         key, value = line.split("=")
-                        ini[section][key] = value
-                        if [key, value] == ["Default", "1"]:
-                            default = section
-        return ini[default]["Path"]
+                        if key == "Default":
+                            default_profile = value
+        path = HOMEDIR + ".mozilla/firefox/" + default_profile
+        if os.path.exists(path + "/extensions/treestyletab@piro.sakura.ne.jp.xpi"):
+            return path
+        else:
+            print(":| TST not found, not deploying userChrome")
+            return False
     except Exception as e:
         print(":( (FF)", e)
         no_errors = False
@@ -72,6 +74,8 @@ for root, dirs, files in os.walk(".", topdown=True):
                 if FFprofile:
                     target = HOMEDIR+file_short.replace("profile", FFprofile)
                     root_short = root_short.replace("profile", FFprofile)
+                else:
+                    do_deploy = False
             else: # default target
                 target = HOMEDIR+file_short
 
