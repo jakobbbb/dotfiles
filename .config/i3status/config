@@ -15,6 +15,7 @@ general {
 order += "disk /"
 order += "ethernet _first_"
 #order += "battery all"
+order += "memory"
 order += "load"
 order += "cpu_usage"
 order += "cpu_temperature 2"
@@ -35,6 +36,12 @@ ethernet _first_ {
 battery all {
         format = "%status %percentage %remaining"
 }
+
+memory {
+    format = "%used"
+    threshold_degraded = "10%"
+    format_degraded = "FREE: %free"
+    }
 
 tztime local {
         format = "%Y-%m-%d %H:%M:%S"
