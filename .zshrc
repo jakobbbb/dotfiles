@@ -69,6 +69,7 @@ fi
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  pass
 )
 
 source $ZSH/oh-my-zsh.sh
