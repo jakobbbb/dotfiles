@@ -7,14 +7,15 @@ from sys import argv
 
 # files with this prefix are symlinked
 deploy = (
-        ".vim",
         ".config",
-        ".zsh",
-        ".mutt",
-        ".mozilla",
-        ".oh-my-zsh",
         ".gtkrc-2.0",
-        ".xinitrc"
+        ".local",
+        ".mozilla",
+        ".mutt",
+        ".oh-my-zsh",
+        ".vim",
+        ".xinitrc",
+        ".zsh"
         )
 
 HOMEDIR = os.path.expanduser("~") + "/"
