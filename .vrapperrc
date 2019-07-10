@@ -1,0 +1,5 @@
+inoremap jk <Esc>
+nnoremap . ;
+nnoremap <CR> :nohlsearch<CR><CR>
+
+set scrolloff=8

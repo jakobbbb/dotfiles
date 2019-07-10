@@ -18,6 +18,7 @@ deploy = (
         ".mutt",
         ".oh-my-zsh",
         ".vim",
+        ".vrapperrc",
         ".xinitrc",
         ".zsh"
         )
