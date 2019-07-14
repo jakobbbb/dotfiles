@@ -7,9 +7,6 @@ terminal font: https://github.com/powerline/fonts/tree/master/Meslo%20Slashed
 
 i3bar / window title font: https://design.ubuntu.com/font/
 
-on Arch: Enable desired `/etc/fonts/conf.avail/*noto*` files to have nicer fonts.
-(Requires `noto-fonts`)
-
 ### terminal
 
 termite: https://github.com/thestinger/termite
@@ -18,11 +15,8 @@ termite: https://github.com/thestinger/termite
 
 arc-theme: https://github.com/NicoHood/arc-theme/
 
-## screenshots
+### more useful things
+https://github.com/jakobbbb/dotfiles/wiki
 
-![zsh screenshot](https://i.imgur.com/2xeSXYb.png)
-
-![vim screenshot](https://i.imgur.com/VltRR1U.png)
-
-## other useful stuff
-set German keyboard layout: `sudo localectl set-x11-keymap de pc105 nodeadkeys`
+## screenshot
+![screenshot](https://gist.githubusercontent.com/jakobbbb/59c7330f0bc29ebef697bb40e421349f/raw/491427a38ef67ddee393edf507d6a59925a72047/neofetch.png)
