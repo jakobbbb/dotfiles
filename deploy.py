@@ -9,6 +9,7 @@ from sys import argv
 deploy = (
         ".config",
         ".gtkrc-2.0",
+        ".ideavimrc",
         ".local",
         ".mozilla",
         ".mutt",
