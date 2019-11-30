@@ -1,1 +1,1 @@
-setxkbmap us
+setxkbmap us altgr-intl
