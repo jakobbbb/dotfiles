@@ -118,8 +118,8 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # scratchpad
-bindsym $mod+Shift+dead_circumflex move scratchpad
-bindsym $mod+dead_circumflex scratchpad show
+bindsym $mod+Shift+grave move scratchpad
+bindsym $mod+grave scratchpad show
 
 # scratchpad, all windows
 bindsym $mod+Shift+less move scratchpad
@@ -139,8 +139,8 @@ bindsym Mod4+l exec "i3lock -p win -i ~/Pictures/login_win.png"
 
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% #decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && ~/.config/i3/scripts/volume-notification.sh #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && ~/.config/i3/scripts/volume-notification.sh #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
 
@@ -148,6 +148,10 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# brightness keys
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 && ~/.config/i3/scripts/brightness-notification.sh
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 && ~/.config/i3/scripts/brightness-notification.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
