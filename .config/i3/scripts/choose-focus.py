@@ -2,6 +2,7 @@
 
 import i3ipc
 import subprocess
+from sys import argv
 
 
 def get_name(window):
@@ -13,7 +14,7 @@ def dmenu_choose(items):
     Get a choice using dmenu.
     """
     items = "\n".join(sorted(items))
-    cmd = ["dmenu", "-l", "30", "-i"]
+    cmd = ["dmenu", "-l", "10", "-i"]
     p = subprocess.Popen(
         cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT
     )
@@ -47,16 +48,20 @@ def get_windows(ws):
     """
     windows = []
     for w in ws.descendants():
-        if w.window:
+        if w.window and w.window_class != "i3bar":
             windows.append(w)
     return windows
 
 
 def main():
     i3 = i3ipc.Connection()
-    ws = i3.get_tree().find_focused().workspace()
 
-    wins = get_windows(ws)
+    if len(argv) >= 2 and argv[1] == "-g":
+        wins = get_windows(i3.get_tree())
+    else:
+        ws = i3.get_tree().find_focused().workspace()
+        wins = get_windows(ws)
+
     if len(wins) == 0:
         return
 

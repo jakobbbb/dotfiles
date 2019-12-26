@@ -94,7 +94,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # prompt for a choice of window to focus
-bindsym $mod+Tab exec --no-startup-id ~/.config/i3/scripts/choose-focus.py
+bindsym $mod+Tab exec --no-startup-id ~/.config/i3/scripts/choose-focus.py -g
+bindsym $mod+Ctrl+Tab exec --no-startup-id ~/.config/i3/scripts/choose-focus.py
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -121,8 +122,8 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # scratchpad
-bindsym $mod+Shift+Tab move scratchpad
-bindsym $mod+Ctrl+Tab scratchpad show
+#bindsym $mod+Shift+Tab move scratchpad
+#bindsym $mod+Ctrl+Tab scratchpad show
 
 # scratchpad, all windows
 bindsym $mod+Shift+grave move scratchpad
