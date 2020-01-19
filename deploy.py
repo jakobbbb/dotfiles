@@ -86,8 +86,6 @@ for root, dirs, files in os.walk(".", topdown=True):
             if os.path.exists(target): # target file exists?
                 if os.path.realpath(target) == DOTFILEDIR+file_short: # is already properly symlinked?
                     do_deploy = False
-                else:
-                    execute(["mv", target, target+".bak"])
             elif not os.path.exists(HOMEDIR+root_short): # parent folder doesn't exist?
                execute(["mkdir", "--parents", HOMEDIR+root_short])
 
