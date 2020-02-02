@@ -40,7 +40,7 @@ battery all {
 memory {
     format = "%used"
     threshold_degraded = "10%"
-    format_degraded = "FREE: %free"
+    format_degraded = "FUCK: %free"
     }
 
 tztime local {
