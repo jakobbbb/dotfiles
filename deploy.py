@@ -10,6 +10,7 @@ deploy = (
         ".config",
         ".gtkrc-2.0",
         ".ideavimrc",
+        ".latexmkrc",
         ".local",
         ".mozilla",
         ".mutt",
