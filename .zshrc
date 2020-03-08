@@ -87,7 +87,11 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-export EDITOR='vim'
+if [ -x "$(command -v nvim)" ]; then
+    export EDITOR='nvim'
+else
+    export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -104,6 +108,7 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pipi="python -m pip install --user"
+alias vim="nvim"
 
 
 #setopt autolist
