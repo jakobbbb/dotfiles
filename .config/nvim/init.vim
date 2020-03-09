@@ -144,7 +144,14 @@ endif
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'lervag/vimtex'
+Plug 'sirver/ultisnips'
 call plug#end()
+
+""" UltiSnips
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
 
 """""""""""""""
 "" FUNCTIONS ""
