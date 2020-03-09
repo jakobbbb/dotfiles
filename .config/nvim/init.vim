@@ -36,6 +36,7 @@ set scrolloff=5 " min no of lines above/below cursor
 
 set dictionary+=/usr/share/dict/american-english
 set dictionary+=/usr/share/dict/ngerman
+set spelllang=en,de
 
 set list " show spaces with underscores
 set lcs=tab:▸\ ,trail:_
