@@ -145,6 +145,7 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 """ UltiSnips
@@ -152,6 +153,9 @@ let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
+""" ALE
+nmap <silent> <C-a> <Plug>(ale_previous_wrap)
+nmap <silent> <C-e> <Plug>(ale_next_wrap)
 
 """""""""""""""
 "" FUNCTIONS ""
