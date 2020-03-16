@@ -15,3 +15,17 @@ snippet ali "begin{align*} / end{align*}" bA
 	$0
 \end{align*}
 endsnippet
+
+# Use `beg defn` and `beg thm` for unnamed defns/thms
+
+snippet defn "begin{defn} / end{defn*}" bA
+\begin{defn$1}[$2]
+	$0
+\end{defn}
+endsnippet
+
+snippet thm "begin{thm} / end{thm*}" bA
+\begin{thm$1}[$2]
+	$0
+\end{thm}
+endsnippet
