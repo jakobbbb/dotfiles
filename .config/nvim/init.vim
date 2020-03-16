@@ -51,6 +51,8 @@ set undofile
 
 set cc=+1
 
+let g:tex_flavor = "latex"
+
 set guicursor= " no block cursor
 
 set laststatus=2
