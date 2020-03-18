@@ -58,6 +58,8 @@ set guicursor= " no block cursor
 set laststatus=2
 set showmode
 
+set inccommand=nosplit " `:s` live preview
+
 """""""""""""""
 "" WILD MENU ""
 """""""""""""""
