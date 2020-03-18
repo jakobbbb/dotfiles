@@ -27,6 +27,7 @@ https://github.com/jakobbbb/dotfiles/wiki
 | `master`| desktop |
 | `x230` | personal X230 |
 | `x230_work` | work X230 |
+| `t420` | personal T420 |
 | `msi` | msi laptop |
 
 Since the laptops typically require more configuration than my desktop,
