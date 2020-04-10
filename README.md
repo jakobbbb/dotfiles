@@ -19,7 +19,7 @@ arc-theme: https://github.com/NicoHood/arc-theme/
 https://github.com/jakobbbb/dotfiles/wiki
 
 ## screenshot
-![screenshot](https://gist.githubusercontent.com/jakobbbb/59c7330f0bc29ebef697bb40e421349f/raw/491427a38ef67ddee393edf507d6a59925a72047/neofetch.png)
+![screenshot](https://gist.githubusercontent.com/jakobbbb/59c7330f0bc29ebef697bb40e421349f/raw/neofetch.png)
 
 ## machines
 | branch | machine |
