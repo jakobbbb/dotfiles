@@ -1,0 +1,19 @@
+IMAPAccount sample
+Host ...
+User ...
+PassCmd ...
+
+IMAPStore sample-remote
+Account sample
+
+MaildirStore sample-local
+Subfolders Verbatim
+Path ~/mail/sample/
+Inbox ~/mail/sample/inbox
+
+Channel sample
+Master :sample-remote:
+Slave :sample-local:
+Patterns *
+Create Both
+SyncState *

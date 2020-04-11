@@ -1,0 +1,21 @@
+# This is the mutt config for the `sample` inbox.
+
+source ~/.mutt/muttrc
+
+set folder = "~/mail/sample"
+macro index S "!mbsync sample^M" "Update through mbsync"
+
+set my_user = "hey@example.com"
+source "gpg -dq ~/.sample.gpg |" # sets my_pass
+
+set from = $my_user
+set use_from = yes
+
+set smtp_url=smtp://$my_user:$my_pass@mail.example.com
+set ssl_force_tls = yes
+set ssl_starttls = yes
+
+set signature="~/.signature"
+set record = "+Sent"
+
+# vim: filetype=muttrc
