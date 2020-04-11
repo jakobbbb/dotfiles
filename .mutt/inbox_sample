@@ -3,7 +3,7 @@
 source ~/.mutt/muttrc
 
 set folder = "~/mail/sample"
-macro index S "!mbsync sample^M" "Update through mbsync"
+macro index G "!mbsync sample^M" "Update through mbsync"
 
 set my_user = "hey@example.com"
 source "gpg -dq ~/.sample.gpg |" # sets my_pass
