@@ -11,7 +11,7 @@ for url in ['chrome-devtools://*', 'devtools://*', 'chrome://*/*', 'qute://*/*']
 # No notifications at all
 config.set('content.notifications', False)
 
-config.set('url.searchengines', {"DEFAULT": "https://google.com.com/search?q={}"})
+config.set('url.searchengines', {"DEFAULT": "https://google.com/search?q={}"})
 
 # Open new tabs (middleclick/ctrl+click) in the background.
 c.tabs.background = True
