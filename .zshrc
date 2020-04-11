@@ -109,6 +109,8 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias pipi="python -m pip install --user"
 alias vim="nvim"
+MUTT=$(which mutt)
+mutt() { $MUTT -F ~/mail/$1/muttrc || $MUTT "$@" }
 
 
 #setopt autolist
