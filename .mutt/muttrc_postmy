@@ -1,0 +1,22 @@
+# muttrc to be sourced after the following have been set:
+#   my_acc
+#   my_inbox
+#   my_pass
+#   my_server
+#   my_sync
+#   my_user
+
+set folder = ~/mail/$my_acc
+set spoolfile = $my_inbox
+set mbox = $my_inbox
+
+set from = $my_user
+set use_from = yes
+
+macro index G "<shell-escape>$my_sync $my_acc<enter>" "run mbsync+notmuch"
+
+set smtp_url=smtp://$my_user@$my_server
+set smtp_pass=$my_pass
+set ssl_force_tls = yes
+
+# vim: filetype=muttrc

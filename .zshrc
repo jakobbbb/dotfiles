@@ -111,21 +111,7 @@ alias pipi="python -m pip install --user"
 alias vim="nvim"
 MUTT=$(which mutt)
 mutt() { $MUTT -F ~/mail/$1/muttrc || $MUTT "$@" }
-unread() {
- notmuch new 2>&1 | grep -vE "\.(uidvalidity|mbsyncstate)$" && \
-    printf 'Unread messages:\n' && \
-    notmuch search tag:unread | awk '{print "  * " $0}'
-}
-ms() {
-    if [ -z "$1" ]; then
-        mbsync -a
-    elif [ -z "$2" ] && [ -f "~/mail/$1" ]; then
-        mbsync "$1"
-    else
-        mbsync "$@"
-    fi
-    [ $? -eq 0 ] && unread
-}
+alias ms="~/.mutt/scripts/ms"
 
 #setopt autolist
 #unsetopt menucomplete

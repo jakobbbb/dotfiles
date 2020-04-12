@@ -3,7 +3,8 @@ set realname = "Jakob Ruckel"
 
 set sort = "threads"
 
-macro index G "!mbsync -a^M" "Update through mbsync"
+set my_sync = ~/.mutt/scripts/ms
+macro index G "<shell-escape>$my_sync $my_acc<enter>" "run mbsync+notmuch"
 
 bind pager j next-line
 bind pager k previous-line
