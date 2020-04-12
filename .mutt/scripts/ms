@@ -3,7 +3,7 @@
 unread() {
  notmuch new 2>&1 | grep -vE "\.(uidvalidity|mbsyncstate)$" && \
     printf 'Unread messages:\n' && \
-    notmuch search tag:unread | awk '{print "  * " $0}'
+    notmuch show --format=json --entire-thread=false "tag:unread" | ~/.mutt/scripts/nmpp
 }
 
 if [ -z "$1" ]; then

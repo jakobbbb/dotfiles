@@ -1,0 +1,39 @@
+#!/usr/bin/env python
+# pretty printer for `notmuch show --format=json`
+
+import sys
+import json
+import re
+
+data = json.loads("".join(sys.stdin.readlines()))
+def extract(data, msgs=[]):
+    for d in data:
+        if type(d) == list:
+            extract(d, msgs)
+        else:
+            msgs.append(d)
+    return msgs
+
+def truncate(s, n, dots="…"):
+    if len(s) < n:
+        return s
+    else:
+        return s[:n-len(dots)] + dots
+
+def print_msg(m):
+    if not m or not "match" in m.keys() or not m["match"]:
+        return
+    filename = m["filename"][0]
+    box = re.match(r"/home/\w+/mail/(\w+).*", filename).group(1)
+    s = [box]
+    s.append(m["date_relative"])
+    s.append(truncate(m["headers"]["From"], 12))
+    s.append(truncate(m["headers"]["Subject"], 62))
+    print("\t".join(s))
+
+msgs = extract(data)
+for m in msgs:
+    try:
+        print_msg(m)
+    except Exception as e:
+        print(e)
