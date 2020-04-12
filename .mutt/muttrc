@@ -2,6 +2,8 @@ set folder = "~/mail"
 set realname = "Jakob Ruckel"
 
 set sort = "threads"
+set sort_aux = "last-date-sent"
+
 
 set my_sync = ~/.mutt/scripts/ms
 macro index G "<shell-escape>$my_sync $my_acc<enter>" "run mbsync+notmuch"
