@@ -97,6 +97,9 @@ nnoremap . ;
 " turn off search by pressing enter
 nnoremap <CR> :nohlsearch<CR><CR>
 
+" Delete up to email signature
+nnoremap <silent> <leader>gr <Esc>d/^--\_.*Jakob<CR>:nohl<CR>O
+
 " disable arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
