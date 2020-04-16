@@ -6,7 +6,9 @@ unread() {
     notmuch show --format=json --entire-thread=false "tag:unread" | ~/.mutt/scripts/nmpp
 }
 
-if [ -z "$1" ]; then
+if [ "$1" = "unread" ]; then
+    unread && exit
+elif [ -z "$1" ]; then
     mbsync -a
 elif [ -z "$2" ] && [ -f "~/mail/$1" ]; then
     mbsync "$1"
