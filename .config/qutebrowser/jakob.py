@@ -30,8 +30,13 @@ c.colors.tabs.selected.even.bg = '#405779'
 
 # Bindings for normal mode
 config.bind(',M', 'hint links spawn mpv {hint-url}')
+config.bind(',Z', 'hint links spawn zathura {hint-url}')
 config.bind(',N', 'hint links spawn umpv {hint-url}')
 config.bind(',P', 'hint links run open -p {hint-url}')
 config.bind(',m', 'spawn mpv {url}')
 config.bind(',n', 'spawn umpv {url}')
 config.bind(',p', 'open -p')
+
+config.bind(',o', 'open-editor')
+config.bind(',t', 'buffer')
+c.editor.command = ['termite', '-e' 'nvim {file}']
