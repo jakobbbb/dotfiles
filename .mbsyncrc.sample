@@ -40,7 +40,6 @@ Inbox ~/mail/gmailsample/inbox
 Channel gmailsample-default
 Master :gmailsample-remote:
 Slave :gmailsample-local:inbox
-#Patterns INBOX
 
 Channel gmailsample-sent
 Master :gmailsample-remote:"[Gmail]/Sent Mail"
@@ -55,7 +54,6 @@ Master :gmailsample-remote:"[Gmail]/Spam"
 slave  :gmailsample-local:Junk
 
 Create Both
-Expunge Both
 SyncState *
 
 Group gmailsample
