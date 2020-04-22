@@ -120,6 +120,8 @@ setopt noautomenu
 
 export GOPATH="$HOME/gocode"
 
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+
 if [ "$TERM" = "linux" ]; then
     ~/bin/motd
 fi

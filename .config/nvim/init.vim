@@ -150,10 +150,15 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'junegunn/fzf.vim'
 Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
 Plug 'dense-analysis/ale'
 call plug#end()
+
+""" FZF
+nnoremap <silent> <leader>f :GFiles<CR>
+nnoremap <silent> <leader>F :Files<CR>
 
 """ UltiSnips
 let g:UltiSnipsExpandTrigger = '<tab>'
