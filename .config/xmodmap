@@ -4,3 +4,5 @@ keycode 134 = Meta_L Super_R Super_R
 ! Capslock -> Hyper
 clear lock
 keycode 66 = Hyper_L Hyper_L Hyper_L
+! Longer shift
+keycode 94 = Shift_L NoSymbol Shift_L
