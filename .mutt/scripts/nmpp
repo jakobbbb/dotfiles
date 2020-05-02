@@ -10,7 +10,7 @@ def extract(data, msgs=[]):
     for d in data:
         if type(d) == list:
             extract(d, msgs)
-        else:
+        elif d:
             msgs.append(d)
     return msgs
 
@@ -27,11 +27,12 @@ def print_msg(m):
     box = re.match(r"/home/\w+/mail/(\w+).*", filename).group(1)
     s = [box]
     s.append(m["date_relative"])
-    s.append(truncate(m["headers"]["From"], 12))
-    s.append(truncate(m["headers"]["Subject"], 62))
+    s.append(truncate(m["headers"]["From"], 20))
+    s.append(truncate(m["headers"]["Subject"], 70))
     print("\t".join(s))
 
 msgs = extract(data)
+msgs = sorted(msgs, key=lambda m : m["timestamp"])
 for m in msgs:
     try:
         print_msg(m)
