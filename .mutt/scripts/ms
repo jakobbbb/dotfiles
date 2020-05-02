@@ -6,8 +6,14 @@ unread() {
     notmuch show --format=json --entire-thread=false "tag:unread" | ~/.mutt/scripts/nmpp
 }
 
+today() {
+    notmuch show --format=json --entire-thread=false "date:today" | ~/.mutt/scripts/nmpp
+}
+
 if [ "$1" = "unread" ]; then
     unread && exit
+elif [ "$1" = "today" ]; then
+    today && exit
 elif [ -z "$1" ]; then
     mbsync -a
 elif [ -z "$2" ] && [ -f "~/mail/$1" ]; then
