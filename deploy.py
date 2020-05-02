@@ -8,6 +8,7 @@ from sys import argv
 # files with this prefix are symlinked
 deploy = (
         ".config",
+        ".ghci",
         ".gtkrc-2.0",
         ".ideavimrc",
         ".latexmkrc",
