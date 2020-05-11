@@ -1,0 +1,6 @@
+# Unmute: Shift+Hyper
+"pacmd set-source-mute @DEFAULT_SOURCE@ 0 && notify-send 'OPEN' -t 300"
+    Shift + 0xffed
+# Mute: Hyper
+"pacmd set-source-mute @DEFAULT_SOURCE@ 1 && notify-send 'M U T E D' -t 300"
+    0xffed
