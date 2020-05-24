@@ -15,7 +15,7 @@ set use_from = yes
 
 macro index G "<shell-escape>$my_sync $my_acc<enter>" "run mbsync+notmuch"
 
-set smtp_url=smtp://$my_user@$my_server
+set smtp_url=smtps://$my_user@$my_server
 set smtp_pass=$my_pass
 set ssl_force_tls = yes
 
