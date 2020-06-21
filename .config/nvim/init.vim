@@ -174,6 +174,18 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 nmap <silent> <C-a> <Plug>(ale_previous_wrap)
 nmap <silent> <C-e> <Plug>(ale_next_wrap)
 
+""" COC
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
 """""""""""""""
 "" FUNCTIONS ""
 """""""""""""""
