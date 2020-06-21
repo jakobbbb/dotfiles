@@ -150,6 +150,10 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+let g:coc_global_extensions = [
+\ 'coc-python',
+\ ]
+
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/fzf.vim'
 Plug 'lervag/vimtex'
