@@ -19,4 +19,6 @@ auto_view text/html
 
 my_hdr User-Agent: Every email client sucks, this one just sucks less.
 
+set pgp_self_encrypt = yes
+
 # vim: filetype=muttrc
