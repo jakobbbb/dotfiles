@@ -189,3 +189,19 @@ endfunction
 """""""""""""""
 "" FUNCTIONS ""
 """""""""""""""
+let s:clang_on_save_enabled = 0
+function! ToggleClangOnSave()
+  if s:clang_on_save_enabled
+      let s:clang_on_save_enabled = 0
+  else
+      let s:clang_on_save_enabled = 1
+  endif
+endfunction
+
+function! ClangFormatOnSave()
+  if s:clang_on_save_enabled
+    let l:formatdiff = 1
+    py3f /usr/share/clang/clang-format.py
+  endif
+endfunction
+autocmd BufWritePre *.h,*.cc,*.cpp,*.hpp call ClangFormatOnSave()
