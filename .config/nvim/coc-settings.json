@@ -26,7 +26,7 @@
         "serverPath" : "/usr/bin/rust-analyzer"
     },
     "python.linting.flake8Enabled": true,
-    "python.linting.pydocstyleEnabled": true,
+    "python.linting.pydocstyleEnabled": false,
     "python.linting.pylintEnabled": false,
     "python.formatting.provider": "black",
     "python.formatting.blackArgs": ["-l", "79"]
