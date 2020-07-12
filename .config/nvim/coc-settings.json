@@ -29,5 +29,6 @@
     "python.linting.pydocstyleEnabled": false,
     "python.linting.pylintEnabled": false,
     "python.formatting.provider": "black",
-    "python.formatting.blackArgs": ["-l", "79"]
+    "python.formatting.blackArgs": ["-l", "79"],
+    "coc.preferences.formatOnSaveFiletypes": ["python"]
 }
