@@ -21,4 +21,4 @@ elif [ -z "$2" ] && [ -f "~/mail/$1" ]; then
 else
     mbsync "$@"
 fi
-[ $? -eq 0 ] && unread
+[ $? -eq 0 ] || unread
