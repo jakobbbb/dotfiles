@@ -11,7 +11,10 @@ source "gpg -dq ~/.sample.gpg |" # plain: `set my_pass = 123456`
 source ~/.mutt/muttrc_postmy
 
 set ssl_starttls = yes
+
+# might need to be "+inbox/Sent" for some mailboxes, for some reason
 set record = "+Sent"
+
 #set signature="~/.signature"
 
 # vim: filetype=muttrc
