@@ -16,7 +16,10 @@ def dmenu_choose(items):
     items = "\n".join(sorted(items))
     cmd = ["dmenu", "-l", "10", "-i"]
     p = subprocess.Popen(
-        cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT
+        cmd,
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
     )
     out = p.communicate(input=items.encode())[0]
     return out.decode().strip()
@@ -31,9 +34,9 @@ def choose_window(windows):
     for w in windows:
         if get_name(w) in entries.keys():
             # Update the other entry
-            entries[fmt % (get_name(w), entries.pop(get_name(w)).id)] = entries[
-                get_name(w)
-            ]
+            entries[
+                fmt % (get_name(w), entries.pop(get_name(w)).id)
+            ] = entries[get_name(w)]
             name = fmt % (get_name(w), w.id)
         else:
             name = get_name(w)

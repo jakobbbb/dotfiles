@@ -6,6 +6,8 @@ import json
 import re
 
 data = json.loads("".join(sys.stdin.readlines()))
+
+
 def extract(data, msgs=[]):
     for d in data:
         if type(d) == list:
@@ -14,14 +16,16 @@ def extract(data, msgs=[]):
             msgs.append(d)
     return msgs
 
+
 def truncate(s, n, dots="…"):
     if len(s) < n:
         return s
     else:
-        return s[:n-len(dots)] + dots
+        return s[: n - len(dots)] + dots
+
 
 def print_msg(m):
-    if not m or not "match" in m.keys() or not m["match"]:
+    if not m or "match" not in m.keys() or not m["match"]:
         return
     filename = m["filename"][0]
     box = re.match(r"/home/\w+/mail/(\w+).*", filename).group(1)
@@ -31,8 +35,9 @@ def print_msg(m):
     s.append(truncate(m["headers"]["Subject"], 70))
     print("\t".join(s))
 
+
 msgs = extract(data)
-msgs = sorted(msgs, key=lambda m : m["timestamp"])
+msgs = sorted(msgs, key=lambda m: m["timestamp"])
 for m in msgs:
     try:
         print_msg(m)
