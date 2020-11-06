@@ -36,3 +36,4 @@
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 
+(setq org-export-html-validation-link nil)
