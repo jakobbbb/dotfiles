@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+if [ -z "$1" ]; then
+    cal -wm3
+else
+    cal -m "$@"
+fi
