@@ -46,4 +46,5 @@ config.bind(",n", "spawn umpv {url}")
 config.bind(",p", "open -p")
 
 config.bind(",o", "open-editor")
+config.bind("\\f", "set-cmd-text -s :buffer")
 c.editor.command = ["termite", "-e" "nvim {file}"]
