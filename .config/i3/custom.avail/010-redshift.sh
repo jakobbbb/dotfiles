@@ -1,3 +1,3 @@
 #!/bin/sh
 
-redshift -PO 4800
+redshift -PO 4400
