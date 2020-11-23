@@ -19,15 +19,21 @@ endsnippet
 # Use `beg defn` and `beg thm` for unnamed defns/thms
 
 snippet defn "begin{defn} / end{defn*}" bA
-\begin{defn$1}[$2]
+\begin{defn}[$1]
 	$0
 \end{defn}
 endsnippet
 
 snippet thm "begin{thm} / end{thm*}" bA
-\begin{thm$1}[$2]
+\begin{thm}[$1]
 	$0
 \end{thm}
+endsnippet
+
+snippet fra "begin{frame} / end{frame}" bA
+\begin{frame}{$1}
+	$0
+\end{frame}
 endsnippet
 
 snippet mat "begin{pmatrix} / end{pmatrix}" bA
