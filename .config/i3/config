@@ -30,7 +30,7 @@ font pango:Ubuntu Medium 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite || xfce4-terminal
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
