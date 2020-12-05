@@ -22,6 +22,16 @@ deploy = (
     ".zsh",
     "bin",
 )
+if len(argv) > 1:
+    deploy_custom = set(argv[1:])
+    deploy = tuple(deploy_custom.intersection(deploy))
+    if len(deploy) == 0:
+        print("Nothing to deploy, goodbye.")
+        exit(0)
+    print(
+        "Limiting deployment to files with paths starting with: %s"
+        % "".join(deploy)
+    )
 
 HOMEDIR = os.path.expanduser("~") + "/"
 DOTFILEDIR = os.getcwd() + "/"
@@ -31,14 +41,11 @@ no_errors = True
 
 def execute(cmd):
     global no_errors
-    if len(argv) == 2 and argv[1] == "dry":
-        print(" ".join(cmd))
-    else:
-        try:
-            subprocess.check_call(cmd)
-        except Exception as e:
-            no_errors = False
-            print(":(", e)
+    try:
+        subprocess.check_call(cmd)
+    except Exception as e:
+        no_errors = False
+        print(":(", e)
 
 
 def getFFprofile():
@@ -50,7 +57,7 @@ def getFFprofile():
             for line in f.read().splitlines():
                 if len(line) > 1:
                     if line[0] + line[-1] == "[]":
-                        section = line[1:-1]
+                        pass
                     elif "=" in line:
                         key, value = line.split("=")
                         if key == "Default":
