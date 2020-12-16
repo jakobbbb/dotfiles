@@ -50,3 +50,4 @@ config.bind("\\f", "set-cmd-text -s :buffer")
 c.editor.command = ["termite", "-e" "nvim {file}"]
 
 c.colors.webpage.darkmode.enabled = True
+c.tabs.show = "multiple"
