@@ -26,6 +26,11 @@ font pango:Ubuntu Medium 10
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+# gaps
+for_window [class="Termite"] border pixel 2
+smart_gaps on
+gaps inner 15
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
