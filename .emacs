@@ -37,3 +37,5 @@
       `((".*" ,temporary-file-directory t)))
 
 (setq org-export-html-validation-link nil)
+
+(setq-default auto-fill-function 'do-auto-fill)
