@@ -1,0 +1,1 @@
+../custom.avail/001-picom.sh
