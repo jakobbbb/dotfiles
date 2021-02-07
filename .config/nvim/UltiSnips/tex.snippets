@@ -52,3 +52,23 @@ snippet tab "begin{table} / end{table}" bA
 	\label{$3}
 \end{table}
 endsnippet
+
+snippet fig "begin{figure} / end{figure}" bA
+\begin{figure}
+	\centering
+	\includegraphics[$1]{$0}
+	\caption{$2}
+	\label{$3}
+\end{figure}
+endsnippet
+
+snippet lst "begin{listing} / end{listing}" bA
+\begin{listing}
+	\centering
+	\begin{minted}{$1}
+		$0
+	\end{minted}
+	\caption{$2}
+	\label{$3}
+\end{listing}
+endsnippet
