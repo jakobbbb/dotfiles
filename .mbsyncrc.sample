@@ -1,7 +1,11 @@
+Create Both
+SyncState *
+
 IMAPAccount sample
 Host ...
 User ...
-PassCmd ...
+PassCmd "pass mail/sample"
+SSLType IMAPS
 
 IMAPStore sample-remote
 Account sample
@@ -12,18 +16,16 @@ Path ~/mail/sample/
 Inbox ~/mail/sample/inbox
 
 Channel sample
-Master :sample-remote:
-Slave :sample-local:
+Far :sample-remote:
+Near :sample-local:
 Patterns *
-Create Both
-SyncState *
-
 
 
 IMAPAccount gmailsample
+# Address to connect to
 Host imap.gmail.com
-User sample@example.com
-PassCmd "pass mail/gmailsample"
+User ...@gmail.com
+PassCmd "pass google/gmailsample"
 SSLType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 #CertificateFile ~/.cert/imap.gmail.com.pem
@@ -38,27 +40,24 @@ Path ~/mail/gmailsample/
 Inbox ~/mail/gmailsample/inbox
 
 Channel gmailsample-default
-Master :gmailsample-remote:
-Slave :gmailsample-local:inbox
+Far :gmailsample-remote:
+Near :gmailsample-local:inbox
+#Patterns INBOX
 
 Channel gmailsample-sent
-Master :gmailsample-remote:"[Gmail]/Sent Mail"
-slave  :gmailsample-local:Sent
+Far :gmailsample-remote:"[Gmail]/Sent Mail"
+near  :gmailsample-local:Sent
 
 Channel gmailsample-trash
-Master :gmailsample-remote:"[Gmail]/Trash"
-slave  :gmailsample-local:Trash
+Far :gmailsample-remote:"[Gmail]/Trash"
+near  :gmailsample-local:Trash
 
 Channel gmailsample-junk
-Master :gmailsample-remote:"[Gmail]/Spam"
-slave  :gmailsample-local:Junk
-
-Create Both
-SyncState *
+Far :gmailsample-remote:"[Gmail]/Spam"
+near  :gmailsample-local:Junk
 
 Group gmailsample
 Channel gmailsample-default
 Channel gmailsample-trash
-Channel gmailsample-archive
 Channel gmailsample-sent
 Channel gmailsample-junk
