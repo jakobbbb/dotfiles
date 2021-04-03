@@ -28,7 +28,7 @@ def print_msg(m):
     if not m or "match" not in m.keys() or not m["match"]:
         return
     filename = m["filename"][0]
-    box = re.match(r"/home/\w+/mail/(\w+).*", filename).group(1)
+    box = re.match(r"/home/\w+/mail/(.*)/(cur|new|tmp).*", filename).group(1)
     s = [box]
     s.append(m["date_relative"])
     s.append(truncate(m["headers"]["From"], 20))
