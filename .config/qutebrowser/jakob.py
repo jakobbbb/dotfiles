@@ -45,8 +45,8 @@ config.bind(",m", "spawn mpv {url}")
 config.bind(",n", "spawn umpv {url}")
 config.bind(",p", "open -p")
 
-config.bind(",o", "open-editor")
-config.bind("\\f", "set-cmd-text -s :buffer")
+config.bind(",o", "edit-text")
+config.bind("\\f", "set-cmd-text -s :tab-select")
 c.editor.command = ["termite", "-e" "nvim {file}"]
 
 c.colors.webpage.darkmode.enabled = True
