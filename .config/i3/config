@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod1
+set $meta Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -102,6 +103,30 @@ bindsym $mod+a focus parent
 bindsym $mod+Tab exec --no-startup-id ~/.config/i3/scripts/choose-focus.py -g
 bindsym $mod+Ctrl+Tab exec --no-startup-id ~/.config/i3/scripts/choose-focus.py
 
+# workspaces
+set $screen_primary "DVI-I-1"
+set $screen_secondary "DVI-D-0"
+workspace 1 output $screen_primary
+workspace 2 output $screen_primary
+workspace 3 output $screen_primary
+workspace 4 output $screen_primary
+workspace 5 output $screen_primary
+workspace 6 output $screen_primary
+workspace 7 output $screen_primary
+workspace 8 output $screen_primary
+workspace 9 output $screen_primary
+workspace 0 output $screen_primary
+workspace 1:A output $screen_secondary
+workspace 2:B output $screen_secondary
+workspace 3:C output $screen_secondary
+workspace 4:D output $screen_secondary
+workspace 5:E output $screen_secondary
+workspace 6:F output $screen_secondary
+workspace 7:G output $screen_secondary
+workspace 8:H output $screen_secondary
+workspace 9:I output $screen_secondary
+workspace 0:J output $screen_secondary
+
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -113,6 +138,16 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
+bindsym $meta+1 workspace 1:A
+bindsym $meta+2 workspace 2:B
+bindsym $meta+3 workspace 3:C
+bindsym $meta+4 workspace 4:D
+bindsym $meta+5 workspace 5:E
+bindsym $meta+6 workspace 6:F
+bindsym $meta+7 workspace 7:G
+bindsym $meta+8 workspace 8:H
+bindsym $meta+9 workspace 9:I
+bindsym $meta+0 workspace 0:J
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -125,6 +160,16 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+bindsym $meta+Shift+1 move container to workspace 1:A
+bindsym $meta+Shift+2 move container to workspace 2:B
+bindsym $meta+Shift+3 move container to workspace 3:C
+bindsym $meta+Shift+4 move container to workspace 4:D
+bindsym $meta+Shift+5 move container to workspace 5:E
+bindsym $meta+Shift+6 move container to workspace 6:F
+bindsym $meta+Shift+7 move container to workspace 7:G
+bindsym $meta+Shift+8 move container to workspace 8:H
+bindsym $meta+Shift+9 move container to workspace 9:I
+bindsym $meta+Shift+0 move container to workspace 9:J
 
 # scratchpad
 #bindsym $mod+Shift+Tab move scratchpad
@@ -206,6 +251,7 @@ exec --no-startup-id dunst
 bar {
         position bottom 
         status_command myi3status || i3status
+        strip_workspace_numbers yes
         colors {
       background #002b36
       statusline #ffffff
