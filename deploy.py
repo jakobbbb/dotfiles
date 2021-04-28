@@ -7,6 +7,7 @@ from sys import argv
 
 # files with this prefix are symlinked
 deploy = (
+    ".Xresources",
     ".config",
     ".emacs",
     ".ghci",
