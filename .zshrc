@@ -114,6 +114,14 @@ mutt() { $MUTT -F ~/mail/$1/muttrc || $MUTT "$@" }
 alias ms="~/.mutt/scripts/ms"
 alias re="rem -cu+2b1mw\$COLUMNS"
 alias cal="calendar"
+tablet() {
+    if [ "$1" = "on" ]; then
+        ~/.config/i3/custom.avail/000-xrandr-neon.sh tablet
+    elif [ "$1" = "off" ]; then
+        ~/.config/i3/custom.avail/000-xrandr-neon.sh notablet
+    fi
+    ~/.config/i3/custom.avail/010-redshift.sh
+}
 
 #setopt autolist
 #unsetopt menucomplete
