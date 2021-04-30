@@ -10,7 +10,7 @@ if [ "$1" = "tablet" ]; then
     xrandr --output HDMI-0 --rotate inverted
     xrandr --dpi 96
     xrdb ~/.Xresources
-    xinput map-to-output `xinput | grep "Tablet Monitor Pen Pen" | sed -e "s/.*id=\(..\).*/\1/g"` HDMI-0
+    xinput map-to-output `xinput | grep "Tablet Monitor stylus" | sed -e "s/.*id=\(..\).*/\1/g"` HDMI-0
 elif [ "$1" = "notablet" ]; then
     xrandr --output HDMI-0 --off
 fi
