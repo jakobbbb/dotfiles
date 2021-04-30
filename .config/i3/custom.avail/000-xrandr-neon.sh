@@ -14,3 +14,5 @@ if [ "$1" = "tablet" ]; then
 elif [ "$1" = "notablet" ]; then
     xrandr --output HDMI-0 --off
 fi
+
+xrdb ~/.Xresources
