@@ -119,6 +119,8 @@ tablet() {
         ~/.config/i3/custom.avail/000-xrandr-neon.sh tablet
     elif [ "$1" = "off" ]; then
         ~/.config/i3/custom.avail/000-xrandr-neon.sh notablet
+    elif [ "$1" = "mirror" ]; then
+        ~/.config/i3/custom.avail/000-xrandr-neon.sh tabletmirror $2
     fi
     ~/.config/i3/custom.avail/010-redshift.sh
 }

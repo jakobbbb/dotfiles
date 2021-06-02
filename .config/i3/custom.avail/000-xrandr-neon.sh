@@ -10,12 +10,17 @@ xrandr --output DVI-D-0 --auto --left-of DVI-I-1
 
 if [ "$1" = "tablet" ]; then
     xrandr --output HDMI-0 --auto --below DVI-D-0
+elif [ "$1" = "tabletmirror" ]; then
+    xrandr --output HDMI-0 --auto --same-as $2
+elif [ "$1" = "notablet" ]; then
+    xrandr --output HDMI-0 --off
+fi
+
+if [[ $1 = tablet* ]]; then
     xrandr --output HDMI-0 --rotate inverted
     xrandr --dpi 96
     xinput map-to-output $TABLET_STYLUS HDMI-0
     xinput set-prop $TABLET_STYLUS "Wacom Tablet Area" 56, 0, 58603, 33232
-elif [ "$1" = "notablet" ]; then
-    xrandr --output HDMI-0 --off
 fi
 
 xrdb ~/.Xresources
