@@ -20,7 +20,7 @@ if [[ $1 = tablet* ]]; then
     xrandr --output HDMI-0 --rotate inverted
     xrandr --dpi 96
     xinput map-to-output $TABLET_STYLUS HDMI-0
-    xinput set-prop $TABLET_STYLUS "Wacom Tablet Area" 56, 0, 58603, 33232
+    xinput set-prop $TABLET_STYLUS "Wacom Tablet Area" -89, 193, 58641, 32793
 fi
 
 xrdb ~/.Xresources
