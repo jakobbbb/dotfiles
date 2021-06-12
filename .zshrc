@@ -136,3 +136,6 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git -i'
 if [ "$TERM" = "linux" ]; then
     ~/bin/motd
 fi
+
+HISTSIZE=200000
+SAVEHIST=$HISTSIZE
