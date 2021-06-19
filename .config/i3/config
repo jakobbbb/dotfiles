@@ -171,7 +171,7 @@ bindsym $meta+Shift+6 move container to workspace 6:F
 bindsym $meta+Shift+7 move container to workspace 7:G
 bindsym $meta+Shift+8 move container to workspace 8:H
 bindsym $meta+Shift+9 move container to workspace 9:I
-bindsym $meta+Shift+0 move container to workspace 9:J
+bindsym $meta+Shift+0 move container to workspace 0:J
 bindsym $mod+Shift+t move container to workspace T
 
 # scratchpad
