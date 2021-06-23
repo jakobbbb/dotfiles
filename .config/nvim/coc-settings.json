@@ -28,6 +28,7 @@
     "rust-analyzer" : {
         "serverPath" : "/usr/bin/rust-analyzer"
     },
+    "python.pythonPath": "python3",
     "python.linting.flake8Enabled": true,
     "python.linting.pydocstyleEnabled": false,
     "python.linting.pylintEnabled": false,
