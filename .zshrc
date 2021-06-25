@@ -116,11 +116,11 @@ alias re="rem -cu+2b1mw\$COLUMNS"
 alias cal="calendar"
 tablet() {
     if [ "$1" = "on" ]; then
-        ~/.config/i3/custom.avail/000-xrandr-neon.sh tablet
+        ~/.config/i3/custom.avail/000-xrandr-$(hostname).sh tablet $2
     elif [ "$1" = "off" ]; then
-        ~/.config/i3/custom.avail/000-xrandr-neon.sh notablet
+        ~/.config/i3/custom.avail/000-xrandr-$(hostname).sh notablet
     elif [ "$1" = "mirror" ]; then
-        ~/.config/i3/custom.avail/000-xrandr-neon.sh tabletmirror $2
+        ~/.config/i3/custom.avail/000-xrandr-$(hostname).sh tabletmirror $2
     fi
     ~/.config/i3/custom.avail/010-redshift.sh
 }
