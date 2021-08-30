@@ -162,7 +162,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'OmniSharp/omnisharp-vim'
 call plug#end()
+
+let g:OmniSharp_server_use_mono = 1
 
 """ FZF
 nnoremap <silent> <leader>f :GFiles<CR>
