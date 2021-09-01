@@ -74,6 +74,7 @@ neovim
 netctl
 netstat-nat
 networkmanager
+node
 notmuch
 noto-fonts
 noto-fonts-cjk
@@ -91,7 +92,7 @@ pavucontrol
 pciutils
 pdfgrep
 pdfpc
-pdftk-bin
+pdftk
 picom
 playerctl
 pulseaudio
@@ -111,6 +112,7 @@ realtime
 redshift
 reflector
 remind
+ripgrep
 rsync
 scrot
 sed
@@ -123,7 +125,6 @@ sudo
 tcpdump
 telegram-desktop
 termite
-termite-terminfo
 texlive-most
 thunar
 thunar-volman
@@ -147,6 +148,7 @@ which
 wine
 winetricks
 xbindkeys
+xclip
 xdotool
 xorg-server
 xorg-xev
@@ -160,3 +162,4 @@ zathura
 zathura-pdf-poppler
 zip
 zsh
+

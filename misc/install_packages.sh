@@ -6,5 +6,5 @@ PGKS=""
 
 while read p; do
     grep -E "^#" <<< $p && PKGS="" || PKGS="$PKGS $p"
-    grep -E "^$" <<< $p && echo "pacman --needed -S$PKGS"
+    grep -E "^$" <<< $p && echo "yay --needed -S$PKGS"
 done < packages.txt
