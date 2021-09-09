@@ -1,5 +1,4 @@
 ack
-arc-gtk-theme
 arc-icon-theme
 audacity
 barrier
