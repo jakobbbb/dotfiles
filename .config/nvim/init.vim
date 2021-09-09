@@ -152,7 +152,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 let g:coc_global_extensions = [
-\ 'coc-python',
+\ 'coc-pyright',
 \ 'coc-java',
 \ 'coc-rust-analyzer',
 \ ]
