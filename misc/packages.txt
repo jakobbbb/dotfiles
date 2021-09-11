@@ -1,4 +1,5 @@
 ack
+alacritty
 arc-icon-theme
 audacity
 barrier
@@ -123,7 +124,6 @@ strace
 sudo
 tcpdump
 telegram-desktop
-termite
 texlive-most
 thunar
 thunar-volman
