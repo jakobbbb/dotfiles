@@ -256,21 +256,21 @@ bar {
         status_command myi3status || i3status
         strip_workspace_numbers yes
         colors {
-      background #002b36
+      background #00362b
       statusline #ffffff
-      separator  #586e75
-      focused_workspace  #285577 #285577 #ffffff
-      active_workspace   #586e75 #586e75 #002b36
-      inactive_workspace #073642 #002b36 #839496
-      urgent_workspace   #dc322f #dc322f #fdf6e3
+      separator  #58756e
+      focused_workspace  #287755 #287755 #ffffff
+      active_workspace   #58756e #58756e #00362b
+      inactive_workspace #074236 #00362b #839694
+      urgent_workspace   #dc2f32 #dc2f32 #fde3f6
         }
 }
 
 
-#client.focused          #002b36 #586e75 #fdf6e3 #268bd2
-#client.focused_inactive #002b36 #073642 #839496 #073642
-#client.unfocused        #002b36 #073642 #839496 #073642
-#client.urgent           #002b36 #dc322f #fdf6e3 #002b36
+client.focused          #00362b #58756e #fdf6e3 #26d28b
+client.focused_inactive #00362b #074236 #839496 #074236
+client.unfocused        #00362b #074236 #839496 #074236
+client.urgent           #00362b #dc2f32 #fdf6e3 #00362b
 
 
 # start custom script
