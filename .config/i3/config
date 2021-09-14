@@ -260,14 +260,14 @@ bar {
       statusline #ffffff
       separator  #58756e
       focused_workspace  #287755 #287755 #ffffff
-      active_workspace   #58756e #58756e #00362b
+      active_workspace   #58756e #2a9c81 #00362b
       inactive_workspace #074236 #00362b #839694
       urgent_workspace   #dc2f32 #dc2f32 #fde3f6
         }
 }
 
 
-client.focused          #00362b #58756e #fdf6e3 #26d28b
+client.focused          #00362b #2a9c81 #fdf6e3 #26d28b
 client.focused_inactive #00362b #074236 #839496 #074236
 client.unfocused        #00362b #074236 #839496 #074236
 client.urgent           #00362b #dc2f32 #fdf6e3 #00362b
