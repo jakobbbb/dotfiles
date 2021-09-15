@@ -7,11 +7,10 @@ dotfiles and other stuff I use
 
 I use a version of arc dark that I've patched to be a little darker.
 
-Clone `arc-gtk-theme-git` from AUR and apply
-[`misc/0001-Make-arc-dark-darker.patch`](misc/0001-Make-arc-dark-darker.patch)
-before building.
-
 ![screenshot](https://gist.githubusercontent.com/jakobbbb/59c7330f0bc29ebef697bb40e421349f/raw/theme.png)
+
+To install using, navigate to `misc/gtk-theme` and run
+`makepkg -scfi`.
 
 ## fonts
 terminal font: [Meslo Slashed](https://github.com/powerline/fonts/tree/master/Meslo%20Slashed)
