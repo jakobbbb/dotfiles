@@ -1,5 +1,5 @@
 set recolor true
-set recolor-lightcolor "#0c171b"
+set recolor-lightcolor "#0f0912"
 set recolor-darkcolor "#ffffff"
 set selection-clipboard clipboard
 set window-title-home-tilde true

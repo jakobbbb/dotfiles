@@ -29,11 +29,12 @@ c.tabs.new_position.stacking = True
 # Tab bar.
 c.tabs.position = "left"
 c.tabs.width = "13%"
-c.colors.tabs.bar.bg = "#0f131f"
-c.colors.tabs.odd.bg = "#333744"
-c.colors.tabs.even.bg = "#4c505e"
-c.colors.tabs.selected.odd.bg = "#405779"
-c.colors.tabs.selected.even.bg = "#405779"
+c.colors.tabs.bar.bg = "#160f1f"
+c.colors.tabs.odd.bg = "#393344"
+c.colors.tabs.even.bg = "#524c5e"
+c.colors.tabs.selected.odd.bg = "#544079"
+c.colors.tabs.selected.even.bg = "#594079"
+
 config.set("tabs.padding", {"bottom": 1, "left": 5, "right": 5, "top": 1})
 
 # Bindings for normal mode
