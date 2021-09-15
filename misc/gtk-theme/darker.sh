@@ -4,9 +4,9 @@ echo "Making theme darker..."
 
 function make_darker() {
     SUBS=(
-      "s/#404552/#272233/gi"
+      "s/#404552/#1e192c/gi"
       "s/#d3dae3/#e0d9e7/gi"
-      "s/#383c4a/#1f1b29/gi"
+      "s/#383c4a/#261e37/gi"
       "s/#d3dae3/#dcd9e7/gi"
       "s/#4b5162/#2e283f/gi"
       "s/#3e4350/#262233/gi"
