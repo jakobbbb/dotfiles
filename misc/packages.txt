@@ -113,6 +113,7 @@ redshift
 reflector
 remind
 ripgrep
+rofi
 rsync
 scrot
 sed
