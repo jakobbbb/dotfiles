@@ -91,6 +91,7 @@ patch
 pavucontrol
 pciutils
 pdfgrep
+pdfjs
 pdfpc
 pdftk
 picom
