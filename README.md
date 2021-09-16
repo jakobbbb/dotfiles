@@ -5,7 +5,7 @@ dotfiles and other stuff I use
 
 ## GTK theme
 
-I use a version of arc dark that I've patched to be a little darker.
+I use a version of arc dark that I've patched to be a dark purple.
 
 ![screenshot](https://gist.githubusercontent.com/jakobbbb/59c7330f0bc29ebef697bb40e421349f/raw/theme.png)
 
