@@ -101,8 +101,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # prompt for a choice of window to focus
-bindsym $mod+Tab exec --no-startup-id ~/.config/i3/scripts/choose-focus.py -g
-bindsym $mod+Ctrl+Tab exec --no-startup-id ~/.config/i3/scripts/choose-focus.py
+bindsym $mod+Tab exec --no-startup-id exec rofi -show window
 
 # workspaces
 set $screen_primary "DVI-I-1"
