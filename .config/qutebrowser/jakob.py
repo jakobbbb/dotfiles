@@ -14,7 +14,7 @@ for url in [
     config.set("content.javascript.enabled", True, url)
 
 # No notifications at all
-config.set("content.notifications", False)
+config.set("content.notifications.enabled", False)
 
 config.set("content.autoplay", False)
 
