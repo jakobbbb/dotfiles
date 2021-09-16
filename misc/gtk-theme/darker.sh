@@ -17,8 +17,8 @@ function make_darker() {
       "s/#383c4a/#221d2c/gi"
       "s/#444a58/#282333/gi"
       "s/#505666/#3a3044/gi"
-      "s/#3e4553/#382950/gi"
-      "s/#2f343f/#2b1f3c/gi"
+      "s/#3e4553/#322246/gi"
+      "s/#2f343f/#251a34/gi"
     )
 
     for s in ${SUBS[@]}; do
