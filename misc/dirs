@@ -1,0 +1,13 @@
+.config/qutebrowser
+.gitconfig
+.gnupg
+.local/share/qutebrowser
+.mbsyncrc
+.mutt
+.notmuch-config
+.password-store
+.texinit
+arfvpnneon
+duck
+mail/*/muttrc
+rem
