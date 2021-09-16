@@ -74,11 +74,12 @@ neovim
 netctl
 netstat-nat
 networkmanager
-node
+nodejs
 notmuch
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+npm
 ntp
 openmp
 openssh
