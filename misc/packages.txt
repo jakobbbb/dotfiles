@@ -68,7 +68,6 @@ man-pages
 minted
 mpv
 mutt
-nano
 neofetch
 neovim
 netctl
@@ -101,7 +100,6 @@ pulseaudio
 pulseaudio-alsa
 python
 python-black
-python-i3ipc
 python-language-server
 python-matplotlib
 python-pillow
@@ -158,7 +156,6 @@ xorg-xinit
 xorg-xrandr
 xorg-xwininfo
 xsel
-xterm
 youtube-dl
 zathura
 zathura-pdf-poppler
