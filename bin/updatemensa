@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-MENSADATE=$(date -I -d "+10 hours")
+MENSADATE=$(date -Ih -d "+10 hours")
 MENSADATE_FILE="/tmp/mensadate"
 MENSAMEAL_FILE="/tmp/mensa"
 MENSA_ID="151"
