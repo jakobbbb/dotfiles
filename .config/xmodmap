@@ -1,8 +1,13 @@
 ! Windows -> Meta
 keycode 133 = Meta_L Super_L Super_L
 keycode 134 = Meta_L Super_R Super_R
-! Capslock -> Hyper
+! Capslock -> Mode switch
 clear lock
-keycode 66 = Hyper_L Hyper_L Hyper_L
+keycode 66 = Mode_switch Mode_switch
 ! Longer shift
 keycode 94 = Shift_L NoSymbol Shift_L
+! Mode_switch (Caps) + HJKL -> Arrows
+keycode  43 = h H Left Left h H h H
+keycode  44 = j J Down Down idiaeresis Idiaeresis idiaeresis Idiaeresis
+keycode  45 = k K Up Up oe OE oe OE
+keycode  46 = l L Right Right oslash Oslash oslash Oslash

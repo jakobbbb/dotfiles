@@ -135,3 +135,10 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git -i'
 
 HISTSIZE=200000
 SAVEHIST=$HISTSIZE
+
+# `Mode_switch + Shift + H` is xmodmapped to `Left`, so when pressing
+# `Ctrl+Left` I'm also holding `Shift`, which for very historical reasons (ANSI
+# Escape Codes, CSI sequences), outputs a `D`.  Here, I'm remapping the CSI
+# sequence.  Note: The codes can be found using `cat`
+bindkey "^[[1;2C" forward-word
+bindkey "^[[1;2D" backward-word
