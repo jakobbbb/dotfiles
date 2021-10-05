@@ -208,5 +208,5 @@ function! ClangFormatOnSave()
 endfunction
 autocmd BufWritePre *.h,*.cc,*.cpp,*.hpp call ClangFormatOnSave()
 
-highlight Pmenu ctermbg=0
-highlight Pmenu ctermfg=15
+highlight Pmenu ctermbg=0 ctermfg=15
+highlight NormalFloat ctermbg=0 ctermfg=15
