@@ -90,10 +90,6 @@ set pt=<F3> "F3 for paste mode
 command W w
 command Q q
 
-" scroll for f<char> using , and . 
-" next to eachother on german keyboard
-nnoremap . ;
-
 " turn off search by pressing enter
 nnoremap <CR> :nohlsearch<CR><CR>
 
