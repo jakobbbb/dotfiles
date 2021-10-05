@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+TYPE="intel_backlight"
+
+DEVICE="/sys/class/backlight/$TYPE/"
+BRIGHTNESS_FILE="$DEVICE/brightness"
+BRIGHTNESS=$(cat $BRIGHTNESS_FILE)
+MAX_BRIGHTNESS=$(cat "$DEVICE/max_brightness")
+
+if [ "$1" = "-get" ]; then
+    echo $(($BRIGHTNESS*100/$MAX_BRIGHTNESS))
+    exit 0
+elif [ "$1" = "-inc" ]; then
+    BRIGHTNESS=$(($BRIGHTNESS+$MAX_BRIGHTNESS*$2/100))
+elif [ "$1" = "-dec" ]; then
+    BRIGHTNESS=$(($BRIGHTNESS-$MAX_BRIGHTNESS*$2/100))
+elif [ "$1" = "-set" ]; then
+    BRIGHTNESS=$(($MAX_BRIGHTNESS*$2/100))
+fi
+
+if [ "$BRIGHTNESS" -gt "$MAX_BRIGHTNESS" ]; then
+    BRIGHTNESS=$MAX_BRIGHTNESS
+elif [ "$BRIGHTNESS" -lt "0" ]; then
+    BRIGHTNESS=0
+fi
+
+echo $BRIGHTNESS > $BRIGHTNESS_FILE
