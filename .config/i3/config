@@ -219,8 +219,8 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym $mode_switch+XF86AudioPrev exec playerctl previous
 
 # brightness keys
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 && ~/.config/i3/scripts/brightness-notification.sh
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 && ~/.config/i3/scripts/brightness-notification.sh
+bindsym XF86MonBrightnessUp exec --no-startup-id notxbacklight -inc 10 && ~/.config/i3/scripts/brightness-notification.sh
+bindsym XF86MonBrightnessDown exec --no-startup-id notxbacklight -dec 10 && ~/.config/i3/scripts/brightness-notification.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
