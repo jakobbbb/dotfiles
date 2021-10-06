@@ -11,6 +11,7 @@
 
 set $mod Mod1
 set $meta Mod4
+set $mode_switch Mode_switch
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -197,14 +198,20 @@ bindsym Mod4+l exec "i3lock -p win -i ~/Pictures/login_win.png"
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && ~/.config/i3/scripts/volume-notification.sh #increase sound volume
+bindsym $mode_switch+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1% && ~/.config/i3/scripts/volume-notification.sh #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && ~/.config/i3/scripts/volume-notification.sh #decrease sound volume
+bindsym $mode_switch+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1% && ~/.config/i3/scripts/volume-notification.sh #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+bindsym $mode_switch+XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 
 
 # playerctl
 bindsym XF86AudioPlay exec playerctl play-pause
+bindsym $mode_switch+XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
+bindsym $mode_switch+XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+bindsym $mode_switch+XF86AudioPrev exec playerctl previous
 
 # brightness keys
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 && ~/.config/i3/scripts/brightness-notification.sh
