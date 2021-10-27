@@ -130,6 +130,7 @@ tablet() {
 setopt noautomenu
 
 export GOPATH="$HOME/gocode"
+export GO=$(which go)
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git -i'
 
