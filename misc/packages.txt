@@ -8,6 +8,7 @@ base-devel
 bash
 biber
 bind
+cbonsai
 ccls
 chromium
 chromium-widevine
@@ -147,6 +148,7 @@ wdiff
 which
 wine
 winetricks
+words
 xbindkeys
 xclip
 xdotool
