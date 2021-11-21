@@ -116,6 +116,8 @@ noremap <ScrollWheelRight> <nop>
 noremap <S-ScrollWheelRight> <nop>
 noremap <C-ScrollWheelRight> <nop>
 
+" last file
+nnoremap <silent> <leader>e :e#<CR>
 
 """""""""""
 "" RULES ""
@@ -179,6 +181,11 @@ nmap <silent> <C-e> <Plug>(ale_next_wrap)
 """ COC
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> J :call <SID>jump_definition()<CR>
+
+function! s:jump_definition()
+  call CocAction('jumpDefinition')
+endfunction
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
