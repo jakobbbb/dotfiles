@@ -194,6 +194,8 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym Mod4+Shift+l exec "systemctl suspend && i3lock -p win -i ~/Pictures/login_win.png"
 # Lock w/ WIN+L
 bindsym Mod4+l exec "i3lock -p win -i ~/Pictures/login_win.png"
+# Hibernate w/ WIN+Shift+H
+bindsym Mod4+Shift+h exec "systemctl hibernate"
 
 
 # Pulse Audio controls
