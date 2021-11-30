@@ -218,3 +218,4 @@ autocmd BufWritePre *.h,*.cc,*.cpp,*.hpp call ClangFormatOnSave()
 
 highlight Pmenu ctermbg=0 ctermfg=15
 highlight NormalFloat ctermbg=0 ctermfg=15
+highlight Normal ctermbg=None
