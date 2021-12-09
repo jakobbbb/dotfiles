@@ -264,6 +264,7 @@ bar {
         position bottom 
         status_command myi3status || i3status
         strip_workspace_numbers yes
+        tray_output primary
         colors {
       background #200036
       statusline #ffffff
