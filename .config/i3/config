@@ -245,6 +245,35 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+exec_always ~/.config/i3/scripts/blender_mode.py
+
+mode "blender" {
+    bindsym $mod+1 workspace 1
+    bindsym $mod+2 workspace 2
+    bindsym $mod+3 workspace 3
+    bindsym $mod+4 workspace 4
+    bindsym $mod+5 workspace 5
+    bindsym $mod+6 workspace 6
+    bindsym $mod+7 workspace 7
+    bindsym $mod+8 workspace 8
+    bindsym $mod+9 workspace 9
+    bindsym $mod+0 workspace 10
+    bindsym $meta+1 workspace 1:A
+    bindsym $meta+2 workspace 2:B
+    bindsym $meta+3 workspace 3:C
+    bindsym $meta+4 workspace 4:D
+    bindsym $meta+5 workspace 5:E
+    bindsym $meta+6 workspace 6:F
+    bindsym $meta+7 workspace 7:G
+    bindsym $meta+8 workspace 8:H
+    bindsym $meta+9 workspace 9:I
+    bindsym $meta+0 workspace 0:J
+    bindsym $mod+t workspace T
+
+    bindsym $mod+b mode "default"
+}
+bindsym $mod+b mode "blender"
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 #bar {
