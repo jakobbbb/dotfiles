@@ -7,7 +7,11 @@ i3: Connection = Connection()
 
 def check_for_blender(i3: Connection, _):
     focused = i3.get_tree().find_focused()
-    if focused and focused.window_class == "Blender":
+    if (
+        focused
+        and focused.window_class == "Blender"
+        and focused.window_title not in ["Blender", "Blender Render"]
+    ):
         i3.command("mode blender")
     else:
         i3.command("mode default")
