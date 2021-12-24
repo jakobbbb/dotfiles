@@ -114,6 +114,7 @@ mutt() { $MUTT -F ~/mail/$1/muttrc || $MUTT "$@" }
 alias ms="~/.mutt/scripts/ms"
 alias re="rem -cu+2b1mw\$COLUMNS"
 alias cal="calendar"
+pc () { pass -c $(find $HOME/.password-store -type f | sed -e "s/^.*\.password-store\/\(.*\)\.gpg/\1/g" | fzf) }
 tablet() {
     if [ "$1" = "on" ]; then
         ~/.config/i3/custom.avail/000-xrandr-$(hostname).sh tablet $2
