@@ -1,0 +1,32 @@
+From d5affbc7624c08cace4c80f486e9455a8d780f77 Mon Sep 17 00:00:00 2001
+From: Jakob Ruckel <jakob@ruckel.de>
+Date: Thu, 16 Sep 2021 00:58:11 +0200
+Subject: [PATCH 2/2] Purple agnoster
+
+---
+ themes/agnoster.zsh-theme | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/themes/agnoster.zsh-theme b/themes/agnoster.zsh-theme
+index 6aa26bcb..ce2aca7a 100644
+--- a/themes/agnoster.zsh-theme
++++ b/themes/agnoster.zsh-theme
+@@ -204,13 +204,13 @@ prompt_hg() {
+ 
+ # Dir: current working directory
+ prompt_dir() {
+-  prompt_segment blue $CURRENT_FG '%~'
++  prompt_segment 5 $CURRENT_FG '%~'
+ }
+ 
+ # Virtualenv: current working virtualenv
+ prompt_virtualenv() {
+   if [[ -n "$VIRTUAL_ENV" && -n "$VIRTUAL_ENV_DISABLE_PROMPT" ]]; then
+-    prompt_segment blue black "(${VIRTUAL_ENV:t:gs/%/%%})"
++    prompt_segment 5 black "(${VIRTUAL_ENV:t:gs/%/%%})"
+   fi
+ }
+ 
+-- 
+2.34.1
+
