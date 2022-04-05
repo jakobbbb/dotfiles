@@ -50,6 +50,10 @@ config.bind(",o", "edit-text")
 config.bind("\\f", "set-cmd-text -s :tab-select")
 c.editor.command = ["termite", "-e" "nvim {file}"]
 
+rubout = 'rl-rubout "/ .,#"'
+config.bind("<Ctrl-w>", rubout, mode="prompt")
+config.bind("<Ctrl-w>", rubout, mode="command")
+
 c.colors.webpage.darkmode.enabled = True
 # c.tabs.show = "multiple"
 config.bind("xx", "config-cycle tabs.show switching multiple")
