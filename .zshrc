@@ -135,6 +135,8 @@ export GO=$(which go)
 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git -i'
 
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
+
 HISTSIZE=200000
 SAVEHIST=$HISTSIZE
 
