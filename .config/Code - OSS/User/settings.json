@@ -1,0 +1,11 @@
+{
+    "cmake.configureOnOpen": true,
+    "omnisharp.path": "latest",
+    "omnisharp.useGlobalMono": "always",
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "editor.fontFamily": "'Meslo LG M for Powerline', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.rulers": [
+     100
+    ],
+    "window.zoomLevel": 1
+}
