@@ -86,6 +86,7 @@ krita
 less
 libreoffice-fresh
 licenses
+light
 linux
 linux-firmware
 linux-headers
