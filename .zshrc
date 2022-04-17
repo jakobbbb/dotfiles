@@ -130,6 +130,8 @@ tablet() {
 #unsetopt menucomplete
 setopt noautomenu
 
+export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1  # unity hates me
+
 export GOPATH="$HOME/gocode"
 export GO=$(which go)
 
