@@ -153,6 +153,7 @@ let g:coc_global_extensions = [
 \ 'coc-pyright',
 \ 'coc-java',
 \ 'coc-rust-analyzer',
+\ 'coc-omnisharp',
 \ ]
 
 call plug#begin('~/.config/nvim/plugged')
@@ -160,7 +161,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'OmniSharp/omnisharp-vim'
+"Plug 'OmniSharp/omnisharp-vim'
 Plug 'tikhomirov/vim-glsl'
 call plug#end()
 
