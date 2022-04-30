@@ -203,8 +203,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tabs = 1
 nnoremap <silent> <Left> :tabprev<CR>
 nnoremap <silent> <Right> :tabnext<CR>
+nnoremap <silent> H :bp<CR>
+nnoremap <silent> L :bn<CR>
 nnoremap <silent> <leader>q :bd<CR>
 nnoremap <silent> <leader>t :tabnew<CR>
+nnoremap <silent> <leader>z :tabnew<CR>:term<CR>
+tnoremap jk <C-\><C-n>
 
 
 """""""""""""""
