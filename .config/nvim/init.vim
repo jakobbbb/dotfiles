@@ -163,6 +163,7 @@ Plug 'sirver/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'OmniSharp/omnisharp-vim'
 Plug 'tikhomirov/vim-glsl'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 let g:OmniSharp_server_use_mono = 1
@@ -196,6 +197,15 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+""" airline / tab stuff
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tabs = 1
+nnoremap <silent> <Left> :tabprev<CR>
+nnoremap <silent> <Right> :tabnext<CR>
+nnoremap <silent> <leader>q :bd<CR>
+nnoremap <silent> <leader>t :tabnew<CR>
+
 
 """""""""""""""
 "" FUNCTIONS ""
