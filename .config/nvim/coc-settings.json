@@ -35,5 +35,6 @@
     "python.formatting.provider": "black",
     "python.formatting.blackArgs": ["-l", "79"],
     "coc.preferences.formatOnSaveFiletypes": ["python"],
-    "clangd.arguments": ["-std=c++17"]
+    "clangd.arguments": ["-std=c++17"],
+    "java.home": "/usr/lib/jvm/java-11-openjdk"
 }
