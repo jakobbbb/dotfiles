@@ -19,7 +19,7 @@ order += "ethernet _first_"
 order += "memory"
 order += "load"
 order += "cpu_usage"
-order += "cpu_temperature 2"
+order += "cpu_temperature 0"
 order += "volume master"
 order += "tztime local"
 
@@ -64,8 +64,9 @@ cpu_usage {
             format = "cpu %usage"
 }
 
-cpu_temperature 2 {
+cpu_temperature 0 {
             format = "%degrees°C"
+            path = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon1/temp1_input"
 }
 volume master {
             format = "♪ %volume"
