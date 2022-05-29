@@ -6,3 +6,6 @@
 xdg-settings set default-web-browser org.qutebrowser.qutebrowser.desktop
 xdg-mime default org.pwmt.zathura.desktop application/pdf
 xdg-mime default mpv.desktop video/x-matroska
+xdg-mime default mpv.desktop video/mp4
+xdg-mime default org.gnome.eog.desktop image/png
+xdg-mime default org.gnome.eog.desktop image/jpeg
