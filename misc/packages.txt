@@ -119,6 +119,7 @@ python-adblock
 python-black
 python-matplotlib
 python-pillow
+python-pip
 python-poetry
 python-pydocstyle
 python-pynvim
