@@ -61,10 +61,13 @@ iputils
 ipython
 irssi
 isync
+jdk-openjdk
 jq
+jre-openjdk
 kdenlive
 krita
 less
+libreoffice-fresh
 licenses
 linux
 linux-firmware
