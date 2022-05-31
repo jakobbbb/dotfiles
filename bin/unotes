@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+set -x
+
+cd ~/uni/$1/n*
+nvim +VimtexCompile *notes*.tex
