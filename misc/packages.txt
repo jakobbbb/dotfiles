@@ -162,7 +162,6 @@ usbutils
 util-linux
 vi
 vim
-virtualbox
 visual-studio-code-bin
 vlc
 wdiff
@@ -179,7 +178,7 @@ xorg-xinit
 xorg-xrandr
 xorg-xwininfo
 xsel
-youtube-dl
+yt-dlp
 zathura
 zathura-pdf-poppler
 zip
