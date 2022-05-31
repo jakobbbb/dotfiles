@@ -148,3 +148,8 @@ SAVEHIST=$HISTSIZE
 # sequence.  Note: The codes can be found using `cat`
 bindkey "^[[1;2C" forward-word
 bindkey "^[[1;2D" backward-word
+
+# Auto-Start X
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+    startx
+fi
