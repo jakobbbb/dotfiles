@@ -111,7 +111,7 @@ pdfpc
 pdftk
 picom
 playerctl
-powerline-fonts
+powerline-fonts-git
 pulseaudio
 pulseaudio-alsa
 python
