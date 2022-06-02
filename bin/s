@@ -1,0 +1,19 @@
+#!/usr/bin/bash
+
+# Screenshot script
+
+SCREENSHOT_DIR="/tmp"
+MAIM_FLAGS="-s"
+
+if [ "$1" = "clip" ]; then
+    maim $MAIM_FLAGS | xclip -sel clip -t image/png
+    exit 0
+elif [ -z "$1" ]; then
+    FILENAME="screenshot";
+else
+    FILENAME="$1";
+fi
+
+SCREENSHOT_PATH="$SCREENSHOT_DIR/$FILENAME.png"
+
+maim $MAIM_FLAGS $SCREENSHOT_PATH
