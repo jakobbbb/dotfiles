@@ -2,6 +2,8 @@
 "" GENERAL SETTINGS ""
 """"""""""""""""""""""
 
+set nocompatible
+
 filetype plugin indent on
 set textwidth=0 " (default) no breaking up of inserted text
 set formatoptions+=t " automatic formatting
@@ -158,6 +160,7 @@ let g:coc_global_extensions = [
 \ ]
 
 call plug#begin('~/.config/nvim/plugged')
+Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf.vim'
 Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
