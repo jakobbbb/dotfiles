@@ -21,6 +21,7 @@ device-mapper
 dhcpcd
 diffstat
 diffutils
+digimend-kernel-drivers-dkms
 discord
 dmenu
 dos2unix
