@@ -2,5 +2,8 @@
 
 redshift -PO 3400
 
-TABLET=`xrandr --listactivemonitors | grep HDMI-0 | cut -d: -f1 | sed -e 's/ //g'`
-redshift -m randr:crtc=$TABLET -x
+# No redshift on tablet
+TABLET=`xrandr --listactivemonitors | grep HDMI- | cut -d: -f1 | sed -e 's/ //g'`
+if [[ ! -z "$TABLET" ]]; then
+    redshift -m randr:crtc=$TABLET -x
+fi
