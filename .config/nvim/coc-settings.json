@@ -36,6 +36,6 @@
     "python.formatting.blackArgs": ["-l", "79"],
     "coc.preferences.formatOnSaveFiletypes": ["python"],
     "clangd.arguments": ["-std=c++17"],
-    "java.home": "/usr/lib/jvm/java-11-openjdk",
+    "java.home": "/usr/lib/jvm/java-18-openjdk",
     "omnisharp.version" : "v1.38.0"
 }
