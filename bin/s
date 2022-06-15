@@ -5,6 +5,10 @@
 SCREENSHOT_DIR="/tmp"
 MAIM_FLAGS="-s"
 
+if [ ! -z "$2" ]; then
+    MAIM_FLAGS="$MAIM_FLAGS -d $2"
+fi
+
 if [ "$1" = "clip" ]; then
     maim $MAIM_FLAGS | xclip -sel clip -t image/png
     exit 0
