@@ -18,7 +18,7 @@ elif [ "$1" = "tabletmirror" ]; then
 elif [ "$1" = "notablet" ]; then
     xrandr --output $SCREEN_TABLET --off
 elif [ -z "$1"]; then
-    xrandr --output $SCREEN_RIGHT --auto --mode 1920x1080 -r 60 --primary --right-of $SCREEN_LEFT
+    xrandr --output $SCREEN_RIGHT --auto --mode 2560x1440 -r 120 --primary --right-of $SCREEN_LEFT
     xrandr --output $SCREEN_LEFT --auto --mode 1920x1080 -r 60 --left-of $SCREEN_RIGHT
 fi
 
