@@ -28,7 +28,7 @@ c.tabs.new_position.stacking = True
 
 # Tab bar.
 c.tabs.position = "left"
-c.tabs.width = "10%"
+c.tabs.width = "13%"
 c.colors.tabs.bar.bg = "#160f1f"
 c.colors.tabs.odd.bg = "#393344"
 c.colors.tabs.even.bg = "#524c5e"
