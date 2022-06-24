@@ -157,6 +157,7 @@ let g:coc_global_extensions = [
 \ 'coc-java',
 \ 'coc-rust-analyzer',
 \ 'coc-omnisharp',
+\ 'coc-vimtex',
 \ ]
 
 call plug#begin('~/.config/nvim/plugged')
