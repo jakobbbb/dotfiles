@@ -6,7 +6,7 @@ SCREEN_LEFT=DP-2
 SCREEN_RIGHT=DP-3
 SCREEN_TABLET=HDMI-1
 
-TABLET_STYLUS=`xinput | grep "Tablet Monitor Pen stylus" | sed -e "s/.*id=\(..\).*/\1/g"`
+TABLET_STYLUS=`xinput | grep "Tablet Monitor stylus" | sed -e "s/.*id=\(..\).*/\1/g"`
 TABLET=`xinput | grep 'Tablet Monitor Pad pad' | sed -e "s/.*id=\(..\).*/\1/g"`
 
 
@@ -25,7 +25,7 @@ fi
 if [[ $1 = tablet* ]]; then
     xrandr --dpi 96
     xinput map-to-output $TABLET_STYLUS $SCREEN_TABLET
-    xinput set-prop $TABLET_STYLUS "Wacom Tablet Area" -89, 193, 58641, 32793
+    #xinput set-prop $TABLET_STYLUS "Wacom Tablet Area" -89, 193, 58641, 32793
 fi
 
 xrdb ~/.Xresources
