@@ -25,7 +25,7 @@ fi
 if [[ $1 = tablet* ]]; then
     xrandr --dpi 96
     xinput map-to-output $TABLET_STYLUS $SCREEN_TABLET
-    #xinput set-prop $TABLET_STYLUS "Wacom Tablet Area" -89, 193, 58641, 32793
+    xinput set-prop $TABLET_STYLUS "Wacom Tablet Area" -283, 406, 32495, 32830
 fi
 
 xrdb ~/.Xresources
