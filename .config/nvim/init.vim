@@ -118,6 +118,9 @@ noremap <ScrollWheelRight> <nop>
 noremap <S-ScrollWheelRight> <nop>
 noremap <C-ScrollWheelRight> <nop>
 
+" disable mouse
+set mouse=c
+
 " last file
 nnoremap <silent> <leader>e :e#<CR>
 
