@@ -2,9 +2,9 @@
 
 set -x
 
-SCREEN_LEFT=DP-2
-SCREEN_RIGHT=DP-3
-SCREEN_TABLET=HDMI-1
+SCREEN_LEFT=DisplayPort-1
+SCREEN_RIGHT=DisplayPort-2
+SCREEN_TABLET=HDMI-A-0
 
 TABLET_STYLUS=`xinput | grep "Tablet Monitor stylus" | sed -e "s/.*id=\(..\).*/\1/g"`
 TABLET=`xinput | grep 'Tablet Monitor Pad pad' | sed -e "s/.*id=\(..\).*/\1/g"`

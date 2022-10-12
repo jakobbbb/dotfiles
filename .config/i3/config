@@ -105,8 +105,8 @@ bindsym $mod+a focus parent
 bindsym $mod+Tab exec --no-startup-id exec rofi -show window
 
 # workspaces
-set $screen_primary "DP-3"
-set $screen_secondary "DP-2"
+set $screen_primary "DisplayPort-2"
+set $screen_secondary "DisplayPort-1"
 workspace 1 output $screen_primary
 workspace 2 output $screen_primary
 workspace 3 output $screen_primary
@@ -127,7 +127,7 @@ workspace 7:G output $screen_secondary
 workspace 8:H output $screen_secondary
 workspace 9:I output $screen_secondary
 workspace 0:J output $screen_secondary
-workspace T output "HDMI-0"
+workspace T output "HDMI-A-0"
 
 # switch to workspace
 bindsym $mod+1 workspace 1
