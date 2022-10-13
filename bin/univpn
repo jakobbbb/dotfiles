@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+echo -n "Username: "
+read VPN_USR
+echo -n "Password: "
+read -s VPN_PWD
+echo
+
+sudo openconnect vpngate.uni-weimar.de --authgroup 'TUNNEL(GROUP)' -u $VPN_USR --passwd-on-stdin <<< $VPN_PWD
