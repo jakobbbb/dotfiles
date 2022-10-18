@@ -1,0 +1,12 @@
+[Unit]
+Description=Run redshift after waking up from hibernate or suspend
+After=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
+
+
+[Service]
+ExecStart=/home/jakob/.config/i3/custom.d/010-redshift.sh
+User=jakob
+Environment=DISPLAY=:0
+
+[Install]
+WantedBy=suspend.target hibernate.target hybrid-sleep.target suspend-then-hibernate.target
