@@ -2,5 +2,5 @@
 
 set -x
 
-cd ~/uni/$1/n*
-nvim +VimtexCompile *notes*.tex
+(cd ~/uni/$1/n* && nvim +VimtexCompile *notes*.tex) \
+ || (cd ~/uni/$1/overview && nvim +VimtexCompile *overview*.tex)
