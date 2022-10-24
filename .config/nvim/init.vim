@@ -168,7 +168,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf.vim'
 Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'v0.0.81', 'do': 'yarn install --frozen-lockfile'}
 "Plug 'OmniSharp/omnisharp-vim'
 Plug 'tikhomirov/vim-glsl'
 Plug 'vim-airline/vim-airline'
