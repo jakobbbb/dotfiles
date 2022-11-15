@@ -9,3 +9,4 @@ xdg-mime default mpv.desktop video/x-matroska
 xdg-mime default mpv.desktop video/mp4
 xdg-mime default org.gnome.eog.desktop image/png
 xdg-mime default org.gnome.eog.desktop image/jpeg
+xdg-mime default thunar.desktop inode/directory
