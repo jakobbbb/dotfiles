@@ -2,5 +2,19 @@
 
 set -x
 
-(cd ~/uni/$1/n* && nvim +VimtexCompile +"set spell" *notes*.tex) \
- || (cd ~/uni/$1/overview && nvim +VimtexCompile +"set spell" *overview*.tex)
+DIR_NOTES=~/uni/$1/n*
+DIR_OVERVIEW=~/uni/$1/overview
+
+if [ -d "$DIR_NOTES" ]; then
+  cd "$DIR_NOTES"
+  nvim +VimtexCompile +"set spell" *notes*.tex
+elif [ -d "$DIR_OVERVIEW" ]; then
+  cd "$DIR_OVERVIEW"
+  nvim +VimtexCompile +"set spell" *overview*.tex
+else
+  echo "No directory found for $1."
+  exit 1
+fi
+
+git add .
+git commit .
