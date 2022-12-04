@@ -1,0 +1,29 @@
+function read_password ( account )
+	local command = "pass " .. account
+	local handle = io.popen(command)
+	local result = handle:read("*a")
+	handle:close()
+
+	result = string.gsub(result, "\n*$", '')
+
+	return result
+end
+
+options.create       = true
+options.certificates = true
+options.starttls     = true
+options.close        = true
+options.timeout      = 60
+
+uni = IMAP {
+	server       = 'mail.uni-weimar.de',
+	username     = 'XXXXXX',
+	password     = read_password('XXXXXX'),
+	ssl          = 'auto'
+}
+uni_last_seen      = uni["INBOX"]:is_newer(30)
+
+filtered                = uni_last_seen
+filtered                = uni_last_seen:contain_from("XXXXXX")
+filtered:mark_seen()
+filtered:move_messages(uni["filtered"])
