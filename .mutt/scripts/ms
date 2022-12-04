@@ -15,13 +15,13 @@ if [ "$1" = "unread" ]; then
 elif [ "$1" = "today" ]; then
     today && exit
 elif [ -z "$1" ]; then
+    imapfilter
     mbsync -a
-    imapfilter
 elif [ -z "$2" ] && [ -f "~/mail/$1" ]; then
+    imapfilter
     mbsync "$1"
-    imapfilter
 else
-    mbsync "$@"
     imapfilter
+    mbsync "$@"
 fi
 [ $? -eq 0 ] && unread
