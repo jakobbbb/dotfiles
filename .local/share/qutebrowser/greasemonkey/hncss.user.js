@@ -11,7 +11,7 @@
 // @version       0.20181013223425
 // ==/UserScript==
 (() => {let css = `
-body  { font-family:Verdana, Geneva, sans-serif; font-size:10pt; color:#7d7d7d; background-color:black;}
+body  { font-family:Verdana, Geneva, sans-serif; font-size:10pt; color:#7d7d7d; background-color:black; zoom: 160%;}
 td    { font-family:Verdana, Geneva, sans-serif; font-size:10pt; color:#7d7d7d; }
 table#hnmain { background-color:#16160f }
 #hnmain > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > table:nth-child(1) {  background-color:#572300; }
