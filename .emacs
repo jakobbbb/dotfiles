@@ -17,9 +17,16 @@
  ;; If there is more than one, they won't work right.
  '(trailing-whitespace ((t (:underline "color-242")))))
 (setq frame-background-mode 'dark)
+;; Download Evil
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
 (require 'evil)
 (evil-mode 1)
+(unless (package-installed-p 'evil-org)
+  (package-install 'evil-org))
 (require 'evil-org)
+(unless (package-installed-p 'key-chord)
+  (package-install 'key-chord))
 (require 'key-chord)
 (key-chord-mode 1)
 (key-chord-define evil-insert-state-map "jk" 'evil-normal-state)
