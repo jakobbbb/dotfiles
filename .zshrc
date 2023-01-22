@@ -131,7 +131,7 @@ tablet() {
 }
 wy () {
     export WY_OPT=$1
-    source ~/bin/yubi.source
+    source ~/bin/yk.source
 }
 
 #setopt autolist
