@@ -129,6 +129,10 @@ tablet() {
     fi
     ~/.config/i3/custom.avail/010-redshift.sh
 }
+wy () {
+    export WY_OPT=$1
+    source ~/bin/yubi.source
+}
 
 #setopt autolist
 #unsetopt menucomplete

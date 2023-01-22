@@ -1,0 +1,7 @@
+if [ "$WY_OPT" = "pin" ]; then
+    pass -c webis/yubi/pin
+else
+    eval $(ssh-agent)
+    gpg-connect-agent updatestartuptty /bye
+    eval $(webis yk ssh connect-agent)
+fi
