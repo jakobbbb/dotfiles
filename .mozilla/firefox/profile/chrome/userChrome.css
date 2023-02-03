@@ -1,10 +1,7 @@
-@namespace xul url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 /*Remove Greasemonkey status bar icon*/
 #status-bar #gm-status {
 display: none !important;
 }
-
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /*
  * CONFIG FOR NICER USE OF TREESTYLETABS ON FIREFOX QUANTUM
