@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+set_browser() {
+	xdg-settings set default-web-browser $1
+	echo "Set default browser to $1."
+}
+
+case $1 in
+qu | qute | qutebrowser)
+	set_browser org.qutebrowser.qutebrowser.desktop
+	;;
+ff | firefox)
+	set_browser firefox.desktop
+	;;
+ch | chrome | chromium)
+	set_browser chromium.desktop
+	;;
+*)
+	echo "Unknown browser '$1'."
+	exit 1
+	;;
+esac
