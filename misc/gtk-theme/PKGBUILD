@@ -7,7 +7,7 @@
 pkgbase=arc-gtk-theme-git
 _pkgname=arc-theme
 pkgname=('arc-gtk-theme-git' 'arc-solid-gtk-theme-git')
-pkgver=20220405.r43.ga76102bb
+pkgver=20221218.r0.g3fd4786f
 pkgrel=1
 pkgdesc="A flat theme suite with transparent elements."
 arch=('any')
