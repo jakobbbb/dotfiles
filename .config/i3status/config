@@ -20,8 +20,7 @@ order += "path_exists VPN"
 order += "memory"
 order += "load"
 order += "cpu_usage"
-order += "cpu_temperature 0"
-order += "cpu_temperature 1"
+order += "cpu_temperature 2"
 order += "volume master"
 order += "tztime local"
 
@@ -66,13 +65,9 @@ cpu_usage {
             format = "cpu %usage"
 }
 
-cpu_temperature 0 {
-            format = "c %degrees°C"
-            path = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon1/temp1_input"
-}
-cpu_temperature 1 {
-            format = "g %degrees°C"
-            path = "/sys/class/drm/card?/device/hwmon/hwmon*/temp1_input"
+cpu_temperature 2 {
+            format = "%degrees°C"
+
 }
 volume master {
             format = "♪ %volume"
