@@ -157,7 +157,6 @@ endif
 
 let g:coc_global_extensions = [
 \ 'coc-pyright',
-\ 'coc-java',
 \ 'coc-rust-analyzer',
 \ 'coc-omnisharp',
 \ 'coc-vimtex',
