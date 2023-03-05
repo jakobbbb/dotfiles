@@ -135,7 +135,7 @@ if has("autocmd")
     autocmd FileType scss setlocal ts=2 sw=2 et tw=72 omnifunc=csscomplete#CompleteCSS
     autocmd FileType javascript setlocal ts=2 sw=2 tw=72 et
     autocmd FileType cpp setlocal ts=2 sw=2 tw=80 et
-    autocmd FileType c setlocal ts=4 sw=4 et
+    autocmd FileType c setlocal ts=2 sw=2 tw=80 et
     autocmd FileType cs setlocal ts=4 sw=4 et tw=120
     autocmd FileType cpp setlocal ts=4 sw=4 et
     autocmd FileType ada setlocal ts=3 sw=3 et
@@ -245,7 +245,7 @@ function! ClangFormatOnSave()
     py3f /usr/share/clang/clang-format.py
   endif
 endfunction
-autocmd BufWritePre *.h,*.cc,*.cpp,*.hpp call ClangFormatOnSave()
+autocmd BufWritePre *.c,*.h,*.cc,*.cpp,*.hpp call ClangFormatOnSave()
 
 highlight Pmenu ctermbg=0 ctermfg=15
 highlight NormalFloat ctermbg=0 ctermfg=15
