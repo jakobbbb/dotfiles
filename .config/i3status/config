@@ -15,11 +15,8 @@ order += "read_file mensa"
 #order += "ipv6"
 order += "disk /"
 order += "ethernet _first_"
-<<<<<<< HEAD
-order += "path_exists VPN"
-=======
 order += "wireless _first_"
->>>>>>> 96bdbef (i3status: Enable wireless)
+order += "path_exists VPN"
 #order += "battery all"
 order += "memory"
 order += "load"
