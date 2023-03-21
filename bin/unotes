@@ -2,7 +2,7 @@
 
 set -x
 
-DIR_NOTES=~/uni/$1/n*
+DIR_NOTES=~/uni/$1/n
 DIR_OVERVIEW=~/uni/$1/overview
 
 if [ -d "$DIR_NOTES" ]; then
