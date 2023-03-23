@@ -4,6 +4,11 @@ set -x
 
 DIR_NOTES=~/uni/$1/n
 DIR_OVERVIEW=~/uni/$1/overview
+SLIDES=~/uni/$1/v/slides.pdf
+
+if [ "$2" = "s" ]; then
+  zathura $SLIDES &
+fi
 
 if [ -d "$DIR_NOTES" ]; then
   cd "$DIR_NOTES"
