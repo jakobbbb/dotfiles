@@ -3,7 +3,7 @@ if [ -x "$(command -v ruby)" ]; then
     export GEM_BIN="$GEM_HOME/bin:"
 fi
 # If you come from bash you might have to change your $PATH.
-export PATH=/opt/rocm/hip/bin:$PATH:$HOME/bin:$HOME/.cargo/bin:/usr/local/bin:$HOME/gocode/bin:$HOME/.local/bin:$GEM_BIN:/opt/rocm/bin/:$PATH
+export PATH=/opt/rocm/hip/bin:$HOME/bin:$HOME/.cargo/bin:/usr/local/bin:$HOME/gocode/bin:$HOME/.local/bin:$GEM_BIN:/opt/rocm/bin/:$PATH
 
 # Unbork HIP
 export HSA_OVERRIDE_GFX_VERSION=10.3.0
