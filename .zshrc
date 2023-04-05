@@ -136,6 +136,14 @@ wy () {
     export WY_OPT=$1
     source ~/bin/yk.source
 }
+vpn () {
+    sudo systemctl $2 openvpn-client@$1.service
+    if [ "$2" = "start" ]; then
+        pass -c vpn/$1
+        sudo systemd-tty-ask-password-agent --query
+        xclip -sel clip <<< ""
+    fi
+}
 
 #setopt autolist
 #unsetopt menucomplete
