@@ -160,6 +160,7 @@ ttf-fira-sans
 ttf-liberation
 ttf-opensans
 ttf-ubuntu-font-family
+tumbler
 ufw
 unrar
 unzip
