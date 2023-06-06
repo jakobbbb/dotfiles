@@ -196,6 +196,8 @@ bindsym Mod4+Shift+l exec "systemctl suspend"
 bindsym Mod4+l exec "i3lock -p win -i ~/Pictures/login_win.png"
 # Hibernate w/ WIN+Shift+H
 bindsym Mod4+Shift+h exec "systemctl hibernate"
+# Re-configure keyboard
+bindsym $meta+k exec "~/.config/i3/custom.d/005-keyboard.sh"
 
 
 # Pulse Audio controls
