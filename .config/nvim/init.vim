@@ -171,6 +171,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'v0.0.81', 'do': 'yarn install --frozen-loc
 "Plug 'OmniSharp/omnisharp-vim'
 Plug 'tikhomirov/vim-glsl'
 Plug 'vim-airline/vim-airline'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
 let g:OmniSharp_server_use_mono = 1
