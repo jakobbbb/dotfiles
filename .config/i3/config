@@ -350,5 +350,5 @@ client.background       #ffffff
 exec_always ~/.config/i3/custom.sh
 
 # floating windows
-for_window [class="Steam"] floating enable
+for_window [class="steam"] floating enable
 for_window [class="Pidgin"] floating enable
