@@ -121,6 +121,7 @@ mutt() { $MUTT -F ~/mail/$1/muttrc || $MUTT "$@" }
 alias ms="~/.mutt/scripts/ms"
 alias re="rem -cu+2b1mw\$COLUMNS"
 alias cal="calendar"
+alias xssh="TERM=xterm-256color ssh"
 pc () {
   fzf_query=""
   if [ ! -z "$1" ]; then fzf_query="--query"; fi
