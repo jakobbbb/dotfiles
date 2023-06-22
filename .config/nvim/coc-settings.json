@@ -27,6 +27,9 @@
     },
     "python.pythonPath": "python3",
     "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--ignore=E203,E266,E501,W503,F403,F401",
+    ],
     "python.linting.pydocstyleEnabled": false,
     "python.linting.pylintEnabled": false,
     "python.formatting.provider": "black",
