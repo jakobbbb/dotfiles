@@ -32,6 +32,8 @@ dunst
 emacs-nox
 eog
 evince
+fcitx5-breeze
+fcitx5-mozc-ut
 fd
 feh
 file
@@ -86,6 +88,7 @@ minted
 mono
 mono-msbuild
 mono-msbuild-sdkresolver
+mozc-ut
 mpv
 mutt
 neofetch
