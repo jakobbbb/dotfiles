@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+set -e
+
+function usage() {
+    echo "pdfimg <input.pdf> <page> <output.pdf> [invert]"
+}
+
+function main() {
+    input=$1
+    page=$2
+    output=$3
+    invert=$4
+    temp=/tmp/pdfimg.pdf
+
+    if [ -z $input ] || [ -z $page ] || [ -z $output ]; then
+        usage
+        exit 1
+    fi
+
+    pdftk $input cat $page output $output
+    inkscape $output
+
+    if [ ! -z $invert ]; then
+        output_png=$(sed -e "s/pdf$/png/" <<< $output)
+        convert -density 1200 $output -channel RGB -negate $output_png
+        rm $output
+    fi
+}
+
+main $@
