@@ -155,6 +155,7 @@ strace
 sudo
 tcpdump
 telegram-desktop
+texlive-binextra
 texlive-most
 thunar
 thunar-volman
