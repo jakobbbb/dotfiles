@@ -139,9 +139,9 @@ if has("autocmd")
     autocmd FileType cs setlocal ts=4 sw=4 et tw=100
     autocmd FileType cpp setlocal ts=4 sw=4 et
     autocmd FileType ada setlocal ts=3 sw=3 et
-    autocmd FileType tex setlocal ts=2 sw=2 tw=72 et
+    autocmd FileType tex setlocal ts=2 sw=2 tw=72 spell et
     autocmd FileType python setlocal ts=4 sw=4 tw=79 et
-    autocmd FileType markdown setlocal tw=72
+    autocmd FileType markdown setlocal tw=72 spell
 endif
 
 
