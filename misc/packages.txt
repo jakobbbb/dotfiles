@@ -34,6 +34,7 @@ emacs-nox
 eog
 evince
 fcitx5-breeze
+fcitx5-configtool
 fcitx5-mozc-ut
 fd
 feh
