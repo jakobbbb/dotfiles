@@ -13,8 +13,10 @@ TABLET=`xinput | grep 'Tablet Monitor Pad pad' | sed -e "s/.*id=\(..\).*/\1/g"`
 if [ "$1" = "tablet" ]; then
     xrandr --output $SCREEN_TABLET --auto
     xrandr --output $SCREEN_TABLET --below $SCREEN_RIGHT
+    ~/.fehbg
 elif [ "$1" = "tabletmirror" ]; then
     xrandr --output $SCREEN_TABLET --auto --same-as $2
+    ~/.fehbg
 elif [ "$1" = "notablet" ]; then
     xrandr --output $SCREEN_TABLET --off
 elif [ -z "$1"]; then
