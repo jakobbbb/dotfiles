@@ -183,6 +183,7 @@ texlive-publishers
 texlive-xetex
 thunar
 thunar-volman
+tmux
 ttf-fira-code
 ttf-fira-mono
 ttf-fira-sans
