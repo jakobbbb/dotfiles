@@ -10,3 +10,4 @@ xdg-mime default mpv.desktop video/mp4
 xdg-mime default org.gnome.eog.desktop image/png
 xdg-mime default org.gnome.eog.desktop image/jpeg
 xdg-mime default thunar.desktop inode/directory
+xdg-mime default mpv-open.desktop x-scheme-handler/mpv

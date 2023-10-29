@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+url=$(sed -e "s/^mpv/https/" <<< $1)
+mpv "$url"
