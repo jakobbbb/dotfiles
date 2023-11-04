@@ -5,7 +5,6 @@ export QT_QPA_PLATFORMTHEME=gtk2
 
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_ENABLE_HIGHDPI_SCALING=1
-export GDK_SCALE=2
 
 export XMODIFIERS=@im=fcitx
 export GTK_IM_MODULE=fcitx
