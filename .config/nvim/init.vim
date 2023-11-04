@@ -134,7 +134,7 @@ if has("autocmd")
     autocmd FileType css setlocal ts=2 sw=2 et tw=72 omnifunc=csscomplete#CompleteCSS
     autocmd FileType scss setlocal ts=2 sw=2 et tw=72 omnifunc=csscomplete#CompleteCSS
     autocmd FileType javascript setlocal ts=4 sw=4 tw=72 et
-    autocmd FileType cpp setlocal ts=4 sw=4 tw=80 et
+    autocmd FileType cpp setlocal ts=4 sw=4 tw=100 et
     autocmd FileType c setlocal ts=4 sw=4 tw=80 et
     autocmd FileType cs setlocal ts=4 sw=4 et tw=100
     autocmd FileType cpp setlocal ts=4 sw=4 et
