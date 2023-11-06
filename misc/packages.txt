@@ -70,7 +70,6 @@ irssi
 isync
 jdk-openjdk
 jq
-jre-openjdk
 kdenlive
 krita
 less
