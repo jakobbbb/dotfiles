@@ -24,10 +24,12 @@ function set_theme() {
         purple|jakob|iza)  # The default theme I've been using for years.
             wallpaper=~/git/wallpapers/iza4k.png
             terminal=~/.config/alacritty/themes/jakob.yml
+            i3=~/.config/i3/themes/purple.conf
             ;;
         autumn)
-            wallpaper=~/git/wallpapers/a0d6e0d7296e50c2ec72dd1e39c38ee0692f8a51_darker.png
+            wallpaper=~/git/wallpapers/eae003a0d5395a59e225328c3c8b2b470c92d95f_darker.jpg
             terminal=~/.config/alacritty/themes/kanagawa.yml
+            i3=~/.config/i3/themes/autumn.conf
             ;;
         *)
             echo "Theme '$theme' not found."
@@ -37,9 +39,15 @@ function set_theme() {
     esac
 
     feh --bg-fill $wallpaper
+
     ln -fs $terminal ~/.config/alacritty/themes/current_theme.yml
     # force reload (assuming live_config_reload: true)
     touch ~/.config/alacritty/alacritty.yml
+
+    ln -fs $i3 ~/.config/i3/themes/current.conf
+    i3-msg reload > /dev/null
+
+    echo "Set theme to '$theme' :)"
 }
 
 set_theme $1
