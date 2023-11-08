@@ -320,23 +320,23 @@ exec --no-startup-id dunst
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        position bottom 
-        status_command myi3status || i3status
-        strip_workspace_numbers yes
-        tray_output primary
-        colors {
-      background #200036
-      statusline #ffffff
-      separator  #5a4e68
-      focused_workspace  #4d2877 #4d2877 #ffffff
-      active_workspace   #5a4e68 #5a4e68 #1c0036
-      inactive_workspace #1e0742 #1c0036 #50485d
-      urgent_workspace   #dc2f71 #dc2f71 #fdf6e3
-        }
+    position bottom 
+    status_command myi3status || i3status
+    strip_workspace_numbers yes
+    tray_output primary
+    colors {
+        background #200036
+        statusline #ffffff
+        separator  #5a4e68
+        focused_workspace  #4d2877 #4d2877 #ffffff
+        active_workspace   #5a4e68 #5a4e68 #1c0036
+        inactive_workspace #1e0742 #1c0036 #50485d
+        urgent_workspace   #dc2f71 #dc2f71 #fdf6e3
+    }
 }
 
 
-# class                 border  backgr. text    indicator child_border
+# class                  border  backgr. text    indicator child_border
 client.focused           #5f2481 #5f2481 #ffffff #aa66f9   #602c90
 client.focused_inactive  #2f253b #2f253b #ffffff #51455d
 client.unfocused         #251a2e #251a2e #7a6b8b #312738
