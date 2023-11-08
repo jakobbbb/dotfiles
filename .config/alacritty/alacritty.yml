@@ -8,8 +8,9 @@
 #
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
-#import:
-#  - /path/to/alacritty.yml
+import:
+  - ~/.config/alacritty/themes/jakob.yml
+  - ~/.config/alacritty/themes/current_theme.yml  # symlink to switch themes
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -174,35 +175,6 @@ font:
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
-
-# Colors
-colors:
-  # Default colors
-  primary:
-    background: '0x0f0912'
-    foreground: '0xffffff'
-
-  # Normal colors
-  normal:
-    black:   '0x180024'
-    red:     '0xc21677'
-    green:   '0x439776'
-    yellow:  '0xc66f6f'
-    blue:    '0x478acc'
-    magenta: '0x986fb1'
-    cyan:    '0x2d8f86'
-    white:   '0xd6adef'
-
-  # Bright colors
-  bright:
-    black:   '0xa67ab5'
-    red:     '0xdb4383'
-    green:   '0x75ca79'
-    yellow:  '0xe5e95d'
-    blue:    '0x8299e2'
-    magenta: '0xd969e0'
-    cyan:    '0x7cc8c8'
-    white:   '0xfae9fd'
 
 # Bell
 #

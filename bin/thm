@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+
+function list_themes() {
+    theme_case=$(grep -zo "case \$theme.*esac" "$0" | tr "\0" "\n")
+    themes=$(grep -E "[^\*])" <<< "$theme_case")
+    echo "The following themes are available:"
+    while read -r theme; do
+        names=$(cut -d")" -f1 <<< "$theme" | tr "|" ",")
+        desc=$(cut -s -d"#" -f2 <<< "$theme")
+        echo -ne "\033[1m"  # bold
+        echo -n "  * "
+        echo -n "$names"
+        echo -ne "\033[0m"  # reset
+        [ ! -z "$desc" ] && echo -n ": $desc"
+        echo
+    done <<< $themes
+}
+
+function set_theme() {
+    theme=$1
+
+    case $theme in
+        purple|jakob|iza)  # The default theme I've been using for years.
+            wallpaper=~/git/wallpapers/iza4k.png
+            terminal=~/.config/alacritty/themes/jakob.yml
+            ;;
+        autumn)
+            wallpaper=~/git/wallpapers/a0d6e0d7296e50c2ec72dd1e39c38ee0692f8a51_darker.png
+            terminal=~/.config/alacritty/themes/kanagawa.yml
+            ;;
+        *)
+            echo "Theme '$theme' not found."
+            list_themes
+            exit 1
+            ;;
+    esac
+
+    feh --bg-fill $wallpaper
+    ln -fs $terminal ~/.config/alacritty/themes/current_theme.yml
+    # force reload (assuming live_config_reload: true)
+    touch ~/.config/alacritty/alacritty.yml
+}
+
+set_theme $1
