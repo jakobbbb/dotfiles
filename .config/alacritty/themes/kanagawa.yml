@@ -4,7 +4,7 @@
 colors:
   primary:
     background: '0x181616'
-    foreground: '0xc5c9c5'
+    foreground: '0xffffff'
 
   normal:
     black: '0x0d0c0c'
