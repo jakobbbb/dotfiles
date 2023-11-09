@@ -25,11 +25,13 @@ function set_theme() {
             wallpaper=~/git/wallpapers/iza4k.png
             terminal=~/.config/alacritty/themes/jakob.yml
             i3=~/.config/i3/themes/purple.conf
+            gtk_theme=Arc-Dark
             ;;
         autumn)
             wallpaper=~/git/wallpapers/eae003a0d5395a59e225328c3c8b2b470c92d95f_darker.jpg
             terminal=~/.config/alacritty/themes/kanagawa.yml
             i3=~/.config/i3/themes/autumn.conf
+            gtk_theme=BetterGruvbox
             ;;
         *)
             echo "Theme '$theme' not found."
@@ -46,6 +48,8 @@ function set_theme() {
 
     ln -fs $i3 ~/.config/i3/themes/current.conf
     i3-msg reload > /dev/null
+
+    echo "$gtk_theme" > /tmp/gtk_theme
 
     echo "Set theme to '$theme' :)"
 }
