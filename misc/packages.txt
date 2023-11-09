@@ -215,6 +215,7 @@ xorg-xinput
 xorg-xrandr
 xorg-xwininfo
 xsel
+yarn
 yt-dlp
 zathura
 zathura-pdf-poppler
