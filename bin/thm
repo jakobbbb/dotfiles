@@ -26,12 +26,18 @@ function set_theme() {
             terminal=~/.config/alacritty/themes/jakob.yml
             i3=~/.config/i3/themes/purple.conf
             gtk_theme=Arc-Dark
+            rofi_theme=/usr/share/rofi/themes/purple.rasi
+            gtk_3_conf=~/.config/gtk-3.0/purple.ini
+            gtk_2_rc=~/.config/gtk-2.0/autumn
             ;;
-        autumn)
+        autumn)  # gruvbox-based cozy theme :3
             wallpaper=~/git/wallpapers/eae003a0d5395a59e225328c3c8b2b470c92d95f_darker.jpg
             terminal=~/.config/alacritty/themes/kanagawa.yml
             i3=~/.config/i3/themes/autumn.conf
             gtk_theme=BetterGruvbox
+            rofi_theme=/usr/share/rofi/themes/gruvbox-dark.rasi
+            gtk_3_conf=~/.config/gtk-3.0/autumn.ini
+            gtk_2_rc=~/.config/gtk-2.0/autumn
             ;;
         *)
             echo "Theme '$theme' not found."
@@ -49,7 +55,13 @@ function set_theme() {
     ln -fs $i3 ~/.config/i3/themes/current.conf
     i3-msg reload > /dev/null
 
+    # set GTK_THEME via rofi (see i3 config)
     echo "$gtk_theme" > /tmp/gtk_theme
+    # also set gtk theme via configs
+    ln -fs $gtk_3_conf ~/.config/gtk-3.0/settings.ini
+    ln -fs $gtk_2_rc ~/.gtkrc-2.0
+
+    ln -fs $rofi_theme ~/.config/rofi/theme.rasi
 
     echo "Set theme to '$theme' :)"
 }

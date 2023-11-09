@@ -145,4 +145,4 @@ configuration {
   }
 }
 
-@theme "/usr/share/rofi/themes/purple.rasi"
+@theme "~/.config/rofi/theme.rasi"
