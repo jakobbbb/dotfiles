@@ -193,7 +193,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Lock and Suspend w/ WIN+Shift+L
 bindsym Mod4+Shift+l exec "systemctl suspend"
 # Lock w/ WIN+L
-bindsym Mod4+l exec "i3lock -p win -i ~/Pictures/login_win.png"
+bindsym Mod4+l exec "scrot /tmp/lock_u.jpg && convert /tmp/lock_u.jpg -blur 5x20 /tmp/lock.png && rm /tmp/lock_u.jpg && i3lock -i /tmp/lock.png"
 # Hibernate w/ WIN+Shift+H
 bindsym Mod4+Shift+h exec "systemctl hibernate"
 # Re-configure keyboard
