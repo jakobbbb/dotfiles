@@ -6,6 +6,7 @@ barrier
 base
 base-devel
 bash
+bettergruvbox-gtk-theme
 biber
 bind
 blender
