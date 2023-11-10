@@ -39,7 +39,13 @@ function set_theme() {
             rofi_theme=/usr/share/rofi/themes/gruvbox-dark.rasi
             gtk_3_conf=~/.config/gtk-3.0/autumn.ini
             gtk_2_rc=~/.config/gtk-2.0/autumn
-            redshift_temperature=5400
+            if [ "$(hostname)" = "neon" ]; then
+                redshift_temperature=4600
+            else
+                redshift_temperature=5400
+            fi
+            echo $redshift_temperature
+            echo $HOST
             ;;
         *)
             echo "Theme '$theme' not found."
