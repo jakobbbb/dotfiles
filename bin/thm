@@ -69,7 +69,7 @@ function set_theme() {
     i3-msg reload > /dev/null
 
     # set GTK_THEME via rofi (see i3 config)
-    echo "$gtk_theme" > /tmp/gtk_theme
+    echo "$gtk_theme" > $XDG_CONFIG_HOME/thm/gtk_theme
     # also set gtk theme via configs
     ln -fs $gtk_3_conf ~/.config/gtk-3.0/settings.ini
     ln -fs $gtk_2_rc ~/.gtkrc-2.0
