@@ -8,7 +8,13 @@ I use a version of Arc-Dark that I've patched to be a dark purple.
 
 ![screenshot](https://gist.githubusercontent.com/jakobbbb/59c7330f0bc29ebef697bb40e421349f/raw/theme.png)
 
-To install using, navigate to `misc/gtk-theme` and run `makepkg -scfi`.
+To install, navigate to `misc/gtk-theme` and run `makepkg -scfi`.
+
+There's also another theme for rainy days in November:
+
+![screenshot](https://gist.githubusercontent.com/jakobbbb/59c7330f0bc29ebef697bb40e421349f/raw/autumn.png)
+
+(activated with `thm autumn`)
 
 ## deploy
 Run `./deploy.py` to symlink the dotfiles.
