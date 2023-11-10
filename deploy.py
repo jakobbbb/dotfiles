@@ -1,12 +1,17 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
-from __future__ import print_function
 import os
-import subprocess
-from sys import argv
+import textwrap
+from enum import Enum
+from collections import Counter
 
-# files with this prefix are symlinked
-deploy = (
+DeployStatus = Enum(
+    "DeployStatus", ["AlreadyGood", "MovedOriginal", "CreatedNew", "Failure"]
+)
+
+
+# These files/directories will be deployed.
+DEPLOY_FILES = (
     ".Xresources",
     ".config",
     ".emacs",
@@ -23,36 +28,16 @@ deploy = (
     ".zsh",
     "bin",
 )
-if len(argv) > 1:
-    deploy_custom = set(argv[1:])
-    deploy = tuple(deploy_custom.intersection(deploy))
-    if len(deploy) == 0:
-        print("Nothing to deploy, goodbye.")
-        exit(0)
-    print(
-        "Limiting deployment to files with paths starting with: %s"
-        % "".join(deploy)
-    )
 
 HOMEDIR = os.path.expanduser("~") + "/"
-DOTFILEDIR = os.getcwd() + "/"
-
-no_errors = True
+DOTFILEDIR = os.path.dirname(os.path.realpath(__file__))
 
 
-def execute(cmd):
-    global no_errors
-    try:
-        subprocess.check_call(cmd)
-    except Exception as e:
-        no_errors = False
-        print(":(", e)
-
-
-def getFFprofile():
-    # Read FF's profiles.ini to find active FF profile
-    # (used for deploying userChrome.css)
-    global no_errors
+def get_firefox_profile():
+    """
+    Used for deploying userChrome.
+    """
+    default_profile = None
     try:
         with open(HOMEDIR + ".mozilla/firefox/profiles.ini", "r") as f:
             for line in f.read().splitlines():
@@ -64,6 +49,9 @@ def getFFprofile():
                         if key == "Default":
                             default_profile = value
                             break
+        if default_profile is None:
+            print(":| Firefox profile not found")
+            return False
         path = HOMEDIR + ".mozilla/firefox/" + default_profile
         if os.path.exists(
             path + "/extensions/treestyletab@piro.sakura.ne.jp.xpi"
@@ -75,44 +63,80 @@ def getFFprofile():
             return False
     except Exception as e:
         print(":( (FF)", e)
-        no_errors = False
         return False
 
 
-for root, dirs, files in os.walk(".", topdown=True):
-    for name in files:
-        file_name = os.path.join(root, name)  # starts with ./
-        file_short = file_name[2:]  # ./ removed
-        root_short = root[2:]  # ./ removed
+def deploy_file(source, target):
+    status = DeployStatus.CreatedNew
+    target_dir = os.path.dirname(target)
 
-        do_deploy = True  # assume file is to be symlinked
+    if os.path.lexists(target):
+        if os.path.realpath(target) == os.path.realpath(source):
+            status = DeployStatus.AlreadyGood
+            return status
+        else:
+            target_bak = target + ".bak"
+            print(
+                f"Warning: File '{target}' exists, "
+                "but is not the correct symlink. "
+            )
+            print(f"    should be: {source}")
+            print(f"    but it is: {os.path.realpath(target)}")
+            os.rename(target, target_bak)
+            status = DeployStatus.MovedOriginal
+    elif not os.path.exists(target_dir):
+        os.makedirs(target_dir)
 
-        if file_short.startswith(deploy):  # in whitelist?
+    os.symlink(source, target)
+    return status
 
-            if file_short.startswith(".mozilla"):  # special FF target
-                FFprofile = getFFprofile()
-                if FFprofile:
-                    target = HOMEDIR + file_short.replace("profile", FFprofile)
-                    root_short = root_short.replace("profile", FFprofile)
+
+def print_deploy_error(source, target, error):
+    print("Error while deploying:")
+    print(f"    source: {source}")
+    print(f"    target: {target}")
+    print(textwrap.indent(str(error), "    "))
+    print()
+
+
+def main():
+    stats = []
+    os.chdir(DOTFILEDIR)
+    for root, _, files in os.walk(".", topdown=True):
+        for name in files:
+            file_name = os.path.join(root, name)  # starts with ./
+            file_short = file_name[2:]  # ./ removed
+            root_short = root[2:]  # ./ removed
+            target = None
+            source = os.path.join(DOTFILEDIR, file_short)
+            target = os.path.join(HOMEDIR, file_short)
+
+            if not file_short.startswith(DEPLOY_FILES):
+                continue
+
+            if file_short.startswith(".mozilla"):
+                firefox_profile = get_firefox_profile()
+                if firefox_profile:
+                    target = target.replace("profile", firefox_profile)
+                    root_short = root_short.replace("profile", firefox_profile)
                 else:
-                    do_deploy = False
-            else:  # default target
-                target = HOMEDIR + file_short
+                    stats.append(DeployStatus.Failure)
+                    print_deploy_error(
+                        source, target, "Could not find Firefox profile"
+                    )
+                    continue
 
-            if os.path.exists(target):  # target file exists?
-                if (
-                    os.path.realpath(target) == DOTFILEDIR + file_short
-                ):  # is already properly symlinked?
-                    do_deploy = False
-            elif not os.path.exists(
-                HOMEDIR + root_short
-            ):  # parent folder doesn't exist?
-                execute(["mkdir", "--parents", HOMEDIR + root_short])
+            try:
+                result = deploy_file(source, target)
+                stats.append(result)
+            except Exception as e:
+                print_deploy_error(source, target, e)
 
-            if do_deploy:
-                execute(["ln", "-sr", DOTFILEDIR + file_short, target])
+    for status, n in Counter(stats).most_common():
+        o = len(DeployStatus.__name__) + 1
+        print(f"{str(status)[o:]}: {n} files")
+    print("Deployed dotfiles :3")
 
-if no_errors:
-    print(":) Sucessfully deployed dotfiles!")
-else:
-    print(":/ Some things went wrong")
+
+if __name__ == "__main__":
+    main()
