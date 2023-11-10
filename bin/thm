@@ -28,7 +28,7 @@ function set_theme() {
             gtk_theme=Arc-Dark
             rofi_theme=/usr/share/rofi/themes/purple.rasi
             gtk_3_conf=~/.config/gtk-3.0/purple.ini
-            gtk_2_rc=~/.config/gtk-2.0/autumn
+            gtk_2_rc=~/.config/gtk-2.0/purple
             ;;
         autumn)  # gruvbox-based cozy theme :3
             wallpaper=~/git/wallpapers/eae003a0d5395a59e225328c3c8b2b470c92d95f_darker.jpg
