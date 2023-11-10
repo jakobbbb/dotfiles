@@ -51,7 +51,6 @@ gimp
 git
 git-lfs
 github-cli
-github-cli
 gnome-themes-extra
 gnu-netcat
 gnupg
