@@ -48,7 +48,7 @@ function set_theme() {
             ;;
     esac
 
-    $cfg_dir = $XDG_CONFIG_HOME/thm/
+    cfg_dir=$XDG_CONFIG_HOME/thm/
     mkdir -p $cfg_dir
     echo $theme > $cfg_dir/theme
     echo $redshift_temperature > $cfg_dir/redshift_temperature
