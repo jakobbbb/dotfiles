@@ -71,6 +71,7 @@ isync
 jdk-openjdk
 jq
 kdenlive
+kernel-modules-hook
 krita
 less
 libreoffice-fresh
