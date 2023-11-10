@@ -1,0 +1,11 @@
+tui enable
+set debuginfod enabled off
+define hook-next
+  refresh
+end
+set auto-load safe-path ~/git
+
+# project-specific stuff
+define luca
+  r ../../assets/luca.bvh
+end
