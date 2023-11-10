@@ -106,6 +106,7 @@ noto-fonts-emoji
 npm
 ntfs-3g
 ntp
+openconnect
 openmp
 openssh
 openvpn
