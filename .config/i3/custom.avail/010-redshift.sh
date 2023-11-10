@@ -2,8 +2,6 @@
 
 TEMPERATURE=3400
 
-echo $1
-
 if [ ! -z "$1" ]; then
     TEMPERATURE=$1
 else
@@ -13,7 +11,7 @@ else
     fi
 fi
 
-redshift -PO $TEMPERATURE
+redshift -PO $TEMPERATURE > /dev/null
 
 # No redshift on tablet
 TABLET=`xrandr --listactivemonitors | grep HDMI- | cut -d: -f1 | sed -e 's/ //g'`

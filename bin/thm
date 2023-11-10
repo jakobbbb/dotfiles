@@ -44,8 +44,6 @@ function set_theme() {
             else
                 redshift_temperature=5400
             fi
-            echo $redshift_temperature
-            echo $HOST
             ;;
         *)
             echo "Theme '$theme' not found."
