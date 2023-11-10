@@ -29,6 +29,7 @@ function set_theme() {
             rofi_theme=/usr/share/rofi/themes/purple.rasi
             gtk_3_conf=~/.config/gtk-3.0/purple.ini
             gtk_2_rc=~/.config/gtk-2.0/purple
+            redshift_temperature=3800
             ;;
         autumn)  # gruvbox-based cozy theme :3
             wallpaper=~/git/wallpapers/eae003a0d5395a59e225328c3c8b2b470c92d95f_darker.jpg
@@ -38,6 +39,7 @@ function set_theme() {
             rofi_theme=/usr/share/rofi/themes/gruvbox-dark.rasi
             gtk_3_conf=~/.config/gtk-3.0/autumn.ini
             gtk_2_rc=~/.config/gtk-2.0/autumn
+            redshift_temperature=5400
             ;;
         *)
             echo "Theme '$theme' not found."
@@ -45,6 +47,11 @@ function set_theme() {
             exit 1
             ;;
     esac
+
+    $cfg_dir = $XDG_CONFIG_HOME/thm/
+    mkdir -p $cfg_dir
+    echo $theme > $cfg_dir/theme
+    echo $redshift_temperature > $cfg_dir/redshift_temperature
 
     feh --bg-fill $wallpaper
 
@@ -62,6 +69,8 @@ function set_theme() {
     ln -fs $gtk_2_rc ~/.gtkrc-2.0
 
     ln -fs $rofi_theme ~/.config/rofi/theme.rasi
+
+    ~/.config/i3/custom.avail/010-redshift.sh $redshift_temperature
 
     echo "Set theme to '$theme' :)"
 }
