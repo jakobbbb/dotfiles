@@ -59,6 +59,7 @@ gtk-engine-murrine
 htop
 hunspell-en_US
 i3-gaps
+i3lock-color
 i3status
 imagemagick
 imapfilter
