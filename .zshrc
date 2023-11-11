@@ -165,6 +165,8 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git -i'
 
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
 
+export GNUMAKEFLAGS=-j$(getconf _NPROCESSORS_ONLN)
+
 if [ -f "$XDG_CONFIG_HOME/thm/gtk_theme" ]; then
   export GTK_THEME=$(cat "$XDG_CONFIG_HOME/thm/gtk_theme")
 fi
