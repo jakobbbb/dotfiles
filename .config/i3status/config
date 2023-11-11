@@ -72,7 +72,7 @@ cpu_temperature 0 {
 }
 cpu_temperature 1 {
             format = "g %degrees°C"
-            path = "/sys/class/drm/card0/device/hwmon/hwmon*/temp1_input"
+            path = "/sys/class/drm/card?/device/hwmon/hwmon*/temp1_input"
 }
 volume master {
             format = "♪ %volume"
