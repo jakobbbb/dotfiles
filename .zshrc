@@ -116,7 +116,7 @@ alias vim="nvim"
 MUTT=$(which mutt)
 mutt() { $MUTT -F ~/mail/$1/muttrc || $MUTT "$@" }
 alias ms="~/.mutt/scripts/ms"
-alias re="rem -cu+2b1mw\$COLUMNS"
+alias re="rem -cu+3b1mw\$COLUMNS"
 alias cal="calendar"
 alias xssh="TERM=xterm-256color ssh"
 pc () {
