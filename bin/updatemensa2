@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+
+import requests
+from typing import List
+from enum import Enum
+from dataclasses import dataclass, field
+import datetime
+from bs4 import BeautifulSoup
+import operator
+from functools import reduce
+
+
+@dataclass
+class CanteenInfo:
+    id: int
+    icon: str
+
+
+class Canteen(Enum):
+    MENSA_AM_PARK = CanteenInfo(77, "P")
+    CAFETERIA_SCHWANSEESTRASSE = CanteenInfo(80, "S")
+
+
+class MealCategory(Enum):
+    Vegan = 0
+    Vegetarian = 1
+    Fish = 2
+    Meat = 3
+
+    @staticmethod
+    def from_string(s: str):
+        if "Vegan" in s:
+            return MealCategory.Vegan
+        elif "Vegetarisch" in s:
+            return MealCategory.Vegetarian
+        elif "Fisch" in s:
+            return MealCategory.Fish
+        return MealCategory.Meat
+
+
+@dataclass
+class Meal:
+    name: str
+    price: str
+    category: MealCategory
+    canteens: List[Canteen] = field(default_factory=list)
+
+    def __str__(self):
+        r = f"{self.name} {self.price} "
+        for c in self.canteens:
+            r += c.value.icon
+        return r
+
+
+BASE_URL = "https://www.stw-thueringen.de/xhr/loadspeiseplan.html"
+
+
+def get_meals(canteen: Canteen, date: datetime.date):
+    params = {
+        "resources_id": canteen.value.id,
+        "date": date.strftime("%d.%m.%Y"),
+    }
+    html = requests.post(BASE_URL, data=params).text
+
+    soup = BeautifulSoup(html, "html.parser")  # mmhhh soup
+    meals = []
+    for container in soup.find_all("div", class_="rowMealInner"):
+        name = container.find("div", class_="mealText").text.strip()
+        price = container.find("div", class_="mealPreise").text.strip()
+        price = price.split(" / ")[0].replace(",", ".")
+        category = container.find("img", class_="splIconMeal")["alt"]
+        category = MealCategory.from_string(category)
+        meal = Meal(name, price, category, [canteen])
+        meals.append(meal)
+    return meals
+
+
+def merge_meal_lists(*meal_lists):
+    mm = {}
+    for m in reduce(operator.concat, meal_lists):
+        if type(m) is not Meal:
+            continue
+        if m.name not in mm.keys():
+            mm[m.name] = []
+        mm[m.name].append(m)
+
+    for k, v in mm.items():
+        if len(v) > 1:
+            canteens = [m.canteens[0] for m in v]
+            v[0].canteens = canteens
+            mm[k] = [v[0]]
+    return [i[0] for i in mm.values()]
+
+
+def meal_filter(meal: Meal) -> bool:
+    return meal.category.value <= MealCategory.Fish.value
+
+
+def main():
+    mensadate = datetime.datetime.now() + datetime.timedelta(hours=10)
+    meals_park = get_meals(Canteen.MENSA_AM_PARK, mensadate)
+    meals_swan = get_meals(Canteen.CAFETERIA_SCHWANSEESTRASSE, mensadate)
+    meals = merge_meal_lists(meals_park, meals_swan)
+    meals = filter(meal_filter, meals)
+
+    meal_string = " / ".join([str(meal) for meal in meals])
+
+    with open("/tmp/mensa", "w+") as f:
+        f.write(meal_string)
+
+
+if __name__ == "__main__":
+    exit(main())
