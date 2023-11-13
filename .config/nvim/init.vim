@@ -182,8 +182,9 @@ let g:OmniSharp_server_use_mono = 1
 """ FZF
 nnoremap <silent> <leader>f :GFiles<CR>
 nnoremap <silent> <leader>F :Files<CR>
+nnoremap <silent> <leader>m :!tmux send-keys "clear; make run-vk" Enter<CR><CR>
 
-""" UltiSnips
+"" UltiSnips
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
