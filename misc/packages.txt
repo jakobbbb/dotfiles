@@ -34,9 +34,12 @@ dunst
 emacs-nox
 eog
 evince
+fcitx5
 fcitx5-breeze
 fcitx5-configtool
+fcitx5-gtk
 fcitx5-mozc-ut
+fcitx5-qt
 fd
 feh
 file
