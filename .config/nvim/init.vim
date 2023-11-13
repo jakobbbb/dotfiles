@@ -201,6 +201,7 @@ let g:OmniSharp_server_use_mono = 1
 """ FZF
 nnoremap <silent> <leader>f :GFiles<CR>
 nnoremap <silent> <leader>F :Files<CR>
+nnoremap <silent> <leader>m :!tmux send-keys "clear; make run-vk" Enter<CR><CR>
 
 """ Godot
 nnoremap <silent> <leader>r :GodotRun<CR>
