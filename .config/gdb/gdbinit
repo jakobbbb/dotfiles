@@ -4,6 +4,7 @@ define hook-next
   refresh
 end
 set auto-load safe-path ~/git
+winheight cmd 50
 
 # project-specific stuff
 define luca
