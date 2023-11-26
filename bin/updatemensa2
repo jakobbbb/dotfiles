@@ -80,9 +80,10 @@ def merge_meal_lists(*meal_lists):
     for m in reduce(operator.concat, meal_lists):
         if type(m) is not Meal:
             continue
-        if m.name not in mm.keys():
-            mm[m.name] = []
-        mm[m.name].append(m)
+        key = m.name.lower().replace(" ", "") + m.price
+        if key not in mm.keys():
+            mm[key] = []
+        mm[key].append(m)
 
     for k, v in mm.items():
         if len(v) > 1:
