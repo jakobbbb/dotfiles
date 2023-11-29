@@ -157,6 +157,7 @@ endif
 
 let g:coc_global_extensions = [
 \ 'coc-pyright',
+\ 'coc-tsserver',
 \ 'coc-rust-analyzer',
 \ 'coc-omnisharp',
 \ 'coc-vimtex',
@@ -167,7 +168,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf.vim'
 Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
-Plug 'neoclide/coc.nvim', {'branch': 'v0.0.81', 'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc.nvim', {'branch': 'v0.0.81', 'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'OmniSharp/omnisharp-vim'
 Plug 'tikhomirov/vim-glsl'
 Plug 'vim-airline/vim-airline'
@@ -205,6 +207,12 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 
 """ airline / tab stuff
 let g:airline#extensions#tabline#enabled = 1
