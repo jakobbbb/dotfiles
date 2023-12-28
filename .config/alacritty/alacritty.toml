@@ -1,6 +1,5 @@
 import = ["/home/jakob/.config/alacritty/themes/jakob.toml", "/home/jakob/.config/alacritty/themes/current_theme.toml"]
 live_config_reload = true
-"window.opacity" = 1
 
 [colors]
 draw_bold_text_with_bright_colors = true
