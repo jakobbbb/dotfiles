@@ -23,7 +23,7 @@ function set_theme() {
     case $theme in
         purple|jakob|iza)  # The default theme I've been using for years.
             wallpaper=~/git/wallpapers/iza4k.png
-            terminal=~/.config/alacritty/themes/jakob.yml
+            terminal=~/.config/alacritty/themes/jakob.toml
             i3=~/.config/i3/themes/purple.conf
             gtk_theme=Arc-Dark
             rofi_theme=/usr/share/rofi/themes/purple.rasi
@@ -33,7 +33,7 @@ function set_theme() {
             ;;
         autumn)  # gruvbox-based cozy theme :3
             wallpaper=~/git/wallpapers/eae003a0d5395a59e225328c3c8b2b470c92d95f_darker.jpg
-            terminal=~/.config/alacritty/themes/kanagawa.yml
+            terminal=~/.config/alacritty/themes/kanagawa.toml
             i3=~/.config/i3/themes/autumn.conf
             gtk_theme=BetterGruvbox
             rofi_theme=/usr/share/rofi/themes/gruvbox-dark.rasi
@@ -59,9 +59,9 @@ function set_theme() {
 
     feh --bg-fill $wallpaper
 
-    ln -fs $terminal ~/.config/alacritty/themes/current_theme.yml
+    ln -fs $terminal ~/.config/alacritty/themes/current_theme.toml
     # force reload (assuming live_config_reload: true)
-    touch ~/.config/alacritty/alacritty.yml
+    touch ~/.config/alacritty/alacritty.toml
 
     ln -fs $i3 ~/.config/i3/themes/current.conf
     i3-msg reload > /dev/null
