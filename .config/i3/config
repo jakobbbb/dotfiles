@@ -34,7 +34,7 @@ smart_gaps on
 gaps inner 15
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+floating_modifier $meta
 
 # start a terminal
 bindsym $mod+Return exec alacritty
