@@ -42,7 +42,7 @@ function set_theme() {
             if [ "$HOST" = "argon" ]; then
                 redshift_temperature=5400
             else
-                redshift_temperature=4600
+                redshift_temperature=3600
             fi
             ;;
         *)
