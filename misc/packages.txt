@@ -96,6 +96,7 @@ mono-msbuild
 mono-msbuild-sdkresolver
 mozc-ut
 mpv
+mpv-mpris
 mutt
 neofetch
 neovim
