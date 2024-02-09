@@ -13,7 +13,7 @@ blinking = "On"
 shape = "Beam"
 
 [font]
-size = 8.0
+size = 10.0
 
 [font.normal]
 family = "Meslo LG M for Powerline"
