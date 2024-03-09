@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-tablet=$(xinput | grep -Ei "huion.*pen" | sed -e "s/.*id=\([0-9]\+\).*/\1/i")
+tablet=$(xinput | grep -Ei "huion.*pen" | sed -e "s/.*id=\([0-9]\+\).*/\1/i" | head -n 1)
 screen=$(grep -Ei "set.*screen_primary" ~/.config/i3/config | sed -e 's/.*"\(.*\).*"/\1/i')
 
 xinput map-to-output $tablet $screen
