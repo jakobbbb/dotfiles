@@ -10,3 +10,7 @@ winheight cmd 50
 define luca
   r ../../assets/luca.bvh
 end
+
+define ruin
+  r --upload_budget 128 --render_budget 1024 --ram_budget 16384 --fine ~/point_data/Modell_Ruine.bvh
+end
