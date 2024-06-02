@@ -6,13 +6,13 @@ SCREEN_LEFT=DisplayPort-1
 SCREEN_RIGHT=DisplayPort-2
 SCREEN_TABLET=HDMI-A-0
 
-TABLET_STYLUS=`xinput | grep "Tablet Monitor Pen stylus" | sed -e "s/.*id=\(..\).*/\1/g"`
-TABLET=`xinput | grep 'Tablet Monitor Pad pad' | sed -e "s/.*id=\(..\).*/\1/g"`
+TABLET_STYLUS=`xinput | grep "Tablet Monitor Pen" | sed -e "s/.*id=\(..\).*/\1/g" | head -n 1`
+TABLET=`xinput | grep 'Tablet Monitor Pad' | sed -e "s/.*id=\(..\).*/\1/g"`
 
 
 if [ "$1" = "tablet" ]; then
     xrandr --output $SCREEN_TABLET --auto
-    xrandr --output $SCREEN_TABLET --below $SCREEN_RIGHT
+    xrandr --output $SCREEN_TABLET --below $SCREEN_LEFT
     ~/.fehbg
 elif [ "$1" = "tabletmirror" ]; then
     xrandr --output $SCREEN_TABLET --auto --same-as $2
