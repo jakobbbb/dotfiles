@@ -15,6 +15,7 @@ set t_Co=256 "more colors
 colorscheme jakob
 set bg=dark
 let g:lucius_no_term_bg=1
+set notermguicolors
 
 " set language to US (not needed in most cases, produces error in others)
 " only enable if vim is german by default!
