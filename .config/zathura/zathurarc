@@ -5,3 +5,4 @@ set selection-clipboard clipboard
 set window-title-home-tilde true
 set statusbar-home-tilde true
 set database sqlite
+set font "Meslo LG M for Powerline 15"
