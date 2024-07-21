@@ -26,14 +26,17 @@ class MealCategory(Enum):
     Vegetarian = 1
     Fish = 2
     Meat = 3
+    Nudelbar = 4
 
     @staticmethod
-    def from_string(s: str):
-        if "Vegan" in s:
+    def from_string(name, category: str):
+        if "Pastateller" in name and "Vegetarisch" in category:
+            return MealCategory.Nudelbar
+        elif "Vegan" in category:
             return MealCategory.Vegan
-        elif "Vegetarisch" in s:
+        elif "Vegetarisch" in category:
             return MealCategory.Vegetarian
-        elif "Fisch" in s:
+        elif "Fisch" in category:
             return MealCategory.Fish
         return MealCategory.Meat
 
@@ -69,7 +72,7 @@ def get_meals(canteen: Canteen, date: datetime.date):
         price = container.find("div", class_="mealPreise").text.strip()
         price = price.split(" / ")[0].replace(",", ".")
         category = container.find("img", class_="splIconMeal")["alt"]
-        category = MealCategory.from_string(category)
+        category = MealCategory.from_string(name, category)
         meal = Meal(name, price, category, [canteen])
         meals.append(meal)
     return meals
