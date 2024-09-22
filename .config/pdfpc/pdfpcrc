@@ -1,0 +1,7 @@
+option cache-max-rtime 1000000000
+option cache-min-rtime 10
+option cache-max-usize 9999999
+option cache-expiration -1
+option prerender-slides -1
+option prerender-delay 0
+option cache-debug true
