@@ -160,7 +160,7 @@ let g:coc_global_extensions = [
 \ 'coc-pyright',
 \ 'coc-tsserver',
 \ 'coc-rust-analyzer',
-\ 'coc-omnisharp',
+"\ 'coc-omnisharp',
 \ 'coc-vimtex',
 \ ]
 
