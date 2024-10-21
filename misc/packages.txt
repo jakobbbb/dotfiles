@@ -19,6 +19,7 @@ cloc
 cmake
 cronie
 cryptsetup
+csharp-ls
 cups
 device-mapper
 dhcpcd
