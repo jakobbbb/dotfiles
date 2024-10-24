@@ -1,3 +1,4 @@
+[general]
 import = ["/home/jakob/.config/alacritty/themes/jakob.toml", "/home/jakob/.config/alacritty/themes/current_theme.toml"]
 live_config_reload = true
 
