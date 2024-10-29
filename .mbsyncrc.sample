@@ -5,7 +5,7 @@ IMAPAccount sample
 Host ...
 User ...
 PassCmd "pass mail/sample"
-SSLType IMAPS
+TLSType IMAPS
 
 IMAPStore sample-remote
 Account sample
@@ -26,7 +26,7 @@ IMAPAccount gmailsample
 Host imap.gmail.com
 User ...@gmail.com
 PassCmd "pass google/gmailsample"
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 #CertificateFile ~/.cert/imap.gmail.com.pem
 #CertificateFile ~/.cert/Equifax_Secure_CA.pem
