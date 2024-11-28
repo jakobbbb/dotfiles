@@ -26,6 +26,11 @@
           "args" : ["-l", "error"],
           "filetypes": ["cs"],
           "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/", "*.sln"]
+        },
+        "godot" : {
+            "host": "127.0.0.1",
+            "port": 6005,
+            "filetypes": ["gdscript"],
         }
     },
     "rust-analyzer" : {
