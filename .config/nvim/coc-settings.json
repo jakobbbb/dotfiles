@@ -50,4 +50,5 @@
     "java.home": "/usr/lib/jvm/java-18-openjdk",
     "omnisharp.version" : "v1.38.0",
     "suggest.noselect": true
+    "inlayHint.enable": false
 }
