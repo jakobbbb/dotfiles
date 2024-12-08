@@ -184,6 +184,9 @@ let g:OmniSharp_server_use_mono = 1
 nnoremap <silent> <leader>f :GFiles<CR>
 nnoremap <silent> <leader>F :Files<CR>
 
+""" Godot
+nnoremap <silent> <leader>r :GodotRun<CR>
+
 """ UltiSnips
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
