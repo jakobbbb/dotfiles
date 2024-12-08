@@ -186,6 +186,13 @@ nnoremap <silent> <leader>F :Files<CR>
 
 """ Godot
 nnoremap <silent> <leader>r :GodotRun<CR>
+func! GodotSettings() abort
+    setlocal sw=4
+    setlocal ts=4
+endfunc
+augroup godot | au!
+    au FileType gdscript call GodotSettings()
+augroup end
 
 """ UltiSnips
 let g:UltiSnipsExpandTrigger = '<tab>'
