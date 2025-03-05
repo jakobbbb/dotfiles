@@ -106,7 +106,7 @@ bindsym $mod+Tab exec --no-startup-id exec rofi -show window
 
 # workspaces
 set $screen_primary "DP-4"
-set $screen_secondary "DP-0"
+set $screen_secondary "HDMI-0"
 workspace 1 output $screen_primary
 workspace 2 output $screen_primary
 workspace 3 output $screen_primary
