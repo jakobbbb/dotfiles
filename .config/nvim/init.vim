@@ -131,8 +131,8 @@ nnoremap <silent> <leader>e :e#<CR>
 
 if has("autocmd")
     autocmd FileType make setlocal ts=8 sw=8 noet
-    autocmd FileType html setlocal ts=2 sw=2 et omnifunc=htmlcomplete#CompleteTags
-    autocmd FileType css setlocal ts=2 sw=2 et tw=72 omnifunc=csscomplete#CompleteCSS
+    autocmd FileType html setlocal ts=4 sw=4 et omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType css setlocal ts=4 sw=4 et tw=72 omnifunc=csscomplete#CompleteCSS
     autocmd FileType scss setlocal ts=2 sw=2 et tw=72 omnifunc=csscomplete#CompleteCSS
     autocmd FileType javascript setlocal ts=4 sw=4 tw=72 et
     autocmd FileType cpp setlocal ts=4 sw=4 tw=100 et

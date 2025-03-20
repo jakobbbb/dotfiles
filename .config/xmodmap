@@ -11,6 +11,8 @@ keycode  43 = h H Left Left h H h H
 keycode  44 = j J Down Down idiaeresis Idiaeresis idiaeresis Idiaeresis
 keycode  45 = k K Up Up oe OE oe OE
 keycode  46 = l L Right Right oslash Oslash oslash Oslash
+! Mode_switch + space -> Return; Shift + space -> Backspace
+keycode 65 = space BackSpace Return NoSymbol space space
 ! more
 keycode  52 = z Z XF86AudioPrev Z ae AE ae AE z Z ae AE
 keycode  53 = x X XF86AudioPlay X oe OE oe OE x X oe OE
