@@ -10,5 +10,8 @@ F12 & k::Send {Up}
 ; F12 + L -> Right Arrow
 F12 & l::Send {Right}
 
-; Prevent F12 from doing anything on its own
-F12::Return
+; Remap "F12 + Space" to "Enter"
+F12 & Space::Send {Enter}
+
+; Remap "Shift + Space" to "Backspace"
++Space::Send {Backspace}
