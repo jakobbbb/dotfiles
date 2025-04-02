@@ -1,4 +1,12 @@
-﻿; F13 + H -> Left Arrow
+﻿; 1: Remap caps
+;   Run capslock_to_f13.reg
+; 2: Autostart
+;   Compile this script into an exe
+;   Create a shortcut to the exe
+;   Move the shortcut here:
+;       %AppData%\Microsoft\Windows\Start Menu\Programs\Startup
+
+; F13 + H -> Left Arrow
 F13 & h::Send {Left}
 
 ; F13 + J -> Down Arrow
