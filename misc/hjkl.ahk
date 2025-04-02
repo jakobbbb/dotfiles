@@ -1,17 +1,28 @@
-﻿; F12 + H -> Left Arrow
-F12 & h::Send {Left}
+﻿; F13 + H -> Left Arrow
+F13 & h::Send {Left}
 
-; F12 + J -> Down Arrow
-F12 & j::Send {Down}
+; F13 + J -> Down Arrow
+F13 & j::Send {Down}
 
-; F12 + K -> Up Arrow
-F12 & k::Send {Up}
+; F13 + K -> Up Arrow
+F13 & k::Send {Up}
 
-; F12 + L -> Right Arrow
-F12 & l::Send {Right}
+; F13 + L -> Right Arrow
+F13 & l::Send {Right}
 
-; Remap "F12 + Space" to "Enter"
-F12 & Space::Send {Enter}
+; Remap "F13 + Space" to "Enter"
+F13 & Space::Send {Enter}
 
 ; Remap "Shift + Space" to "Backspace"
 +Space::Send {Backspace}
+
+; Media
+F13 & z::Send {Media_Prev}
+F13 & x::Send {Media_Play_Pause}
+F13 & c::Send {Media_Next}
+F13 & ,::Send {Volume_Down}
+F13 & .::Send {Volume_Up}
+F13 & m::Send {Volume_Mute}
+
+; Prevent F13 from doing anything on its own
+F13::Return
