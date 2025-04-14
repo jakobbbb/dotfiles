@@ -96,7 +96,6 @@ minted
 mono
 mono-msbuild
 mono-msbuild-sdkresolver
-mozc-ut
 mpv
 mpv-mpris
 mutt
@@ -210,8 +209,6 @@ visual-studio-code-bin
 vlc
 wdiff
 which
-wine
-winetricks
 words
 xbindkeys
 xclip
