@@ -88,7 +88,6 @@ set hlsearch
 """""""""""""""""
 
 inoremap jk <Esc>
-set pt=<F3> "F3 for paste mode
 
 command W w
 command Q q
