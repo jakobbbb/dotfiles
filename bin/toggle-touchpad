@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -e
+
+touchpad=$(xinput | grep -Ei "Touchpad" | sed -e "s/.*id=\([0-9]\+\).*/\1/i" | head -n 1)
+
+xinput $1 $touchpad
