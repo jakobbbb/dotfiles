@@ -8,3 +8,6 @@ setxkbmap us altgr-intl
 
 # load xmodmap
 xmodmap ~/.config/xmodmap
+
+# disable touchpad
+toggle-touchpad disable
