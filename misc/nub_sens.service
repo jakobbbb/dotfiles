@@ -1,0 +1,9 @@
+[Unit]
+Description=Set thinkpad nub sensitivity
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "echo 60 > /sys/devices/platform/i8042/serio1/sensitivity"
+
+[Install]
+WantedBy=multi-user.target
