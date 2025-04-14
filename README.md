@@ -28,6 +28,7 @@ https://github.com/jakobbbb/dotfiles/wiki
 | `main`| desktop |
 | `b11` | uni workstation |
 | `x230` | personal X230 |
+| `l14` | personal L14 |
 | `t420` | personal T420 |
 | `msi` | msi laptop |
 
