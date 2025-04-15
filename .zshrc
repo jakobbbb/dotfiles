@@ -184,9 +184,6 @@ if [ -f "$XDG_CONFIG_HOME/thm/gtk_theme" ]; then
   export GTK_THEME=$(cat "$XDG_CONFIG_HOME/thm/gtk_theme")
 fi
 
-# unbork blender
-export MESA_GL_VERSION_OVERRIDE=4.1
-
 HISTSIZE=400000
 SAVEHIST=$HISTSIZE
 
