@@ -6,6 +6,7 @@ barrier
 base
 base-devel
 bash
+bc
 bettergruvbox-gtk-theme
 biber
 bibtool
