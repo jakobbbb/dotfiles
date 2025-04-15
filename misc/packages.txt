@@ -19,9 +19,11 @@ chromium-widevine
 cloc
 cmake
 cronie
+cryfs
 cryptsetup
 csharp-ls
 cups
+dbus-python
 device-mapper
 dhcpcd
 diffstat
@@ -34,6 +36,7 @@ dot2tex
 dotnet-runtime
 dotnet-sdk
 dunst
+easy-rsa
 emacs-nox
 eog
 evince
@@ -70,6 +73,7 @@ i3status
 imagemagick
 imapfilter
 inetutils
+inkscape
 iproute2
 iputils
 ipython
@@ -93,6 +97,7 @@ maim
 make
 man-db
 man-pages
+mesa-utils
 minted
 mono
 mono-msbuild
@@ -113,6 +118,7 @@ noto-fonts-emoji
 npm
 ntfs-3g
 ntp
+okular
 openconnect
 openmp
 openssh
@@ -162,6 +168,7 @@ spotify
 steam
 strace
 sudo
+syncthing
 tcpdump
 telegram-desktop
 texlive-basic
@@ -191,6 +198,7 @@ texlive-publishers
 texlive-xetex
 thunar
 thunar-volman
+timew
 tmux
 ttf-fira-code
 ttf-fira-mono
@@ -208,6 +216,7 @@ vi
 vim
 visual-studio-code-bin
 vlc
+vulkan-devel
 wdiff
 which
 words
