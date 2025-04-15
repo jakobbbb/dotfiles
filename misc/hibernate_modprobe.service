@@ -1,0 +1,12 @@
+[Unit]
+Description=Resume: modprobe ath11k_pci
+After=suspend-then-hibernate.target hibernate.target hybrid-sleep.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sh -c 'if ! (lsmod | grep -wq ath11k_pci); then \
+	logger -p user.info "Loading ath11k_pci kernel module after suspend."; \
+	modprobe ath11k_pci; fi'
+
+[Install]
+WantedBy=suspend-then-hibernate.target hibernate.target hybrid-sleep.target sleep.target
