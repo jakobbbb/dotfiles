@@ -1,6 +1,6 @@
 #!/bin/sh
 
-TEMPERATURE=3400
+TEMPERATURE=4800
 
 if [ ! -z "$1" ]; then
     TEMPERATURE=$1
