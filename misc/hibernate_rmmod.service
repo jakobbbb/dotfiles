@@ -1,0 +1,12 @@
+[Unit]
+Description=Suspend: rmmod ath11k_pci
+Before=suspend-then-hibernate.target hibernate.target hybrid-sleep.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/sh -c 'if (lsmod | grep -wq ath11k_pci); then \
+	logger -p user.info "Unloading ath11k_pci kernel module before suspend."; \
+	rmmod ath11k_pci; fi'
+
+[Install]
+WantedBy=suspend-then-hibernate.target hibernate.target hybrid-sleep.target sleep.target
