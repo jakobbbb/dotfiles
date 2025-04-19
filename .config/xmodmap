@@ -11,8 +11,6 @@ keycode  43 = h H Left Left h H h H
 keycode  44 = j J Down Down idiaeresis Idiaeresis idiaeresis Idiaeresis
 keycode  45 = k K Up Up oe OE oe OE
 keycode  46 = l L Right Right oslash Oslash oslash Oslash
-! Mode_switch + space -> Return; Shift + space -> Backspace
-keycode 65 = space BackSpace Return NoSymbol space space
 ! more
 keycode  52 = z Z XF86AudioPrev Z ae AE ae AE z Z ae AE
 keycode  53 = x X XF86AudioPlay X oe OE oe OE x X oe OE
@@ -20,3 +18,8 @@ keycode  54 = c C XF86AudioNext C copyright cent copyright cent c C copyright ce
 keycode  58 = m M XF86AudioMute M mu mu mu mu m M mu mu
 keycode  59 = comma less XF86AudioLowerVolume less ccedilla Ccedilla ccedilla Ccedilla comma less ccedilla Ccedilla
 keycode  60 = period greater XF86AudioRaiseVolume greater dead_abovedot dead_caron dead_abovedot dead_caron period greater dead_abovedot dead_caron
+! swap backspace and backslash, HHKB style
+keycode 51 = BackSpace bar BackSpace bar
+keycode 22 = backslash bar backslash bar
+! Mode_switch + space -> Return
+keycode 65 = space BackSpace Return NoSymbol space space
