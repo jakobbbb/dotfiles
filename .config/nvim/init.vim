@@ -95,6 +95,9 @@ command Q q
 command Wq wq
 command WQ wq
 
+" Make backspace leader too
+map <BS> <Leader>
+
 " turn off search by pressing enter
 nnoremap <CR> :nohlsearch<CR><CR>
 
