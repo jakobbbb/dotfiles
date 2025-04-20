@@ -22,4 +22,4 @@ keycode  60 = period greater XF86AudioRaiseVolume greater dead_abovedot dead_car
 keycode 51 = BackSpace bar BackSpace bar
 keycode 22 = backslash bar backslash bar
 ! Mode_switch + space -> Return
-keycode 65 = space BackSpace Return NoSymbol space space
+keycode 65 = space space Return NoSymbol space space
