@@ -89,8 +89,11 @@ set hlsearch
 
 inoremap jk <Esc>
 
+" typos yeahhh
 command W w
 command Q q
+command Wq wq
+command WQ wq
 
 " turn off search by pressing enter
 nnoremap <CR> :nohlsearch<CR><CR>
