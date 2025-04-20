@@ -1,0 +1,35 @@
+#!/usr/bin/bash
+
+set -e
+
+
+kernel=$(uname -r)
+tempdir=/tmp/clean-dkms-old
+
+echo "Current kernel is $kernel"
+
+mkdir -p $tempdir
+
+for directory in /usr/lib/modules/*; do
+    if [ "$(basename $directory)" = "$kernel" ]; then
+        echo "Keeping $directory"
+    else
+        sudo mv $directory $tempdir
+    fi
+done
+
+echo
+echo "Are you sure you want to delete $(ls -1q $tempdir | wc -l) old DKMS thingies form '$tempdir'?"
+echo -n "[YES] "
+read confirmation
+echo
+
+if [ "$confirmation" = "YES" ]; then
+    size=$(du -sh $tempdir | tail -n 1 | sed -e "s#.$tempdir##")
+    sudo rm -fr $tempdir
+    echo "Freed $size, good job!"
+    exit 0
+fi
+
+echo "Aborting..."
+exit 1
