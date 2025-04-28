@@ -21,8 +21,13 @@ F13 & l::Send {Right}
 ; Remap "F13 + Space" to "Enter"
 F13 & Space::Send {Enter}
 
-; Remap "Shift + Space" to "Backspace"
-+Space::Send {Backspace}
+; Remap the backslash key (\) to act like Backspace + bar
+SC02B::Backspace
+Shift & SC02B::Send |
+
+; Remap the Backspace key to send backslash and bar
+SC00E::Send \
+Shift & SC00E::Send |
 
 ; Media
 F13 & z::Send {Media_Prev}
