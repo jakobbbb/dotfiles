@@ -164,6 +164,10 @@ export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1  # unity hates me
 export GOPATH="$HOME/gocode"
 export GO=$(which go)
 
+ems() {
+    source "/usr/lib/emsdk/emsdk_env.sh"
+}
+
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git -i'
 
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
