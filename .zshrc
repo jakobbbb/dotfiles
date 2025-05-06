@@ -142,6 +142,9 @@ tablet() {
     fi
     ~/.config/i3/custom.avail/010-redshift.sh
 }
+ta () {
+  tmux attach-session -t $(tmux list-sessions | fzf | cut -d: -f1)
+}
 wy () {
     export WY_OPT=$1
     source ~/bin/yk.source
