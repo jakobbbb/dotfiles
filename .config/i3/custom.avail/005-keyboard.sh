@@ -7,7 +7,9 @@ setxkbmap -option caps:none
 setxkbmap us altgr-intl
 
 # load xmodmap
-xmodmap ~/.config/xmodmap
+if [ "$1" != "noxmodmap" ]; then
+    xmodmap ~/.config/xmodmap
+fi
 
 # disable touchpad
 toggle-touchpad disable
