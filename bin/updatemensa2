@@ -18,7 +18,7 @@ class CanteenInfo:
 
 class Canteen(Enum):
     MENSA_AM_PARK = CanteenInfo(77, "P")
-    CAFETERIA_SCHWANSEESTRASSE = CanteenInfo(80, "S")
+    CAFETERIA_PARK = CanteenInfo(78, "C")
 
 
 class MealCategory(Enum):
@@ -97,14 +97,21 @@ def merge_meal_lists(*meal_lists):
 
 
 def meal_filter(meal: Meal) -> bool:
-    return meal.category.value <= MealCategory.Fish.value
+    return meal.category.value < MealCategory.Fish.value
 
 
 def main():
-    mensadate = datetime.datetime.now() + datetime.timedelta(hours=10)
-    meals_park = get_meals(Canteen.MENSA_AM_PARK, mensadate)
-    meals_swan = get_meals(Canteen.CAFETERIA_SCHWANSEESTRASSE, mensadate)
-    meals = merge_meal_lists(meals_park, meals_swan)
+    now = datetime.datetime.now()
+
+    mensa = Canteen.MENSA_AM_PARK
+    delta = datetime.timedelta(hours=10)
+
+    if now.hour >= 14 and now.hour <= 18:
+        mensa = Canteen.CAFETERIA_PARK
+        delta = datetime.timedelta(0)
+
+    mensadate = now + delta
+    meals = get_meals(mensa, mensadate)
     meals = filter(meal_filter, meals)
 
     meal_string = " / ".join([str(meal) for meal in meals])
