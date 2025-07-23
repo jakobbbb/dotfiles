@@ -112,7 +112,9 @@ def main():
 
     mensadate = now + delta
     meals = get_meals(mensa, mensadate)
-    meals = filter(meal_filter, meals)
+    meals_filtered = list(filter(meal_filter, meals))
+    if len(meals_filtered) > 0:
+        meals = meals_filtered
 
     meal_string = " / ".join([str(meal) for meal in meals])
 
