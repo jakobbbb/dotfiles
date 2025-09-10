@@ -104,6 +104,16 @@ nnoremap <CR> :nohlsearch<CR><CR>
 " Delete up to email signature
 nnoremap <silent> <leader>gr <Esc>d/^--\_.*Jakob<CR>:nohl<CR>O
 
+" Normal mode: code action at cursor
+nmap <leader>a  <Plug>(coc-codeaction)
+
+" Visual mode: code action for selection
+xmap <leader>a  <Plug>(coc-codeaction-selected)
+
+" Quickfix (applies the top suggestion automatically)
+nmap <leader>s <Plug>(coc-fix-current)
+xmap <leader>s <Plug>(coc-fix-current)
+
 " disable arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -166,6 +176,7 @@ let g:coc_global_extensions = [
 \ 'coc-rust-analyzer',
 "\ 'coc-omnisharp',
 \ 'coc-vimtex',
+\ 'coc-ltex',
 \ ]
 
 call plug#begin('~/.config/nvim/plugged')
