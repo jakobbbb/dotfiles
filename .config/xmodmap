@@ -25,3 +25,5 @@ keycode 51 = BackSpace bar BackSpace bar
 keycode 22 = backslash bar backslash bar
 ! Mode_switch + space -> Return
 keycode 65 = space space Return NoSymbol space space
+! GROẞES ẞ with AltGr+F
+keycode  41 = f F f F U1E9E F f F f F f F f F f F
