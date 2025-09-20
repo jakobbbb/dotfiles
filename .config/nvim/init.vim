@@ -157,6 +157,7 @@ if has("autocmd")
     autocmd FileType tex setlocal ts=2 sw=2 tw=72 spell et
     autocmd FileType python setlocal ts=4 sw=4 tw=79 et
     autocmd FileType markdown setlocal tw=72 spell
+    autocmd FileType shader setlocal ts=4 sw=4 noet
 endif
 
 
