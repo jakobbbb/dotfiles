@@ -71,7 +71,10 @@ def get_meals(canteen: Canteen, date: datetime.date):
         name = container.find("div", class_="mealText").text.strip()
         price = container.find("div", class_="mealPreise").text.strip()
         price = price.split(" / ")[0].replace(",", ".")
-        category = container.find("img", class_="splIconMeal")["alt"]
+        icon = container.find("img", class_="splIconMeal")
+        if icon is None:
+            continue
+        category = icon["alt"]
         category = MealCategory.from_string(name, category)
         meal = Meal(name, price, category, [canteen])
         meals.append(meal)
