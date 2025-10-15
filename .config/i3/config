@@ -193,7 +193,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Lock and Suspend w/ WIN+Shift+L
 bindsym Mod4+Shift+l exec "systemctl suspend"
 # Lock w/ WIN+L
-bindsym Mod4+l exec "i3lock -B 10 -k --date-str='' --time-size=70 --time-color=ffffff  --bar-indicator --bar-count 1 --bar-periodic-step 10 --bar-color=00000000"
+bindsym Mod4+l exec "~/bin/lock"
 # Hibernate w/ WIN+Shift+H
 bindsym Mod4+Shift+h exec "systemctl hibernate"
 # Re-configure keyboard
