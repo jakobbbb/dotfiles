@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 
+# Starts `xsecurelock` such that it shows the current wallpaper, blurred and
+# darkened. The avarge color of the image is used as the box background.  Uses
+# `saver_mpv` because it works out-of-the-box with multiple monitors with
+# different resolutions.
+
 wallpaper=$(tail -n 1 $HOME/.fehbg | sed -e "s/.*'\(.*\)'/\1/")
 
 blurred_dir="$HOME/.cache/lock/wallpapers_blurred"
@@ -29,5 +34,6 @@ env \
     XSECURELOCK_PASSWORD_PROMPT=asterisks \
     XSECURELOCK_SAVER=saver_mpv \
     XSECURELOCK_SAVER_DELAY_MS="2" \
+    XSECURELOCK_SHOW_DATETIME=1 \
     XSECURELOCK_VIDEOS_FLAGS="--panscan=1" \
     xsecurelock
