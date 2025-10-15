@@ -191,7 +191,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Lock and Suspend w/ WIN+Shift+L
-bindsym Mod4+Shift+l exec "systemctl suspend"
+bindsym Mod4+Shift+l exec --no-startup-id "~/bin/lock & sleep 1 && systemctl suspend"
 # Lock w/ WIN+L
 bindsym Mod4+l exec "~/bin/lock"
 # Hibernate w/ WIN+Shift+H
