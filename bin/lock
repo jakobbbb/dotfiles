@@ -9,6 +9,7 @@ wallpaper=$(tail -n 1 $HOME/.fehbg | sed -e "s/.*'\(.*\)'/\1/")
 
 blurred_dir="$HOME/.cache/lock/wallpapers_blurred"
 wallpaper_blurred="$blurred_dir/$(basename "$wallpaper")"
+wallpaper_blurred=$(sed -e "s/\(.*\)\.[^\.]*/\1.png/g" <<< "$wallpaper_blurred")
 
 if [ ! -f "$wallpaper_blurred" ]; then
     mkdir -p $(dirname "$wallpaper_blurred")
