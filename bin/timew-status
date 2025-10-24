@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+timew > /dev/null
+
+if [ $? -eq 0 ]; then
+    what=$(timew | head -n 1 | sed -e "s/^Tracking //")
+    duration=$(timew | tail -n 1 | sed -e "s/.*Total[^0-9]*\(.*\):../\1/")
+    echo "$what ($duration)" > /tmp/timew
+else
+    echo "" > /tmp/timew
+fi
