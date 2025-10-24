@@ -23,10 +23,16 @@ order += "cpu_usage"
 order += "cpu_temperature 0"
 order += "cpu_temperature 1"
 order += "volume master"
+order += "read_file timew"
 order += "tztime local"
 
 read_file mensa {
     path = "/tmp/mensa"
+    format = "%content"
+}
+
+read_file timew {
+    path = "/tmp/timew"
     format = "%content"
 }
 
