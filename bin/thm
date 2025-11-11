@@ -39,7 +39,7 @@ function set_theme() {
             rofi_theme=/usr/share/rofi/themes/gruvbox-dark.rasi
             gtk_3_conf=~/.config/gtk-3.0/autumn.ini
             gtk_2_rc=~/.config/gtk-2.0/autumn
-            if [ "$HOST" = "argon" ]; then
+            if [ "$HOST" = "nya" ]; then
                 redshift_temperature=5400
             else
                 redshift_temperature=3600
