@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -ex
+
+sudo rmmod ath11k_pci
+sleep 0.1
+sudo modprobe ath11k_pci
+sleep 0.3
+sudo systemctl restart NetworkManager
