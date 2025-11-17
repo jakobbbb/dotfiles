@@ -3,12 +3,14 @@ dotfiles and other stuff I use
 ## theme
 ![screenshot](https://gist.githubusercontent.com/jakobbbb/59c7330f0bc29ebef697bb40e421349f/raw/autumn.png)
 
-The default theme is a purple one, but I've been on the autumn-vibey one for a while now.
+The default theme is a purple one, but I've been on the autumn-vibey one for a while now[^autumn].
 It can be activated with `thm autumn`.
 The theme uses bettergruvbox, but patched it with the `./misc/patch_bettergruvbox.sh` script :3
 
 The purple theme uses a patched version of Arc-Dark, which can be installed by
 navigating to `misc/gtk-theme` and running `makepkg -scfi`.
+
+[^autumn]: two autumns, two winters, two springs and two summers so far!
 
 ## deploy
 Run `./deploy.py` to symlink the dotfiles.
