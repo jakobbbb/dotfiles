@@ -158,6 +158,7 @@ if has("autocmd")
     autocmd FileType python setlocal ts=4 sw=4 tw=79 et
     autocmd FileType markdown setlocal tw=72 spell
     autocmd FileType shader setlocal ts=4 sw=4 noet
+    autocmd FileType hlsl setlocal ts=4 sw=4 noet
 endif
 
 
@@ -192,6 +193,7 @@ Plug 'tikhomirov/vim-glsl'
 Plug 'vim-airline/vim-airline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'habamax/vim-godot'
+Plug 'kalvinpearce/ShaderHighlight'
 call plug#end()
 
 let g:OmniSharp_server_use_mono = 1
