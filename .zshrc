@@ -177,6 +177,7 @@ export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
 
 export GNUMAKEFLAGS=-j$(getconf _NPROCESSORS_ONLN)
 export MAKEFLAGS=-j$(getconf _NPROCESSORS_ONLN)
+export CMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 if [ -f "$XDG_CONFIG_HOME/thm/gtk_theme" ]; then
   export GTK_THEME=$(cat "$XDG_CONFIG_HOME/thm/gtk_theme")
