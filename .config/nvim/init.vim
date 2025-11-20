@@ -194,9 +194,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'habamax/vim-godot'
 Plug 'kalvinpearce/ShaderHighlight'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 let g:OmniSharp_server_use_mono = 1
+let g:rustfmt_autosave = 1
 
 """ FZF
 nnoremap <silent> <leader>f :GFiles<CR>
