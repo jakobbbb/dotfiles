@@ -16,7 +16,7 @@ elif [ "$1" = "today" ]; then
     today && exit
 elif [ -z "$1" ]; then
     imapfilter
-    mbsync -a
+    parallel mbsync "{}" ::: $(ls ~/mail)
 elif [ -z "$2" ] && [ -f "~/mail/$1" ]; then
     imapfilter
     mbsync "$1"
