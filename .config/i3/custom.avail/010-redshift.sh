@@ -14,7 +14,7 @@ fi
 redshift -PO $TEMPERATURE > /dev/null
 
 # No redshift on tablet
-TABLET=`xrandr --listactivemonitors | grep HDMI- | cut -d: -f1 | sed -e 's/ //g'`
-if [[ ! -z "$TABLET" ]]; then
-    redshift -m randr:crtc=$TABLET -x
-fi
+#TABLET=`xrandr --listactivemonitors | grep HDMI- | cut -d: -f1 | sed -e 's/ //g'`
+#if [[ ! -z "$TABLET" ]]; then
+#    redshift -m randr:crtc=$TABLET -x
+#fi
