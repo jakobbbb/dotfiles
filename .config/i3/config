@@ -324,5 +324,7 @@ include ~/.config/i3/themes/current.conf
 exec_always ~/.config/i3/custom.sh
 
 # floating windows
+for_window [title="[OpenGL-Mode] Isosurface Renderer"] floating enable
+for_window [class="[OpenGL-Mode] Isosurface Renderer"] floating enable
 for_window [class="steam"] floating enable
 for_window [class="Pidgin"] floating enable
