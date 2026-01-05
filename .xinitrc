@@ -14,7 +14,6 @@ fcitx5 -dr
 
 /usr/lib/xdg-desktop-portal &
 
-i3
-
 xrdb -merge ~/.Xresources
 
+i3
