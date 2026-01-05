@@ -12,8 +12,6 @@ export QT_IM_MODULE=fcitx
 export QT5_IM_MODULE=fcitx
 fcitx5 -dr
 
-
-i3
-
 xrdb -merge ~/.Xresources
 
+i3
