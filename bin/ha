@@ -6,7 +6,7 @@ what=turn_$2
 
 [ -z $HASS_SERVER ] && source ~/.config/hass-cli
 
-[ "$device" == "all" ] && ha bett $2 && ha regal $2
+[ "$device" == "all" ] && ha bett $2 && ha regal $2 && exit
 
 echo $device $what
 
