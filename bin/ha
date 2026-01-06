@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+device=$1
+what=turn_$2
+[ -z $2 ] && what="toggle"
+
+[ -z $HASS_SERVER ] && source ~/.config/hass-cli
+
+[ "$device" == "all" ] && ha bett $2 && ha regal $2
+
+echo $device $what
+
+hass-cli state $what switch.$device
