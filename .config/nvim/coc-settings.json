@@ -21,11 +21,12 @@
                 },
             }
         },
-        "csharp-ls": {
-          "command": "csharp-ls",
-          "args" : ["-l", "error"],
+        "roslyn": {
+          "command": "Microsoft.CodeAnalysis.LanguageServer",
+          "args": ["--stdio", "--autoLoadProjects"],
           "filetypes": ["cs"],
-          "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/", "*.sln"]
+          "rootPatterns": ["*.slnx", "*.sln", "*.csproj", ".git"],
+          "trace.server": "verbose"
         },
         "godot" : {
             "host": "127.0.0.1",
