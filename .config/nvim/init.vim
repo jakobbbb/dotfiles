@@ -222,14 +222,14 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <silent> J :call <SID>jump_definition()<CR>
 
 function! s:jump_definition()
-  call CocAction('jumpDefinition')
+  call CocActionAsync('jumpDefinition')
 endfunction
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
   else
-    call CocAction('doHover')
+    call CocActionAsync('doHover')
   endif
 endfunction
 
