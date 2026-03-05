@@ -16,4 +16,6 @@ fcitx5 -dr
 
 xrdb -merge ~/.Xresources
 
+nvidia-settings --load-config-only
+
 i3
