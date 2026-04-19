@@ -9,6 +9,7 @@ export QT_IM_MODULE=fcitx
 export QT5_IM_MODULE=fcitx
 fcitx5 -dr
 
+/usr/lib/xdg-desktop-portal &
 
 i3
 
