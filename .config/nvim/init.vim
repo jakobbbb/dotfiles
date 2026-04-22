@@ -159,6 +159,7 @@ if has("autocmd")
     autocmd FileType markdown setlocal tw=72 spell
     autocmd FileType shader setlocal ts=4 sw=4 noet
     autocmd FileType hlsl setlocal ts=4 sw=4 noet
+    autocmd BufRead,BufNewFile *.typ set filetype=typst
 endif
 
 
@@ -195,6 +196,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'habamax/vim-godot'
 Plug 'kalvinpearce/ShaderHighlight'
 Plug 'rust-lang/rust.vim'
+" Plug 'kaarmu/typst.vim'
+Plug 'chomosuke/typst-preview.nvim', {'tag': 'v1.*'}
 call plug#end()
 
 let g:OmniSharp_server_use_mono = 1
@@ -285,3 +288,10 @@ highlight CocMenuSel ctermbg=15 ctermfg=0
 highlight Pmenu ctermbg=0 ctermfg=15
 highlight NormalFloat ctermbg=0 ctermfg=15
 highlight Normal ctermbg=None
+
+lua << EOF
+require('typst-preview').setup({
+  invert_colors = "always",
+  debug = true,
+})
+EOF

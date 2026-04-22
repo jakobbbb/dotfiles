@@ -32,7 +32,13 @@
             "host": "127.0.0.1",
             "port": 6005,
             "filetypes": ["gdscript"],
-        }
+        },
+        "tinymist": {
+          "command": "tinymist",
+          "filetypes": ["typst"],
+          "rootPatterns": ["main.typ", ".git/"],
+          "settings": {}
+        },
     },
     "rust-analyzer" : {
         "serverPath" : "/usr/bin/rust-analyzer"
@@ -49,6 +55,14 @@
     "clangd.arguments": ["-std=c++17"],
     "java.home": "/usr/lib/jvm/java-18-openjdk",
     "omnisharp.version" : "v1.38.0",
-    "suggest.noselect": true
-    "inlayHint.enable": false
+    "suggest.noselect": true,
+    "inlayHint.enable": false,
+    "ltex.enabled": true,
+    "xltex.enabled": [
+        "markdown",
+        "tex",
+        "latex",
+        "typst",
+        "typ"
+      ]
 }
