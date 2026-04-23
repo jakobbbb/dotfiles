@@ -295,3 +295,6 @@ require('typst-preview').setup({
   debug = true,
 })
 EOF
+
+autocmd FileType markdown nnoremap <buffer> <leader>ll :MarkdownPreview<CR>
+autocmd FileType typst nnoremap <buffer> <leader>ll :TypstPreview<CR>
