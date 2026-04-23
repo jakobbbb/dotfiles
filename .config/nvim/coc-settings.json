@@ -56,5 +56,13 @@
     "java.home": "/usr/lib/jvm/java-18-openjdk",
     "omnisharp.version" : "v1.38.0",
     "suggest.noselect": true,
-    "inlayHint.enable": false
+    "inlayHint.enable": false,
+    "ltex.enabled": true,
+    "xltex.enabled": [
+        "markdown",
+        "tex",
+        "latex",
+        "typst",
+        "typ"
+      ]
 }

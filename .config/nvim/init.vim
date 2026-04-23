@@ -295,4 +295,3 @@ require('typst-preview').setup({
   debug = true,
 })
 EOF
-let g:coc_filetype_map = {'typst': 'latex'}
