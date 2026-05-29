@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+typfile=$1
+revcount=$(git log --oneline -- $typfile | wc -l)
+commit=$(git log -1 --oneline $typfile | head -n 1 | cut -d\  -f1)
+lastmodified=$(git log -1 --pretty="format:%ci" -- $typfile | cut -d\  -f1)
+
+git diff --exit-code $typfile > /dev/null || lastmodified=$(date -I)
+
+typst compile $typfile --input ver="version $commit / revision $revcount" --input date="$lastmodified"
