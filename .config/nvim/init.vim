@@ -159,7 +159,7 @@ if has("autocmd")
     autocmd FileType markdown setlocal tw=72 spell
     autocmd FileType shader setlocal ts=4 sw=4 noet
     autocmd FileType hlsl setlocal ts=4 sw=4 noet
-    autocmd BufRead,BufNewFile *.typ set filetype=typst
+    autocmd BufRead,BufNewFile *.typ set filetype=typst tw=72
 endif
 
 
