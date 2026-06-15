@@ -158,6 +158,13 @@ vpn () {
         xclip -sel clip <<< ""
     fi
 }
+__zk_binary=$(which zk)
+zk () {
+    __current_dir=$(pwd)
+    cd ~/zk
+    $__zk_binary $@
+    cd $__current_dir
+}
 
 #setopt autolist
 #unsetopt menucomplete

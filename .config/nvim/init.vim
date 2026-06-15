@@ -198,6 +198,7 @@ Plug 'kalvinpearce/ShaderHighlight'
 Plug 'rust-lang/rust.vim'
 " Plug 'kaarmu/typst.vim'
 Plug 'chomosuke/typst-preview.nvim', {'tag': 'v1.*'}
+Plug 'zk-org/zk-nvim', {'tag': 'v0.4.8'}
 call plug#end()
 
 let g:OmniSharp_server_use_mono = 1
@@ -225,7 +226,11 @@ nnoremap <silent> K :call <SID>show_documentation()<CR>
 nnoremap <silent> J :call <SID>jump_definition()<CR>
 
 function! s:jump_definition()
-  call CocActionAsync('jumpDefinition')
+  if expand('%:p') =~# '/zk/' || &filetype ==# 'markdown'
+    lua vim.lsp.buf.definition()
+  else
+    call CocActionAsync('jumpDefinition')
+  endif
 endfunction
 
 function! s:show_documentation()
@@ -298,3 +303,22 @@ EOF
 
 autocmd FileType markdown nnoremap <buffer> <leader>ll :MarkdownPreview<CR>
 autocmd FileType typst nnoremap <buffer> <leader>ll :TypstPreview<CR>
+
+lua << EOF
+require("zk").setup({
+    picker = "fzf"
+})
+
+local opts = { noremap=true, silent=false }
+
+vim.api.nvim_set_keymap("n", "<leader>zn", "<Cmd>ZkNew { title = vim.fn.input('Title: ') }<CR>", opts)
+
+vim.api.nvim_set_keymap("n", "<leader>zo", "<Cmd>ZkNotes { sort = { 'modified' } }<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>zt", "<Cmd>ZkTags<CR>", opts)
+
+vim.api.nvim_set_keymap("n", "<leader>zf", "<Cmd>ZkNotes { sort = { 'modified' }, match = { vim.fn.input('Search: ') } }<CR>", opts)
+vim.api.nvim_set_keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>", opts)
+
+vim.keymap.set("n", "<leader>zg", vim.lsp.buf.definition, { silent = true })
+
+EOF

@@ -39,6 +39,18 @@
           "rootPatterns": ["main.typ", ".git/"],
           "settings": {}
         },
+        "zk": {
+          "command": "zk",
+          "args": ["lsp"],
+          "trace.server": "verbose",
+          "rootPatterns": [".zk"],
+          "filetypes": ["markdown", ".md"],
+          "textDocument": {
+              "definition": {
+                "linkSupport": true
+              }
+          }
+        }
     },
     "rust-analyzer" : {
         "serverPath" : "/usr/bin/rust-analyzer"
@@ -64,5 +76,8 @@
         "latex",
         "typst",
         "typ"
-      ]
+      ],
+
+    // ZK: Important, otherwise link completion containing spaces and other special characters won't work.
+    "suggest.invalidInsertCharacters": [],
 }
