@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -ex
+
 typfile=$1
 revcount=$(git log --oneline -- $typfile | wc -l)
 commit=$(git log -1 --oneline $typfile | head -n 1 | cut -d\  -f1)
@@ -7,6 +9,6 @@ lastmodified=$(git log -1 --pretty="format:%ci" -- $typfile | cut -d\  -f1)
 star=
 
 git diff --exit-code $typfile > /dev/null || lastmodified=$(date -I)
-git diff --exit-code $typfile > /dev/null || star="*"
+git diff --exit-code $typfile > /dev/null || star="\*"
 
 typst compile $typfile --input ver="version $commit$star / revision $revcount" --input date="$lastmodified"
