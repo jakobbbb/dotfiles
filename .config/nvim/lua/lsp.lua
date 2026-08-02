@@ -14,6 +14,12 @@ require("mason-tool-installer").setup({
     },
 })
 
+vim.lsp.config("ltex", {
+    cmd_env = {
+        JAVA_HOME = "/usr/lib/jvm/java-21-openjdk",
+    },
+})
+
 vim.lsp.enable("pyright")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("rust_analyzer")
