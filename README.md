@@ -10,7 +10,7 @@ The theme uses bettergruvbox, but patched it with the `./misc/patch_bettergruvbo
 The purple theme uses a patched version of Arc-Dark, which can be installed by
 navigating to `misc/gtk-theme` and running `makepkg -scfi`.
 
-[^autumn]: two autumns, two winters, two springs and two summers so far!
+[^autumn]: three autumns, three winters, three springs and two summers so far!
 
 ## deploy
 Run `./deploy.py` to symlink the dotfiles.
