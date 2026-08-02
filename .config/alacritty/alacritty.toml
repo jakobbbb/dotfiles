@@ -16,7 +16,7 @@ shape = "Beam"
 size = 10.0
 
 [font.normal]
-family = "Meslo LG M for Powerline"
+family = "MesloLGM Nerd Font"
 
 [[keyboard.bindings]]
 action = "ToggleViMode"

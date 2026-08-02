@@ -203,6 +203,7 @@ ttf-fira-code
 ttf-fira-mono
 ttf-fira-sans
 ttf-liberation
+ttf-meslo-nerd
 ttf-opensans
 ttf-ubuntu-font-family
 tumbler
