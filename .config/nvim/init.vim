@@ -104,16 +104,6 @@ nnoremap <CR> :nohlsearch<CR><CR>
 " Delete up to email signature
 nnoremap <silent> <leader>gr <Esc>d/^--\_.*Jakob<CR>:nohl<CR>O
 
-" Normal mode: code action at cursor
-nmap <leader>a  <Plug>(coc-codeaction)
-
-" Visual mode: code action for selection
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Quickfix (applies the top suggestion automatically)
-nmap <leader>s <Plug>(coc-fix-current)
-xmap <leader>s <Plug>(coc-fix-current)
-
 " disable arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -173,22 +163,12 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-let g:coc_global_extensions = [
-\ 'coc-pyright',
-\ 'coc-tsserver',
-\ 'coc-rust-analyzer',
-"\ 'coc-omnisharp',
-\ 'coc-vimtex',
-\ 'coc-ltex',
-\ ]
 
 call plug#begin('~/.config/nvim/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf.vim'
 Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
-" Plug 'neoclide/coc.nvim', {'branch': 'v0.0.81', 'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'OmniSharp/omnisharp-vim'
 Plug 'tikhomirov/vim-glsl'
 Plug 'vim-airline/vim-airline'
@@ -199,6 +179,11 @@ Plug 'rust-lang/rust.vim'
 " Plug 'kaarmu/typst.vim'
 Plug 'chomosuke/typst-preview.nvim', {'tag': 'v1.*'}
 Plug 'zk-org/zk-nvim', {'tag': 'v0.4.8'}
+Plug 'neovim/nvim-lspconfig'
+Plug 'mason-org/mason.nvim'
+Plug 'WhoIsSethDaniel/mason-tool-installer.nvim'
+Plug 'saghen/blink.lib'
+Plug 'saghen/blink.cmp'
 call plug#end()
 
 let g:OmniSharp_server_use_mono = 1
@@ -219,33 +204,6 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 """ ALE
 nmap <silent> <C-a> <Plug>(ale_previous_wrap)
 nmap <silent> <C-e> <Plug>(ale_next_wrap)
-
-""" COC
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-nnoremap <silent> J :call <SID>jump_definition()<CR>
-
-function! s:jump_definition()
-  if expand('%:p') =~# '/zk/' || &filetype ==# 'markdown'
-    lua vim.lsp.buf.definition()
-  else
-    call CocActionAsync('jumpDefinition')
-  endif
-endfunction
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocActionAsync('doHover')
-  endif
-endfunction
-
-" Make <CR> to accept selected completion item or notify coc.nvim to format
-" <C-g>u breaks current undo, please make your own choice
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
 
 """ airline / tab stuff
 let g:airline#extensions#tabline#enabled = 1
@@ -289,7 +247,6 @@ function! ClangFormatOnSave()
 endfunction
 autocmd BufWritePre *.c,*.h,*.cc,*.cpp,*.hpp call ClangFormatOnSave()
 
-highlight CocMenuSel ctermbg=15 ctermfg=0
 highlight Pmenu ctermbg=0 ctermfg=15
 highlight NormalFloat ctermbg=0 ctermfg=15
 highlight Normal ctermbg=None
@@ -322,3 +279,5 @@ vim.api.nvim_set_keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>", opts)
 vim.keymap.set("n", "<leader>zg", vim.lsp.buf.definition, { silent = true })
 
 EOF
+
+lua require("lsp")
