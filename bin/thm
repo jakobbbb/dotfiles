@@ -32,7 +32,7 @@ function set_theme() {
             redshift_temperature=3800
             ;;
         autumn)  # gruvbox-based cozy theme :3
-            wallpaper=~/git/wallpapers/eae003a0d5395a59e225328c3c8b2b470c92d95f_darker.jpg
+            wallpaper=~/git/wallpapers/more_ryokita_ig.png
             terminal=~/.config/alacritty/themes/kanagawa.toml
             i3=~/.config/i3/themes/autumn.conf
             gtk_theme=BetterGruvbox
