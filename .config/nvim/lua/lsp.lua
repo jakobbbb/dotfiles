@@ -11,6 +11,7 @@ require("mason-tool-installer").setup({
         "typescript-language-server",
         "eslint-lsp",
         "prettier",
+        "roslyn-language-server",
     },
 })
 
@@ -27,6 +28,7 @@ vim.lsp.enable("texlab")
 vim.lsp.enable("ltex")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("svelte")
+vim.lsp.enable("roslyn_ls")
 
 require("blink.cmp").setup({
     keymap = {
