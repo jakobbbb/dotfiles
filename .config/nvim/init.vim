@@ -89,6 +89,27 @@ set hlsearch
 
 inoremap jk <Esc>
 
+function! EnterWithIndent() abort
+    let line = getline('.')
+    let col = col('.')
+
+    let pairs = {
+        \ '{': '}',
+        \ '(': ')',
+        \ '[': ']',
+        \ }
+
+    if col > 1 && col <= len(line)
+                \ && has_key(pairs, line[col - 2])
+                \ && line[col - 1] ==# pairs[line[col - 2]]
+        return "\<CR>\<C-o>O"
+    endif
+
+    return "\<CR>"
+endfunction
+
+inoremap <expr> <CR> EnterWithIndent()
+
 " typos yeahhh
 command W w
 command Q q
