@@ -109,9 +109,9 @@ def main():
     mensa = Canteen.MENSA_AM_PARK
     delta = datetime.timedelta(hours=10)
 
-    if now.hour >= 14 and now.hour <= 18:
-        mensa = Canteen.CAFETERIA_PARK
-        delta = datetime.timedelta(0)
+    # if now.hour >= 14 and now.hour <= 18:
+    #     mensa = Canteen.CAFETERIA_PARK
+    #     delta = datetime.timedelta(0)
 
     mensadate = now + delta
     meals = get_meals(mensa, mensadate)
