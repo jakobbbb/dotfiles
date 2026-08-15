@@ -205,6 +205,7 @@ Plug 'mason-org/mason.nvim'
 Plug 'WhoIsSethDaniel/mason-tool-installer.nvim'
 Plug 'saghen/blink.lib'
 Plug 'saghen/blink.cmp'
+Plug 'stevearc/conform.nvim'
 call plug#end()
 
 let g:OmniSharp_server_use_mono = 1
@@ -298,6 +299,24 @@ vim.api.nvim_set_keymap("n", "<leader>zf", "<Cmd>ZkNotes { sort = { 'modified' }
 vim.api.nvim_set_keymap("v", "<leader>zf", ":'<,'>ZkMatch<CR>", opts)
 
 vim.keymap.set("n", "<leader>zg", vim.lsp.buf.definition, { silent = true })
+
+EOF
+
+lua << EOF
+
+require("conform").setup({
+  formatters_by_ft = {
+    python = { "ruff_format" },
+    rust = { "rustfmt" },
+    c = { "clang_format" },
+    cpp = { "clang_format" },
+  },
+  format_on_save = {
+    -- These options will be passed to conform.format()
+    timeout_ms = 500,
+    lsp_format = "fallback",
+  },
+})
 
 EOF
 
