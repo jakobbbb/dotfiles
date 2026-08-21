@@ -120,6 +120,10 @@ MUTT=$(which mutt)
 mutt() { $MUTT -F ~/mail/$1/muttrc || $MUTT "$@" }
 alias ms="~/.mutt/scripts/ms"
 scruff() { for inbox in $(ms unread | grep "/inbox" | cut -d/ -f1 | sort | uniq | tr "\n" " "); do mutt $inbox; done; ms }
+
+XRANDR=$(which xrandr)
+xrandr() { $XRANDR "$@" && ~/.fehbg }
+
 alias re="rem -cu+3b1mw\$COLUMNS"
 alias cal="calendar"
 alias xssh="TERM=xterm-256color ssh"
