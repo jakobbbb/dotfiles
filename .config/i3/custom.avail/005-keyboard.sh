@@ -13,4 +13,3 @@ fi
 
 # disable touchpad
 toggle-touchpad disable
->>>>>>> 95a09e0 (Disable touchpad)
