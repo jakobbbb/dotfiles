@@ -125,6 +125,8 @@ nnoremap <CR> :nohlsearch<CR><CR>
 " Delete up to email signature
 nnoremap <silent> <leader>gr <Esc>d/^--\_.*Jakob<CR>:nohl<CR>O
 
+nnoremap <silent> <leader>ny <Esc>:r ~/nyakob.signature<CR>
+
 " disable arrow keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
